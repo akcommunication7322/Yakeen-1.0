@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درخشاں و روشنی - Class 10 Urdu Objective Quiz & Certificate</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Urdu Nastaliq & Modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Html2Canvas Library for Certificate Download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b'
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        },
+                        whatsapp: {
+                            500: '#25D366',
+                            600: '#1da851'
+                        }
+                    },
+                    fontFamily: {
+                        urdu: ['Noto Nastaliq Urdu', 'Amiri', 'serif'],
+                        amiri: ['Amiri', 'serif'],
+                        signature: ['Great Vibes', 'cursive'],
+                        outfit: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            color: #0f172a;
+            line-height: 2.2;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+        }
+
+        .font-sans-ui {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .white-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .white-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .white-card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px -5px rgba(16, 185, 129, 0.15);
+            border-color: #34d399;
+        }
+
+        .option-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateX(-4px);
+        }
+
+        /* Animated Progress Ring */
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a7f3d0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+
+        /* Print styles for certificate */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificatePrintContainer, #certificatePrintContainer * {
+                visibility: visible;
+            }
+            #certificatePrintContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+
+/* Stylish Back Button - Fixed to Top Left & Hidden by Default */
+        .btn-back {
+            position: fixed;   
+            top: 20px;         
+            left: 20px;        
+            z-index: 9999;     
+            
+            /* Hidden State Controls */
+            opacity: 0.1;               /* Button 90% transparent rahega */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth look-and-hide effect */
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* SVG Arrow styling */
+        .btn-back svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+
+        /* Trigger: Cursor lane par ya Mobile par Finger touch karne par */
+        .btn-back:hover, 
+        .btn-back:focus,
+        .btn-back:active {
+            opacity: 1;                 /* Poora visible ho jayega */
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Arrow animation on hover */
+        .btn-back:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* Click effect */
+        .btn-back:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+<!-- Hidden Back Button -->
+    <button class="btn-back" id="backBtn">
+        <svg viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Go Back</span>
+    </button>
+
+
+    <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+            <!-- App Logo & Title -->
+            <div class="flex items-center space-x-3 space-x-reverse cursor-pointer" onclick="showHomeScreen()">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-700 flex items-center justify-center shadow-md shadow-emerald-600/20 text-white font-bold text-xl">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+                        <span>درخشاں و روشنی (دسویں جماعت)</span>
+                        <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded-full border border-emerald-200 font-sans-ui">Class 10 Urdu</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 font-medium hidden sm:block">بیہار بورڈ میٹڑک اردو معروضی سوالات (MCQs) اور سرٹیفکیٹ</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons: WhatsApp Share & Sound Toggle -->
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <!-- WhatsApp Share Button -->
+                <button onclick="shareOnWhatsApp()" class="px-3 py-2 rounded-xl bg-whatsapp-500 hover:bg-whatsapp-600 text-white font-bold text-xs flex items-center gap-2 shadow-md shadow-emerald-500/20 transition active:scale-95">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span class="hidden sm:inline">شیئر کریں</span>
+                </button>
+
+                <!-- Sound Toggle -->
+                <button id="soundToggleBtn" onclick="toggleSound()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="آواز آن / آف کریں">
+                    <i class="fa-solid fa-volume-high text-base text-emerald-600" id="soundIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-6 relative z-10 flex flex-col justify-center">
+
+        <!-- SCREEN 1: HOME / CHAPTER SELECTION -->
+        <section id="homeScreen" class="space-y-6">
+            <!-- Author Banner Header Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border border-emerald-100 shadow-xl bg-gradient-to-b from-white via-emerald-50/30 to-teal-50/50">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-emerald-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-12 -top-12 w-48 h-48 bg-teal-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold mb-3">
+                    <i class="fa-solid fa-award text-emerald-600"></i> بیہار اسٹیٹ مدرسہ و اسکول بورڈ (BSAEB / BSEB) اسپیشل
+                </div>
+
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2 leading-relaxed">
+                    لازمی اردو (درخشاں حصہ دوم و روشنی) - اہم معروضی سوالات
+                </h2>
+                
+                <!-- Made By Badge -->
+                <div class="inline-block mt-1 mb-4">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold text-xs sm:text-sm tracking-wide shadow-sm flex items-center justify-center gap-2 font-sans-ui">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Designed by Mr. Md Imamul Kalam
+                    </span>
+                </div>
+
+                <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-loose">
+                    میٹرک امتحان 2025-2026 کی مکمل اور باوقار تیاری کریں۔ تمام اسباق کے معروضی سوالات کے جوابات دیں، اپنا اسکور جانچیں اور **Mr. Md Imamul Kalam** کی جانب سے تصدیق شدہ ڈیجیٹل سند (Certificate) حاصل کریں۔
+                </p>
+
+                <!-- Mode Selection Toggle -->
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-bold text-slate-700 hover:border-emerald-400 transition">
+                        <input type="radio" name="quizMode" value="practice" checked class="w-4 h-4 text-emerald-600 focus:ring-emerald-500">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> پریکٹس موڈ (فوری جواب و وضاحت)
+                    </label>
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-bold text-slate-700 hover:border-emerald-400 transition">
+                        <input type="radio" name="quizMode" value="exam" class="w-4 h-4 text-emerald-600 focus:ring-emerald-500">
+                        <i class="fa-solid fa-stopwatch text-rose-500"></i> امتحان موڈ (ٹائمر کے ساتھ)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Full Quiz Master CTA Banner -->
+            <div class="white-card white-card-hover rounded-2xl p-6 border-r-8 border-r-emerald-600 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-right">
+                    <span class="text-xs font-bold tracking-wider text-emerald-700 uppercase bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">گرینڈ کوئز (All Chapters)</span>
+                    <h3 class="text-xl font-extrabold text-slate-900">تمام اسباق کا ایک ساتھ گرینڈ ٹیسٹ</h3>
+                    <p class="text-xs text-slate-500 font-medium">بورڈ امتحان کے 50+ انتہائی اہم معروضی سوالات | فوری سرٹیفکیٹ حاصل کریں</p>
+                </div>
+                <button onclick="startQuiz('all')" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-bold shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-3 transition active:scale-95">
+                    <span>مکمل ٹیسٹ شروع کریں</span>
+                    <i class="fa-solid fa-play text-sm"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3 my-2">
+                <div class="h-px bg-slate-200 flex-grow"></div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-3 py-1 rounded-full">باب وار مشق (Select Chapter)</span>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <!-- Chapter Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="chapterGrid">
+                <!-- Dynamically Injected Chapters -->
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ACTIVE QUIZ -->
+        <section id="quizScreen" class="hidden space-y-6">
+            <!-- Quiz Header Bar -->
+            <div class="white-card rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3 shadow-sm border border-slate-200">
+                <div class="flex items-center gap-3">
+                    <button onclick="confirmExitQuiz()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="ہوم اسکرین پر جائیں">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <div>
+                        <h2 id="activeQuizTitle" class="text-base sm:text-lg font-extrabold text-slate-900">سبق کا عنوان</h2>
+                        <span id="activeQuizSubtitle" class="text-xs text-slate-500 font-medium">معروضی سوالات کی مشق</span>
+                    </div>
+                </div>
+
+                <!-- Timer & Counter -->
+                <div class="flex items-center gap-3">
+                    <div id="timerContainer" class="hidden flex items-center gap-2 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 text-amber-800 font-sans-ui font-bold text-sm">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="quizTimer">00:00</span>
+                    </div>
+
+                    <div class="bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 font-sans-ui">
+                        سوال: <span id="currentQuestionNum" class="text-emerald-600 text-sm font-extrabold">1</span> / <span id="totalQuestionsNum" class="text-sm font-bold">10</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Progress Bar -->
+            <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                <div id="quizProgressBar" class="bg-gradient-to-r from-emerald-500 to-teal-600 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl border border-slate-200 relative">
+                <!-- Question Text -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span id="questionTag" class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold">سبق کا سوال</span>
+                    </div>
+                    <h3 id="questionText" class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+                        <!-- Question content -->
+                    </h3>
+                </div>
+
+                <!-- Options List -->
+                <div id="optionsContainer" class="space-y-3">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Feedback Message Box (Practice Mode) -->
+                <div id="feedbackBox" class="hidden p-4 rounded-2xl border text-sm font-medium transition-all duration-300 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div id="feedbackIcon" class="w-8 h-8 rounded-full flex items-center justify-center text-lg"></div>
+                        <span id="feedbackText" class="text-sm sm:text-base font-bold"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Navigation Footer -->
+            <div class="flex items-center justify-between gap-3">
+                <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-bold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span>پچھلا سوال</span>
+                </button>
+
+                <button id="nextBtn" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-md shadow-emerald-600/20 transition flex items-center gap-2">
+                    <span id="nextBtnText">اگلا سوال</span>
+                    <i class="fa-solid fa-chevron-left text-xs" id="nextBtnIcon"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: QUIZ RESULT SUMMARY -->
+        <section id="resultScreen" class="hidden space-y-6">
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center space-y-6 shadow-xl border border-emerald-100">
+                <!-- Animated Score Badge -->
+                <div class="relative w-36 h-36 mx-auto flex items-center justify-center">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <circle class="text-slate-100" stroke-width="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                        <circle id="scoreProgressCircle" class="text-emerald-500 progress-ring__circle" stroke-width="8" stroke-linecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+                    </svg>
+                    <div class="absolute flex flex-col items-center justify-center">
+                        <span id="resultPercentage" class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans-ui">0%</span>
+                        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">کل اسکور</span>
+                    </div>
+                </div>
+
+                <!-- Result Greeting Header -->
+                <div class="space-y-2">
+                    <h2 id="resultTitle" class="text-2xl sm:text-3xl font-extrabold text-slate-900">بہت عمدہ کارکردگی!</h2>
+                    <p id="resultSubtitle" class="text-slate-600 text-sm max-w-md mx-auto">آپ نے میٹرک اردو ابجیکٹیو ٹیسٹ کامیابی کے ساتھ مکمل کر لیا ہے۔</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto pt-2">
+                    <div class="bg-emerald-50 border border-emerald-100 p-3.5 rounded-2xl text-center">
+                        <div class="text-xs text-emerald-700 font-bold mb-1">صحیح جوابات</div>
+                        <div id="statCorrect" class="text-xl font-black text-emerald-700 font-sans-ui">0</div>
+                    </div>
+                    <div class="bg-rose-50 border border-rose-100 p-3.5 rounded-2xl text-center">
+                        <div class="text-xs text-rose-700 font-bold mb-1">غلط جوابات</div>
+                        <div id="statIncorrect" class="text-xl font-black text-rose-700 font-sans-ui">0</div>
+                    </div>
+                    <div class="bg-sky-50 border border-sky-100 p-3.5 rounded-2xl text-center">
+                        <div class="text-xs text-sky-700 font-bold mb-1">کل سوالات</div>
+                        <div id="statTotal" class="text-xl font-black text-sky-700 font-sans-ui">0</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-3.5 rounded-2xl text-center">
+                        <div class="text-xs text-amber-700 font-bold mb-1">صرف شدہ وقت</div>
+                        <div id="statTime" class="text-xl font-black text-amber-700 font-sans-ui">00:00</div>
+                    </div>
+                </div>
+
+                <!-- Action CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
+                    <button onclick="promptForCertificate()" id="certTriggerBtn" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+                        <i class="fa-solid fa-certificate text-lg"></i>
+                        <span>ڈیجیٹل سند (Certificate) حاصل کریں</span>
+                    </button>
+                    <button onclick="restartCurrentQuiz()" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold border border-slate-200 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>دوبارہ کوشش کریں</span>
+                    </button>
+                    <button onclick="showHomeScreen()" class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 font-bold border border-slate-200 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-house"></i>
+                        <span>دیگر اسباق</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 4: CERTIFICATE VIEW & DOWNLOAD -->
+        <section id="certificateScreen" class="hidden space-y-6">
+            <div class="flex items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <button onclick="showResultScreen()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-2 transition">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>نتیجہ پر واپس جائیں</span>
+                </button>
+                <div class="flex items-center gap-2">
+                    <button onclick="downloadCertificate()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-2 shadow-md shadow-emerald-600/20 transition">
+                        <i class="fa-solid fa-download"></i>
+                        <span>ڈاؤن لوڈ کریں (PNG)</span>
+                    </button>
+                    <button onclick="printCertificate()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs flex items-center gap-2 transition">
+                        <i class="fa-solid fa-print"></i>
+                        <span>پرنٹ کریں</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Printable & Renderable Certificate Frame -->
+            <div id="certificatePrintContainer" class="w-full overflow-x-auto p-2">
+                <div id="certificateCard" class="w-[850px] h-[600px] mx-auto bg-white p-8 relative rounded-xl border-[12px] border-emerald-800 shadow-2xl flex flex-col justify-between select-none overflow-hidden" style="background-image: radial-gradient(#10b981 0.75px, transparent 0.75px); background-size: 16px 16px; background-color: #ffffff;">
+                    <!-- Decorative Corners -->
+                    <div class="absolute top-2 right-2 w-16 h-16 border-t-4 border-r-4 border-amber-500"></div>
+                    <div class="absolute top-2 left-2 w-16 h-16 border-t-4 border-l-4 border-amber-500"></div>
+                    <div class="absolute bottom-2 right-2 w-16 h-16 border-b-4 border-r-4 border-amber-500"></div>
+                    <div class="absolute bottom-2 left-2 w-16 h-16 border-b-4 border-l-4 border-amber-500"></div>
+
+                    <!-- Inner Border Ribbon -->
+                    <div class="absolute inset-4 border-2 border-emerald-600/30 rounded-lg pointer-events-none"></div>
+
+                    <!-- Header Section -->
+                    <div class="text-center space-y-2 relative z-10 pt-2">
+                        <div class="flex items-center justify-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-emerald-800 text-amber-400 flex items-center justify-center text-2xl border-2 border-amber-400 shadow-md">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                        </div>
+                        <h1 class="text-3xl font-extrabold text-emerald-900 tracking-wide font-urdu">سندِ توصیف (Certificate of Excellence)</h1>
+                        <p class="text-xs font-bold text-amber-700 tracking-widest uppercase font-sans-ui">BIHAR BOARD CLASS 10 URDU OBJECTIVE EXCELLENCE AWARD</p>
+                    </div>
+
+                    <!-- Body Content -->
+                    <div class="text-center space-y-4 relative z-10 my-auto">
+                        <p class="text-slate-600 text-sm font-semibold">یہ سند فخر کے ساتھ عطا کی جاتی ہے برائے طالب علم / طالبہ:</p>
+                        
+                        <!-- Student Name -->
+                        <div class="inline-block border-b-2 border-emerald-700 px-12 py-1 min-w-[300px]">
+                            <h2 id="certStudentName" class="text-3xl font-black text-slate-900 tracking-tight font-urdu">طالب علم کا نام</h2>
+                        </div>
+
+                        <p class="text-slate-700 text-sm max-w-xl mx-auto leading-relaxed font-urdu">
+                            جنہوں نے دسویں جماعت (میٹڑک) کے **اردو (درخشاں حصہ دوم و روشنی)** کے معروضی سوالات (MCQs) کے آن لائن کوئز میں نمایا ں کامیابی حاصل کی ہے۔
+                        </p>
+
+                        <!-- Score Banner -->
+                        <div class="inline-flex items-center gap-6 bg-emerald-50 border border-emerald-200 px-6 py-2 rounded-xl text-emerald-900 font-bold text-sm">
+                            <div>حاصل کردہ اسکور: <span id="certScore" class="font-extrabold text-emerald-700 font-sans-ui">0/0</span></div>
+                            <div class="w-px h-4 bg-emerald-300"></div>
+                            <div>فیصد: <span id="certPercentage" class="font-extrabold text-emerald-700 font-sans-ui">0%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Signatures -->
+                    <div class="flex items-end justify-between px-8 pb-3 relative z-10">
+                        <!-- Date & Certificate ID -->
+                        <div class="text-right space-y-1">
+                            <p class="text-xs text-slate-500 font-medium">تاریخِ اجراء: <span id="certDate" class="font-bold text-slate-800 font-sans-ui">2026-08-24</span></p>
+                            <p class="text-xs text-slate-500 font-medium font-sans-ui">ID: <span id="certID" class="font-bold text-emerald-800">URDU-10-8921</span></p>
+                        </div>
+
+                        <!-- Golden Badge -->
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 via-amber-300 to-amber-500 border-4 border-white shadow-xl flex flex-col items-center justify-center text-amber-950 font-bold text-[10px] text-center p-1 uppercase">
+                            <i class="fa-solid fa-star text-base text-amber-900 mb-0.5"></i>
+                            <span class="leading-none font-extrabold font-sans-ui">VERIFIED</span>
+                            <span class="text-[8px] font-sans-ui">PASSED</span>
+                        </div>
+
+                        <!-- Educator Signature -->
+                        <div class="text-center space-y-1">
+                            <div class="font-signature text-2xl text-emerald-900 font-bold">Mr. Md Imamul Kalam</div>
+                            <div class="w-36 h-0.5 bg-slate-400 mx-auto"></div>
+                            <p class="text-xs font-bold text-slate-800">Mr. Md Imamul Kalam</p>
+                            <p class="text-[10px] text-slate-500 font-medium">ایجوکیٹر و کورس ڈائریکٹر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-6 mt-auto">
+        <div class="max-w-5xl mx-auto px-4 text-center space-y-2 text-xs text-slate-500">
+            <p class="font-bold text-slate-700">بیہار بورڈ میٹرک اردو (درخشاں و روشنی) ابجیکٹیو تیاری پورٹل</p>
+            <p>Designed and Developed with <i class="fa-solid fa-heart text-rose-500"></i> by <strong class="text-slate-800 font-sans-ui">Mr. Md Imamul Kalam</strong></p>
+            <p class="text-[11px] text-slate-400 font-sans-ui">© 2026 Class 10 Urdu Quiz Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: ENTER STUDENT NAME FOR CERTIFICATE -->
+    <div id="nameModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="white-card max-w-md w-full rounded-3xl p-6 space-y-5 shadow-2xl border border-emerald-100 transform transition-all">
+            <div class="text-center space-y-2">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full mx-auto flex items-center justify-center text-2xl">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-slate-900">اپنا پورا نام درج کریں</h3>
+                <p class="text-xs text-slate-500 font-medium">سند (Certificate) پر پرنٹ کرنے کے لیے اپنا درست نام لکھیں</p>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-xs font-bold text-slate-700 block">طالب علم کا پورا نام (Student Full Name):</label>
+                <input type="text" id="studentNameInput" placeholder="مثلاً: محمد ساحل / Aarav Kumar" class="w-full px-4 py-3 rounded-2xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm font-bold text-slate-800">
+            </div>
+
+            <div class="flex items-center gap-3 pt-2">
+                <button onclick="closeNameModal()" class="w-1/2 py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+                    منسوخ کریں
+                </button>
+                <button onclick="generateCertificateFromModal()" class="w-1/2 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition">
+                    سند تیار کریں
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ==========================================================================
+           DATASET: Class 10 Bihar Board Urdu (Darakhshan Part 2 & Roshni) MCQs
+           ========================================================================== */
+        const quizChapters = [
+            {
+                id: 'ch1',
+                title: 'حمد و نعت',
+                subtitle: 'حمدِ خدا عزوجل (شبنم کمالی)',
+                icon: 'fa-hands-praying',
+                count: 8
+            },
+            {
+                id: 'ch2',
+                title: 'افسانہ نگاری',
+                subtitle: 'بھابھی جان، فرار، کٹی ہوئی شاخ، آشیانہ',
+                icon: 'fa-book-open',
+                count: 10
+            },
+            {
+                id: 'ch3',
+                title: 'مضامین و انشائیہ',
+                subtitle: 'عالمی حدت (گلوبل وارمنگ)، ریا، ادب کی پہچان',
+                icon: 'fa-newspaper',
+                count: 8
+            },
+            {
+                id: 'ch4',
+                title: 'مکتوبات و سیرت',
+                subtitle: 'خطوطِ غالب، عبدالغفور شہباز',
+                icon: 'fa-envelope-open-text',
+                count: 8
+            },
+            {
+                id: 'ch5',
+                title: 'شاعری و غزل',
+                subtitle: 'نظمیں، غزلیں، مثنوی اور مرثیہ',
+                icon: 'fa-feather-pointed',
+                count: 10
+            },
+            {
+                id: 'ch6',
+                title: 'اردو قواعد (Grammar)',
+                subtitle: 'اسم، فعل، مترادف، واحد جمع، محاورے',
+                icon: 'fa-spell-check',
+                count: 10
+            }
+        ];
+
+        const questionsDatabase = [
+            // Chapter 1: حمد و نعت
+            {
+                chapterId: 'ch1',
+                question: "شبنم کمالی کا اصل نام کیا ہے؟",
+                options: ["مصطفی رضا", "حسن نعیم", "احمد رضا", "صابر رضا"],
+                answer: 0,
+                explanation: "شبنم کمالی کا اصل نام 'مصطفی رضا' ہے۔ ان کا تعلق بیہار کے ضلع پوپری (سیتا مڑھی) سے ہے۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "شعر میں خدا کی تعریف بیان کرنے والی نظم کو کیا کہتے ہیں؟",
+                options: ["نعت", "حمد", "منقبت", "قصیدہ"],
+                answer: 1,
+                explanation: "جس نظم میں اللہ تعالیٰ کی تعریف و توصیف کی جائے اسے 'حمد' کہتے ہیں۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "نعتِ پاک میں کس کی تعریف بیان کی جاتی ہے؟",
+                options: ["خدا کی", "حضور اکرم ﷺ کی", "اولیاء کرام کی", "بادشاہوں کی"],
+                answer: 1,
+                explanation: "نظم جس میں حضرت محمد مصطفیٰ ﷺ کی مدح کی جائے، اسے 'نعت' کہتے ہیں۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "شبنم کمالی کس ضلع میں پیدا ہوئے؟",
+                options: ["در بھنگہ", "مظفر پور", "سیتا مڑھی", "پٹنہ"],
+                answer: 2,
+                explanation: "شبنم کمالی کی پیدائش پوپری، ضلع سیتا مڑھی میں ہوئی۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "شبنم کمالی کب پیدا ہوئے؟",
+                options: ["1938ء", "1940ء", "1935ء", "1942ء"],
+                answer: 0,
+                explanation: "شبنم کمالی 22 جولائی 1938ء کو پیدا ہوئے۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "بزرگانِ دین کی تعریف میں کہی گئی نظم کو کیا کہتے ہیں؟",
+                options: ["حمد", "نعت", "منقبت", "غزل"],
+                answer: 2,
+                explanation: "بزرگانِ دین اور خلفائے راشدین کی تعریف میں نظم کو 'منقبت' کہا جاتا ہے۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "بندوں کو رزق دینے والا کون ہے؟",
+                options: ["فرشتے", "خدا عزوجل", "انسان", "حاکم"],
+                answer: 1,
+                explanation: "ساری کائنات کو رزق دینے والی ذات اللہ تعالیٰ کی ہے۔"
+            },
+            {
+                chapterId: 'ch1',
+                question: "شبنم کمالی کا تعلق کس ریاست سے تھا؟",
+                options: ["یوپی", "بیہار", "بنگال", "جھارکھنڈ"],
+                answer: 1,
+                explanation: "شبنم کمالی کا تعلق ریاست بیہار سے تھا۔"
+            },
+
+            // Chapter 2: افسانہ نگاری
+            {
+                chapterId: 'ch2',
+                question: "افسانہ 'بھابھی جان' کس کی تخلیق ہے؟",
+                options: ["سہیل عظیم آبادی", "ڈاکٹر محمد محسن", "نگار عظیم", "قمر جہاں"],
+                answer: 0,
+                explanation: "'بھابھی جان' سہیل عظیم آبادی کا ایک انتہائی مشھور افسانہ ہے۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "سہیل عظیم آبادی کا اصل نام کیا تھا؟",
+                options: ["سید مجیب الرحمن", "سید حسیب الرحمن", "سید شفیق الرحمن", "سید فضل الرحمن"],
+                answer: 0,
+                explanation: "سہیل عظیم آبادی کا اصل نام 'سید مجیب الرحمن' تھا۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "افسانہ 'فرار' کے مصنف کون ہیں؟",
+                options: ["ڈاکٹر محمد محسن", "شکیلہ اختر", "سہیل عظیم آبادی", "قمر جہاں"],
+                answer: 0,
+                explanation: "افسانہ 'فرار' کے مصنف مشہور نفسیاتی ماہر ڈاکٹر محمد محسن ہیں۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "ڈاکٹر محمد محسن کا کون سا افسانہ آپ کے نصاب میں شامل ہے؟",
+                options: ["بھابھی جان", "فرار", "آشیانہ", "کٹی ہوئی شاخ"],
+                answer: 1,
+                explanation: "ڈاکٹر محمد محسن کا افسانہ 'فرار' دسویں کے نصاب میں شامل ہے۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "افسانہ 'کٹی ہوئی شاخ' کس کا لکھا ہوا افسانہ ہے؟",
+                options: ["ڈاکٹر قمر جہاں", "نگار عظیم", "عصمت چغتائی", "سہیل عظیم آبادی"],
+                answer: 0,
+                explanation: "'کٹی ہوئی شاخ' ڈاکٹر قمر جہاں کا افسانہ ہے۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "افسانہ 'آشیانہ' کی تخلیق کار کون ہیں؟",
+                options: ["نگار عظیم", "قمر جہاں", "شکیلہ اختر", "زہرا نگاہ"],
+                answer: 0,
+                explanation: "افسانہ 'آشیانہ' نگار عظیم کا لکھا ہوا سبق آموز افسانہ ہے۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "روقیہ بھابھی کس افسانہ کا مرکزی کردار ہیں؟",
+                options: ["آشیانہ", "فرار", "بھابھی جان", "کٹی ہوئی شاخ"],
+                answer: 2,
+                explanation: "روقیہ بھابھی افسانہ 'بھابھی جان' کا مرکزی اور محترم کردار ہیں۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "سہیل عظیم آبادی کی پیدائش کہاں ہوئی؟",
+                options: ["پٹنہ", "گیا", "مظفر پور", "بھاگل پور"],
+                answer: 0,
+                explanation: "سہیل عظیم آبادی 1911ء میں پٹنہ (عظیم آباد) میں پیدا ہوئے۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "محمود کا کردار کس افسانے میں ہے؟",
+                options: ["فرار", "آشیانہ", "کٹی ہوئی شاخ", "بھابھی جان"],
+                answer: 0,
+                explanation: "محمود افسانہ 'فرار' کا اہم نفسیاتی کردار ہے۔"
+            },
+            {
+                chapterId: 'ch2',
+                question: "ڈاکٹر قمر جہاں کے والد کا نام کیا تھا؟",
+                options: ["سید عطا الحق", "سید انوار الحق", "سید ضیاء الحق", "سید مظہر الحق"],
+                answer: 0,
+                explanation: "ڈاکٹر قمر جہاں کے والد کا نام سید عطا الحق تھا۔"
+            },
+
+            // Chapter 3: مضامین و انشائیہ
+            {
+                chapterId: 'ch3',
+                question: "'عالمی حدت' (Global Warming) کیسا مضمون ہے؟",
+                options: ["سائنس مضمون", "تاریخی مضمون", "ادبی مضمون", "سیاسی مضمون"],
+                answer: 0,
+                explanation: "'عالمی حدت' ماحولیات اور سائنسی موضوع پر مبنی ایک معلوماتی مضمون ہے۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "زمین کا درجہ حرارت پچھلے سو سالوں میں کتنا بڑھ گیا ہے؟",
+                options: ["0.75°C", "1.5°C", "2.0°C", "0.50°C"],
+                answer: 0,
+                explanation: "زمین کا اوسط درجہ حرارت تقریباً 0.75 ڈگری سیلسیس بڑھ چکا ہے۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "مضمون 'ریا' کے مصنف کون ہیں؟",
+                options: ["سر سید احمد خان", "مولوی عبدالحق", "شبلی نعمانی", "حالی"],
+                answer: 0,
+                explanation: "مضمون 'ریا' بانیِ علی گڑھ سر سید احمد خان کی تصنیف ہے۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "سر سید احمد خان کی پیدائش کب ہوئی؟",
+                options: ["1817ء", "1820ء", "1835ء", "1805ء"],
+                answer: 0,
+                explanation: "سر سید احمد خان 17 اکتوبر 1817ء کو دہلی میں پیدا ہوئے۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "مضمون 'ادب کی پہچان' کس کی تحریر ہے؟",
+                options: ["ڈاکٹر عبد المغنی", "کلیم الدین احمد", "وہاب اشرافی", "احتشام حسین"],
+                answer: 0,
+                explanation: "مضمون 'ادب کی پہچان' کے مصنف نامور نقاد ڈاکٹر عبد المغنی ہیں۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "کویوٹو (Kyoto) کانفرنس کس موضوع پر ہوئی تھی؟",
+                options: ["گلوبل وارمنگ", "تعلیم", "تجارت", "کھیل"],
+                answer: 0,
+                explanation: "کویوٹو کانفرنس عالمی حدت اور ماحولیاتی تحفظ کے موضوع پر منعقد ہوئی تھی۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "سر سید احمد خان نے کون سا رسالہ جاری کیا تھا؟",
+                options: ["تہذیب الاخلاق", "مخزن", "البلال", "ہمدرد"],
+                answer: 0,
+                explanation: "سر سید احمد خان نے قومی بیداری کے لیے 'تہذیب الاخلاق' رسالہ نکالا۔"
+            },
+            {
+                chapterId: 'ch3',
+                question: "ڈاکٹر عبد المغنی کی پیدائش کس ضلع میں ہوئی؟",
+                options: ["اورنگ آباد (بیہار)", "پٹنہ", "گیا", "نواادہ"],
+                answer: 0,
+                explanation: "ڈاکٹر عبد المغنی کی پیدائش ضلع اورنگ آباد (بیہار) میں 1934ء میں ہوئی۔"
+            },
+
+            // Chapter 4: مکتوبات و سیرت
+            {
+                chapterId: 'ch4',
+                question: "اردو میں خطوط نگاری کو ایک نیا انداز کس نے دیا؟",
+                options: ["مرزا اسد اللہ خان غالب", "علامہ اقبال", "سر سید", "میر تقی میر"],
+                answer: 0,
+                explanation: "مرزا غالب نے مراسلہ کو مکالمہ بنا دیا اور خطوط نگاری کو نیا روح بخشا۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "غالب نے کل کتنے خطوط لکھے؟",
+                options: ["تقریباً 900", "500", "1500", "2000"],
+                answer: 0,
+                explanation: "مرزا غالب نے اپنے خطوط کی مجموعی تعداد تقریباً 900 بتائی ہے۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "مرزا غالب کی پیدائش کہاں ہوئی؟",
+                options: ["آگرہ", "دہلی", "لکھنؤ", "رام پور"],
+                answer: 0,
+                explanation: "مرزا غالب 27 دسمبر 1797ء کو آگرہ میں پیدا ہوئے۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "غالب کے خطوط کے کسی ایک مجموعے کا نام بتائیں۔",
+                options: ["عودِ ہندی", "غبارِ خاطر", "مکاتیبِ اقبال", "خطوطِ سرسید"],
+                answer: 0,
+                explanation: "'عودِ ہندی' اور 'اردوئے معلیٰ' مرزا غالب کے خطوط کے مشہور مجموعے ہیں۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "عبدالغفور شہباز کا تعلق کس ریاست سے تھا؟",
+                options: ["بیہار", "یوپی", "بنگال", "دہلی"],
+                answer: 0,
+                explanation: "عبدالغفور شہباز کا تعلق ریاست بیہار سے تھا۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "شہباز کی بیٹی کا کیا نام تھا جس کے نام خط لکھا گیا؟",
+                options: ["سغریٰ", "کبریٰ", "صغریٰ بیگم", "فاطمہ"],
+                answer: 0,
+                explanation: "عبدالغفور شہباز نے اپنی بیٹی 'سغریٰ' کے نام خط لکھا جو نصاب میں شامل ہے۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "مرزا غالب کا تخلص کیا تھا؟",
+                options: ["اسد اور غالب", "شیدا", "میر", "ذوق"],
+                answer: 0,
+                explanation: "مرزا غالب ابتدامیں 'اسد' اور بعد میں 'غالب' تخلص کرتے تھے۔"
+            },
+            {
+                chapterId: 'ch4',
+                question: "مرزا غالب کی وفات کہاں ہوئی؟",
+                options: ["دہلی", "آگرہ", "کولکاتا", "پٹنہ"],
+                answer: 0,
+                explanation: "مرزا غالب کی وفات 1869ء میں دہلی میں ہوئی۔"
+            },
+
+            // Chapter 5: شاعری و غزل
+            {
+                chapterId: 'ch5',
+                question: "نظم 'ہم نداء ہیں' کے شاعر کون ہیں؟",
+                options: ["نداء فاضلی", "زبیر رضوی", "احمد فراز", "پروین شاکر"],
+                answer: 0,
+                explanation: "نظم 'ہم نداء ہیں' اور 'بجلی کا کھمبا' نداء فاضلی کی مشہور نظمیں ہیں۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "مثنوی 'زہرِ عشق' کس کی تصنیف ہے؟",
+                options: ["شوق لکھنوی", "میر حسن", "دیا شنکر نسیم", "مصحفی"],
+                answer: 0,
+                explanation: "'زہرِ عشق' نواب مرزا شوق لکھنوی کی ایک مشہور اور غم انگیز مثنوی ہے۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "اردو غزل کا پہلا صاحبِ دیوان شاعر کسے مانا جاتا ہے؟",
+                options: ["قلی قطب شاہ", "ولی دکنی", "میر تقی میر", "غالب"],
+                answer: 0,
+                explanation: "سلطان قلی قطب شاہ کو اردو کا پہلا صاحبِ دیوان شاعر تسلیم کیا جاتا ہے۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "شوق لکھنوی کا اصل نام کیا تھا؟",
+                options: ["تصدق حسین خان", "رضا علی خان", "محمد علی", "احمد حسین"],
+                answer: 0,
+                explanation: "شوق لکھنوی کا اصل نام 'تصدق حسین خان' تھا۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "نظم 'مناظرِ فطرت' کس کی نظم ہے؟",
+                options: ["بچک پرشاد چکبست", "نداء فاضلی", "محروم", "اقبال"],
+                answer: 0,
+                explanation: "'مناظرِ فطرت' پنڈت برج نرائن چکبست کی خوبصورت نظم ہے۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "احمد فراز کا تعلق کس ملک سے تھا؟",
+                options: ["پاکستان", "ہندوستان", "بنگلہ دیش", "افغانستان"],
+                answer: 0,
+                explanation: "نامور غزل گو شاعر احمد فراز کا تعلق پاکستان سے تھا۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "پروبین شاکر کی بنیاد کس حیثیت سے ہے؟",
+                options: ["غزل گو شاعرہ", "افسانہ نگار", "ناقد", "مضمون نگار"],
+                answer: 0,
+                explanation: "پروین شاکر اردو کی ایک انتہائی مقبول اور ممتاز غزل گو شاعرہ ہیں۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "غزل کے پہلے شعر کو کیا کہتے ہیں؟",
+                options: ["مطلع", "مقطع", "بیت", "حسنِ مطلع"],
+                answer: 0,
+                explanation: "غزل کے پہلے شعر کو جس میں دونوں مصرعے ہم قافیہ ہوں، 'مطلع' کہتے ہیں۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "غزل کے آخری شعر کو جس میں شاعر اپنا تخلص استعمال کرتا ہے، کیا کہتے ہیں؟",
+                options: ["مقطع", "مطلع", "قافیہ", "ردیف"],
+                answer: 0,
+                explanation: "غزل کا آخری شعر جس میں شاعر اپنا تخلص لاتا ہے 'مقطع' کہلاتا ہے۔"
+            },
+            {
+                chapterId: 'ch5',
+                question: "نظم 'انڈیا گیٹ' کے شاعر کون ہیں؟",
+                options: ["جگَن ناتھ آزاد", "نداء فاضلی", "چکبست", "ظفر گورکھپوری"],
+                answer: 0,
+                explanation: "نظم 'انڈیا گیٹ' کے شاعر جگن ناتھ آزاد ہیں۔"
+            },
+
+            // Chapter 6: اردو قواعد (Grammar)
+            {
+                chapterId: 'ch6',
+                question: "کسی شخص، جگہ یا چیز کے نام کو کیا کہتے ہیں؟",
+                options: ["اسم", "فعل", "حرف", "صفت"],
+                answer: 0,
+                explanation: "کسی شخص، جگہ یا چیز کے نام کو 'اسم' (Noun) کہا جاتا ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "وہ کلمہ جس سے کسی کام کے کرنے یا ہونے کا علم ہو، کیا کہلاتا ہے؟",
+                options: ["فعل", "اسم", "حرف", "ضمیر"],
+                answer: 0,
+                explanation: "کام کا ظاہر ہونا یا کرنا 'فعل' (Verb) کہلاتا ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "اسمِ معرفہ (Khas Name) کی نشاندہی کریں۔",
+                options: ["پٹنہ", "شہر", "دریا", "کتاب"],
+                answer: 0,
+                explanation: "'پٹنہ' ایک خاص شہر کا نام ہے، اس لیے یہ اسمِ معرفہ ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "لفظ 'آفتاب' کا مترادف (Synonym) کیا ہوگا؟",
+                options: ["خورشید", "قمر", "ستارہ", "شب"],
+                answer: 0,
+                explanation: "آفتاب اور خورشید دونوں کا مطلب سورج ہوتا ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "لفظ 'علم' کی ضد (Opposite) کیا ہوگی؟",
+                options: ["جہل", "عالم", "معلوم", "جہالت"],
+                answer: 0,
+                explanation: "'علم' کی ضد (متضاد) 'جہل' ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "لفظ 'کتاب' کی جمع کیا ہوگی؟",
+                options: ["کتب", "کتابوں", "مکاتب", "کتابیں"],
+                answer: 0,
+                explanation: "'کتاب' کی جمع 'کُتُب' ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "محاورہ 'آب آب ہونا' کا کیا مطلب ہے؟",
+                options: ["شرمندہ ہونا", "پانی پینا", "غصہ ہونا", "خوش ہونا"],
+                answer: 0,
+                explanation: "'آب آب ہونا' کا مطلب انتہائی شرمندہ ہونا ہوتا ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "اسمِ نکرہ (عام نام) کی مثال کون سی ہے؟",
+                options: ["کتاب", "قرآن", "گنگا", "دہلی"],
+                answer: 0,
+                explanation: "'کتاب' ایک عام نام ہے، اس لیے یہ اسمِ نکرہ (Common Noun) ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "لفظ 'شب' کی ضد کیا ہے؟",
+                options: ["روز", "دن", "سحر", "صبح"],
+                answer: 0,
+                explanation: "'شب' (رات) کی متضاد 'روز' (دن) ہے۔"
+            },
+            {
+                chapterId: 'ch6',
+                question: "فاعل کسے کہتے ہیں؟",
+                options: ["کام کرنے والے کو", "جس پر کام واقع ہو", "کام کو", "جگہ کو"],
+                answer: 0,
+                explanation: "کام کرنے والے کو 'فاعل' (Subject) کہا جاتا ہے۔"
+            }
+        ];
+
+        /* ==========================================================================
+           APPLICATION STATE
+           ========================================================================== */
+        let state = {
+            currentChapter: 'all',
+            quizMode: 'practice', // 'practice' or 'exam'
+            questions: [],
+            currentIndex: 0,
+            userAnswers: [],
+            soundEnabled: true,
+            timerInterval: null,
+            secondsElapsed: 0,
+            studentName: ''
+        };
+
+        /* ==========================================================================
+           AUDIO SYNTHESIZER (Web Audio API)
+           ========================================================================== */
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(type) {
+            if (!state.soundEnabled) return;
+            try {
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                const now = audioCtx.currentTime;
+
+                if (type === 'click') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(400, now);
+                    gain.gain.setValueAtTime(0.1, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+                    osc.start(now);
+                    osc.stop(now + 0.05);
+                } else if (type === 'correct') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(523.25, now); // C5
+                    osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                } else if (type === 'wrong') {
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, now); // A3
+                    osc.frequency.setValueAtTime(174.61, now + 0.1); // F3
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                } else if (type === 'win') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(440, now);
+                    osc.frequency.setValueAtTime(554.37, now + 0.15);
+                    osc.frequency.setValueAtTime(659.25, now + 0.3);
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.6);
+                    osc.start(now);
+                    osc.stop(now + 0.6);
+                }
+            } catch (e) {
+                console.log("Audio play error", e);
+            }
+        }
+
+        function toggleSound() {
+            state.soundEnabled = !state.soundEnabled;
+            const icon = document.getElementById('soundIcon');
+            if (state.soundEnabled) {
+                icon.className = 'fa-solid fa-volume-high text-emerald-600';
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark text-slate-400';
+            }
+        }
+
+        /* ==========================================================================
+           UI CONTROLLERS & INITIALIZATION
+           ========================================================================== */
+        window.addEventListener('DOMContentLoaded', () => {
+            renderChaptersGrid();
+        });
+
+        function renderChaptersGrid() {
+            const grid = document.getElementById('chapterGrid');
+            grid.innerHTML = '';
+
+            quizChapters.forEach((ch, idx) => {
+                const card = document.createElement('div');
+                card.className = 'white-card white-card-hover rounded-2xl p-5 cursor-pointer flex flex-col justify-between border border-slate-200 transition space-y-4';
+                card.onclick = () => startQuiz(ch.id);
+
+                card.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-lg font-bold border border-emerald-100">
+                            <i class="fa-solid ${ch.icon}"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full font-sans-ui">باب ${idx + 1}</span>
+                    </div>
+
+                    <div class="space-y-1">
+                        <h4 class="text-lg font-extrabold text-slate-900">${ch.title}</h4>
+                        <p class="text-xs text-slate-500 font-medium leading-relaxed">${ch.subtitle}</p>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs font-bold">
+                        <span class="text-emerald-700 flex items-center gap-1 font-sans-ui">
+                            <i class="fa-solid fa-list-check"></i> ${ch.count} سوالات
+                        </span>
+                        <span class="text-slate-400 hover:text-emerald-600 flex items-center gap-1">
+                            مشق کریں <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                        </span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        /* ==========================================================================
+           QUIZ ENGINE & SCREEN SWITCHING
+           ========================================================================== */
+        function startQuiz(chapterId) {
+            playSound('click');
+            // Get selected mode
+            const modeRadios = document.getElementsByName('quizMode');
+            for (let r of modeRadios) {
+                if (r.checked) {
+                    state.quizMode = r.value;
+                    break;
+                }
+            }
+
+            state.currentChapter = chapterId;
+            if (chapterId === 'all') {
+                state.questions = [...questionsDatabase];
+            } else {
+                state.questions = questionsDatabase.filter(q => q.chapterId === chapterId);
+            }
+
+            // Shuffle questions for freshness
+            state.questions.sort(() => Math.random() - 0.5);
+
+            state.currentIndex = 0;
+            state.userAnswers = new Array(state.questions.length).fill(null);
+            state.secondsElapsed = 0;
+
+            // Header titles
+            const titleEl = document.getElementById('activeQuizTitle');
+            const subTitleEl = document.getElementById('activeQuizSubtitle');
+
+            if (chapterId === 'all') {
+                titleEl.textContent = 'تمام اسباق کا گرینڈ کوئز';
+                subTitleEl.textContent = 'درخشاں، روشنی و قواعد کے اہم سوالات';
+            } else {
+                const ch = quizChapters.find(c => c.id === chapterId);
+                titleEl.textContent = ch ? ch.title : 'اردو کوئز';
+                subTitleEl.textContent = ch ? ch.subtitle : '';
+            }
+
+            // Timer display
+            const timerBox = document.getElementById('timerContainer');
+            if (state.quizMode === 'exam') {
+                timerBox.classList.remove('hidden');
+                startTimer();
+            } else {
+                timerBox.classList.add('hidden');
+                clearInterval(state.timerInterval);
+            }
+
+            // Switch to quiz screen
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('certificateScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            renderQuestion();
+        }
+
+        function startTimer() {
+            clearInterval(state.timerInterval);
+            const timerEl = document.getElementById('quizTimer');
+            state.timerInterval = setInterval(() => {
+                state.secondsElapsed++;
+                const mins = Math.floor(state.secondsElapsed / 60).toString().padStart(2, '0');
+                const secs = (state.secondsElapsed % 60).toString().padStart(2, '0');
+                timerEl.textContent = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function renderQuestion() {
+            const q = state.questions[state.currentIndex];
+            const total = state.questions.length;
+
+            document.getElementById('currentQuestionNum').textContent = state.currentIndex + 1;
+            document.getElementById('totalQuestionsNum').textContent = total;
+            document.getElementById('questionText').textContent = q.question;
+
+            // Tag update
+            const chObj = quizChapters.find(c => c.id === q.chapterId);
+            document.getElementById('questionTag').textContent = chObj ? chObj.title : 'معروضی سوال';
+
+            // Progress bar
+            const pct = ((state.currentIndex + 1) / total) * 100;
+            document.getElementById('quizProgressBar').style.width = `${pct}%`;
+
+            // Options container
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+
+            const selectedAnswer = state.userAnswers[state.currentIndex];
+
+            q.options.forEach((optText, optIdx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn w-full p-4 rounded-2xl border border-slate-200 text-right font-bold text-slate-800 bg-white hover:bg-slate-50 flex items-center justify-between transition-all duration-200 shadow-sm';
+                
+                let iconHTML = `<div class="w-7 h-7 rounded-full bg-slate-100 border border-slate-300 flex items-center justify-center text-xs font-bold text-slate-600 font-sans-ui">${optIdx + 1}</div>`;
+
+                if (selectedAnswer !== null) {
+                    if (state.quizMode === 'practice') {
+                        if (optIdx === q.answer) {
+                            btn.className = 'option-btn w-full p-4 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-emerald-900 font-bold flex items-center justify-between shadow-sm';
+                            iconHTML = `<div class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></div>`;
+                        } else if (optIdx === selectedAnswer) {
+                            btn.className = 'option-btn w-full p-4 rounded-2xl border-2 border-rose-500 bg-rose-50 text-rose-900 font-bold flex items-center justify-between shadow-sm';
+                            iconHTML = `<div class="w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-xmark"></i></div>`;
+                        } else {
+                            btn.className = 'option-btn w-full p-4 rounded-2xl border border-slate-200 bg-slate-50 text-slate-400 font-semibold flex items-center justify-between opacity-60';
+                        }
+                    } else {
+                        // Exam mode selection highlight
+                        if (optIdx === selectedAnswer) {
+                            btn.className = 'option-btn w-full p-4 rounded-2xl border-2 border-emerald-600 bg-emerald-50 text-emerald-900 font-bold flex items-center justify-between shadow-sm';
+                            iconHTML = `<div class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></div>`;
+                        }
+                    }
+                }
+
+                btn.onclick = () => selectOption(optIdx);
+                btn.innerHTML = `
+                    <span class="text-sm sm:text-base leading-snug">${optText}</span>
+                    ${iconHTML}
+                `;
+                optionsContainer.appendChild(btn);
+            });
+
+            // Feedback Box logic (Practice Mode)
+            const feedbackBox = document.getElementById('feedbackBox');
+            if (state.quizMode === 'practice' && selectedAnswer !== null) {
+                feedbackBox.classList.remove('hidden');
+                const isCorrect = selectedAnswer === q.answer;
+
+                if (isCorrect) {
+                    feedbackBox.className = 'p-4 rounded-2xl border border-emerald-200 bg-emerald-50 text-emerald-900 text-sm font-medium transition-all duration-300 flex flex-col gap-1 shadow-sm';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center text-base';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+                    document.getElementById('feedbackText').innerHTML = `<span class="text-emerald-700">بالکل صحیح جواب!</span> <br><span class="text-xs font-semibold text-slate-600">${q.explanation}</span>`;
+                } else {
+                    feedbackBox.className = 'p-4 rounded-2xl border border-rose-200 bg-rose-50 text-rose-900 text-sm font-medium transition-all duration-300 flex flex-col gap-1 shadow-sm';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center text-base';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+                    document.getElementById('feedbackText').innerHTML = `<span class="text-rose-700">غلط جواب! صحیح جواب: <strong>${q.options[q.answer]}</strong></span> <br><span class="text-xs font-semibold text-slate-600">${q.explanation}</span>`;
+                }
+            } else {
+                feedbackBox.classList.add('hidden');
+            }
+
+            // Buttons state
+            document.getElementById('prevBtn').disabled = state.currentIndex === 0;
+
+            const nextBtnText = document.getElementById('nextBtnText');
+            const nextBtnIcon = document.getElementById('nextBtnIcon');
+
+            if (state.currentIndex === total - 1) {
+                nextBtnText.textContent = 'ٹیسٹ مکمل کریں';
+                nextBtnIcon.className = 'fa-solid fa-flag-checkered text-xs';
+            } else {
+                nextBtnText.textContent = 'اگلا سوال';
+                nextBtnIcon.className = 'fa-solid fa-chevron-left text-xs';
+            }
+        }
+
+        function selectOption(index) {
+            if (state.quizMode === 'practice' && state.userAnswers[state.currentIndex] !== null) {
+                return; // Prevent changing in practice mode once answered
+            }
+
+            state.userAnswers[state.currentIndex] = index;
+            const q = state.questions[state.currentIndex];
+
+            if (index === q.answer) {
+                playSound('correct');
+            } else {
+                playSound('wrong');
+            }
+
+            renderQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            playSound('click');
+            const newIndex = state.currentIndex + direction;
+
+            if (newIndex >= 0 && newIndex < state.questions.length) {
+                state.currentIndex = newIndex;
+                renderQuestion();
+            } else if (newIndex >= state.questions.length) {
+                finishQuiz();
+            }
+        }
+
+        function confirmExitQuiz() {
+            playSound('click');
+            clearInterval(state.timerInterval);
+            showHomeScreen();
+        }
+
+        function finishQuiz() {
+            clearInterval(state.timerInterval);
+            playSound('win');
+
+            // Calculate results
+            let correctCount = 0;
+            state.questions.forEach((q, idx) => {
+                if (state.userAnswers[idx] === q.answer) {
+                    correctCount++;
+                }
+            });
+
+            const total = state.questions.length;
+            const incorrectCount = total - correctCount;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            // Update result UI
+            document.getElementById('resultPercentage').textContent = `${percentage}%`;
+            document.getElementById('statCorrect').textContent = correctCount;
+            document.getElementById('statIncorrect').textContent = incorrectCount;
+            document.getElementById('statTotal').textContent = total;
+
+            // Time formatted
+            const mins = Math.floor(state.secondsElapsed / 60).toString().padStart(2, '0');
+            const secs = (state.secondsElapsed % 60).toString().padStart(2, '0');
+            document.getElementById('statTime').textContent = `${mins}:${secs}`;
+
+            // Titles based on score
+            const resTitle = document.getElementById('resultTitle');
+            const resSub = document.getElementById('resultSubtitle');
+
+            if (percentage >= 80) {
+                resTitle.textContent = "شاندار! ممتاز کامیابی!";
+                resSub.textContent = "آپ نے بیہار بورڈ میٹرک اردو امتحان میں شاندار نمبرا حاصل کیے ہیں۔";
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            } else if (percentage >= 50) {
+                resTitle.textContent = "بہت اچھا! اچھی کارکردگی!";
+                resSub.textContent = "آپ کی تیاری اچھی ہے، مزید مشق سے 100% حاصل کریں۔";
+            } else {
+                resTitle.textContent = "مزید محنت کی ضرورت ہے!";
+                resSub.textContent = "براہ کرم اسباق کا دوبارہ مطالعہ کریں اور دوبارہ کوئز دیں۔";
+            }
+
+            // Animate progress circle
+            setTimeout(() => {
+                const circle = document.getElementById('scoreProgressCircle');
+                const circumference = 2 * Math.PI * 40; // 251.2
+                const offset = circumference - (percentage / 100) * circumference;
+                circle.style.strokeDashoffset = offset;
+            }, 150);
+
+            showResultScreen();
+        }
+
+        /* ==========================================================================
+           SCREEN VISIBILITY CONTROLLERS
+           ========================================================================== */
+        function showHomeScreen() {
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('certificateScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+        }
+
+        function showResultScreen() {
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('certificateScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+        }
+
+        function restartCurrentQuiz() {
+            startQuiz(state.currentChapter);
+        }
+
+        /* ==========================================================================
+           CERTIFICATE GENERATION & MODAL ENGINE
+           ========================================================================== */
+        function promptForCertificate() {
+            playSound('click');
+            document.getElementById('nameModal').classList.remove('hidden');
+        }
+
+        function closeNameModal() {
+            document.getElementById('nameModal').classList.add('hidden');
+        }
+
+        function generateCertificateFromModal() {
+            const input = document.getElementById('studentNameInput');
+            const name = input.value.trim();
+
+            if (!name) {
+                input.focus();
+                input.classList.add('border-rose-500');
+                return;
+            }
+
+            input.classList.remove('border-rose-500');
+            state.studentName = name;
+            closeNameModal();
+            renderCertificate();
+        }
+
+        function renderCertificate() {
+            playSound('win');
+            let correctCount = 0;
+            state.questions.forEach((q, idx) => {
+                if (state.userAnswers[idx] === q.answer) correctCount++;
+            });
+            const total = state.questions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            document.getElementById('certStudentName').textContent = state.studentName;
+            document.getElementById('certScore').textContent = `${correctCount} / ${total}`;
+            document.getElementById('certPercentage').textContent = `${percentage}%`;
+
+            // Random Cert ID & Date
+            const today = new Date().toISOString().split('T')[0];
+            const randomID = 'URDU10-' + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('certDate').textContent = today;
+            document.getElementById('certID').textContent = randomID;
+
+            // Show screen
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('certificateScreen').classList.remove('hidden');
+
+            confetti({ particleCount: 150, spread: 90, origin: { y: 0.5 } });
+        }
+
+        function downloadCertificate() {
+            playSound('click');
+            const certNode = document.getElementById('certificateCard');
+            
+            html2canvas(certNode, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: "#ffffff"
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `Class_10_Urdu_Certificate_${state.studentName.replace(/\s+/g, '_')}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+
+        function printCertificate() {
+            playSound('click');
+            window.print();
+        }
+
+        function shareOnWhatsApp() {
+            playSound('click');
+            const text = encodeURIComponent("سلام! میں نے بیہار بورڈ دسویں جماعت (Class 10 Urdu) کا آن لائن ابجیکٹیو کوئز دیا اور سرٹیفکیٹ حاصل کیا۔ آپ بھی اپنی تیاری جانچیں:\n" + window.location.href);
+            window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        }
+document.getElementById('backBtn').addEventListener('click', () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html'; 
+            }
+        });
+
+    </script>
+</body>
+</html>

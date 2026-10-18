@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पीयूषम् (भाग 2) - Class 10 Sanskrit Objective Quiz & Certificate</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Devanagari & Modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Html2Canvas Library for Certificate Download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        // Ensure tailwind global object is safely initialized
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#ea580c',
+                            600: '#c2410c',
+                            700: '#9a3412',
+                            800: '#7c2d12',
+                            900: '#431407'
+                        },
+                        whatsapp: {
+                            500: '#25D366',
+                            600: '#1da851'
+                        }
+                    },
+                    fontFamily: {
+                        devanagari: ['Noto Sans Devanagari', 'Outfit', 'sans-serif'],
+                        signature: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', 'Outfit', sans-serif;
+            background-color: #fcfbf9;
+            min-height: 100vh;
+            color: #1c1917;
+        }
+
+        .white-card {
+            background: #ffffff;
+            border: 1px solid #e7e5e4;
+            box-shadow: 0 4px 20px -2px rgba(28, 25, 23, 0.05);
+        }
+
+        .white-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .white-card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px -5px rgba(234, 88, 12, 0.15);
+            border-color: #fb923c;
+        }
+
+        .option-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateX(4px);
+        }
+
+        /* Animated Progress Ring */
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f5f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d6d3d1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a29e;
+        }
+
+        /* Print styles for certificate */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificatePrintContainer, #certificatePrintContainer * {
+                visibility: visible;
+            }
+            #certificatePrintContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+
+/* Stylish Back Button - Fixed to Top Left & Hidden by Default */
+        .btn-back {
+            position: fixed;   
+            top: 20px;         
+            left: 20px;        
+            z-index: 9999;     
+            
+            /* Hidden State Controls */
+            opacity: 0.1;               /* Button 90% transparent rahega */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth look-and-hide effect */
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* SVG Arrow styling */
+        .btn-back svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+
+        /* Trigger: Cursor lane par ya Mobile par Finger touch karne par */
+        .btn-back:hover, 
+        .btn-back:focus,
+        .btn-back:active {
+            opacity: 1;                 /* Poora visible ho jayega */
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Arrow animation on hover */
+        .btn-back:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* Click effect */
+        .btn-back:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-amber-50/20 text-stone-800 antialiased selection:bg-orange-500 selection:text-white">
+
+ <!-- Hidden Back Button -->
+    <button class="btn-back" id="backBtn">
+        <svg viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Go Back</span>
+    </button>
+
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+            <!-- App Logo & Title -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showHomeScreen()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-orange-500 flex items-center justify-center shadow-md shadow-orange-500/20 text-white font-bold">
+                    <i class="fa-solid fa-book-open text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-stone-900 flex items-center gap-2">
+                        पीयूषम् (भाग 2) - संस्कृतम्
+                        <span class="text-[10px] bg-orange-100 text-orange-800 font-bold px-2 py-0.5 rounded-full border border-orange-200">Class 10</span>
+                    </h1>
+                    <p class="text-xs text-stone-500 font-medium hidden sm:block">संस्कृत (Sanskrit) वस्तुनिष्ठ प्रश्न अभ्यास एवं डिजिटल सर्टिफिकेट</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons: WhatsApp Share & Sound Toggle -->
+            <div class="flex items-center space-x-2">
+                <!-- WhatsApp Share Button -->
+                <button onclick="shareOnWhatsApp()" class="px-3 py-2 rounded-xl bg-whatsapp-500 hover:bg-whatsapp-600 text-white font-bold text-xs flex items-center gap-2 shadow-md shadow-emerald-500/20 transition active:scale-95" title="दोस्तों को शेयर करें">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span class="hidden sm:inline">शेयर करें</span>
+                </button>
+
+                <!-- Sound Toggle -->
+                <button id="soundToggleBtn" onclick="toggleSound()" class="p-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-600 transition" title="ध्वनि चालू/बंद करें">
+                    <i class="fa-solid fa-volume-high text-base text-orange-600" id="soundIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-6 relative z-10 flex flex-col justify-center">
+
+        <!-- SCREEN 1: HOME / CHAPTER SELECTION -->
+        <section id="homeScreen" class="space-y-6">
+            <!-- Author Banner Header Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border border-stone-200 shadow-xl bg-gradient-to-b from-white to-orange-50/40">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-orange-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-12 -top-12 w-48 h-48 bg-amber-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-orange-900 text-xs sm:text-sm font-semibold mb-3">
+                    <i class="fa-solid fa-award text-orange-600"></i> बिहार बोर्ड संस्कृत (Sanskrit) स्पेशल
+                </div>
+
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mb-2">
+                    पीयूषम् भाग-2 (वस्तुनिष्ठ प्रश्नोत्तरी)
+                </h2>
+                
+                <!-- Made By Badge -->
+                <div class="inline-block mt-1 mb-4">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold text-xs sm:text-sm tracking-wide shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Made by Mr. Md Imamul Kalam
+                    </span>
+                </div>
+
+                <p class="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                    मैट्रिक परीक्षा की पूर्ण तैयारी करें। सभी महत्वपूर्ण अध्यायों के वस्तुनिष्ठ प्रश्नों का सही उत्तर दें, तुरंत स्कोर जांचें और **Mr. Md Imamul Kalam** द्वारा हस्ताक्षरित डिजिटल सर्टिफिकेट प्राप्त करें।
+                </p>
+
+                <!-- Mode Selection Toggle -->
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-stone-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-stone-700 hover:border-orange-400 transition">
+                        <input type="radio" name="quizMode" value="practice" checked class="w-4 h-4 text-orange-600 focus:ring-orange-500">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> प्रैक्टिस मोड (तुरंत उत्तर)
+                    </label>
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-stone-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-stone-700 hover:border-orange-400 transition">
+                        <input type="radio" name="quizMode" value="exam" class="w-4 h-4 text-orange-600 focus:ring-orange-500">
+                        <i class="fa-solid fa-stopwatch text-rose-500"></i> परीक्षा मोड (टाइमर)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Full Quiz Master CTA Banner -->
+            <div class="white-card white-card-hover rounded-2xl p-6 border-l-8 border-l-orange-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-center sm:text-left">
+                    <span class="text-xs font-bold tracking-wider text-orange-700 uppercase bg-orange-50 px-2.5 py-1 rounded-md border border-orange-100">सम्पूर्ण टेस्ट</span>
+                    <h3 class="text-xl font-extrabold text-stone-900">सभी अध्यायों का महा-टेस्ट (All 7 Chapters)</h3>
+                    <p class="text-xs text-stone-500 font-medium">कुल 80+ अति-महत्वपूर्ण वस्तुनिष्ठ प्रश्न | तुरंत प्रमाणपत्र प्राप्त करें</p>
+                </div>
+                <button onclick="startQuiz('all')" class="w-full sm:w-auto px-7 py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+                    <span>पूरा टेस्ट शुरू करें</span>
+                    <i class="fa-solid fa-play text-sm"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3 my-2">
+                <div class="h-px bg-stone-200 flex-grow"></div>
+                <span class="text-xs font-bold uppercase tracking-wider text-stone-400">अध्याय अनुसार अभ्यास करें</span>
+                <div class="h-px bg-stone-200 flex-grow"></div>
+            </div>
+
+            <!-- Chapter Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="chapterGrid">
+                <!-- Dynamically Inserted Chapter Cards -->
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ACTIVE QUIZ -->
+        <section id="quizScreen" class="hidden space-y-6">
+            <!-- Quiz Header Bar -->
+            <div class="white-card rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <button onclick="confirmExitQuiz()" class="p-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-600 transition" title="मुख्य पृष्ठ पर जाएं">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div>
+                        <h2 id="activeQuizTitle" class="text-base sm:text-lg font-extrabold text-stone-900">Chapter 1</h2>
+                        <span id="activeQuizSubtitle" class="text-xs text-stone-500 font-medium">वस्तुनिष्ठ प्रश्न अभ्यास</span>
+                    </div>
+                </div>
+
+                <!-- Timer & Counter -->
+                <div class="flex items-center gap-3">
+                    <div id="timerContainer" class="hidden flex items-center gap-2 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 text-amber-900 font-mono font-bold text-sm">
+                        <i class="fa-regular fa-clock text-amber-600"></i>
+                        <span id="quizTimer">00:00</span>
+                    </div>
+
+                    <div class="bg-stone-100 px-3.5 py-1.5 rounded-xl border border-stone-200 text-xs font-semibold text-stone-700">
+                        प्रश्न: <span id="currentQuestionNum" class="text-orange-600 text-sm font-extrabold">1</span> / <span id="totalQuestionsNum" class="text-sm font-bold">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Top Progress Bar -->
+            <div class="w-full bg-stone-200 h-2.5 rounded-full overflow-hidden p-0.5 border border-stone-200">
+                <div id="quizProgressBar" class="bg-gradient-to-r from-orange-500 to-amber-600 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl border border-stone-200 relative">
+                <!-- Question Text -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between text-xs text-stone-500">
+                        <span id="questionTag" class="px-3 py-1 rounded-full bg-orange-50 text-orange-800 border border-orange-200 font-bold">Chapter Question</span>
+                    </div>
+                    <h3 id="questionText" class="text-lg sm:text-2xl font-bold text-stone-900 leading-snug">
+                        <!-- Question content -->
+                    </h3>
+                </div>
+
+                <!-- Options List -->
+                <div id="optionsContainer" class="space-y-3">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Feedback Message Box (Practice Mode) -->
+                <div id="feedbackBox" class="hidden p-4 rounded-2xl border text-sm font-medium transition-all duration-300 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div id="feedbackIcon" class="w-8 h-8 rounded-full flex items-center justify-center text-lg"></div>
+                        <span id="feedbackText" class="text-sm sm:text-base font-bold"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Navigation Footer -->
+            <div class="flex items-center justify-between gap-3">
+                <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-2xl bg-white hover:bg-stone-100 border border-stone-200 font-semibold text-stone-700 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-chevron-left text-xs"></i> पिछला
+                </button>
+
+                <button id="nextBtn" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-lg shadow-orange-500/25 transition flex items-center gap-2">
+                    <span>अगला</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <button id="submitQuizBtn" onclick="submitQuiz()" class="hidden px-7 py-2.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/25 transition flex items-center gap-2">
+                    <span>सबमिट करें</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & SCORE CARD -->
+        <section id="resultScreen" class="hidden space-y-6">
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center space-y-6 border border-stone-200 shadow-xl relative overflow-hidden bg-gradient-to-b from-white to-stone-50">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-xs font-bold text-orange-900">
+                    <i class="fa-solid fa-trophy text-amber-500"></i> क्विज़ परिणाम रिपोर्ट कार्ड
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">आपका कुल परिणाम</h2>
+
+                <!-- Percentage Score Badge & Radial Circle -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 py-2">
+                    <!-- SVG Progress Circle -->
+                    <div class="relative w-40 h-40 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <!-- Background Circle -->
+                            <circle class="text-stone-100" stroke-width="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                            <!-- Animated Circle -->
+                            <circle id="resultProgressRing" class="progress-ring__circle text-orange-500" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="percentageText" class="text-3xl font-black text-stone-900">0%</span>
+                            <span class="text-xs text-stone-500 uppercase font-bold">प्राप्तांक</span>
+                        </div>
+                    </div>
+
+                    <!-- Performance Grade & Score Breakdown -->
+                    <div class="text-center sm:text-left space-y-2">
+                        <div id="performanceBadge" class="inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                            उत्कृष्ट प्रदर्शन!
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-900">
+                            प्राप्त अंक: <span id="correctAnswersCount" class="text-emerald-600 font-extrabold text-2xl">0</span> / <span id="totalResultQuestions" class="text-stone-600">0</span>
+                        </h3>
+                        <p id="resultFeedbackNote" class="text-xs sm:text-sm text-stone-600 max-w-xs leading-relaxed">
+                            आपने सभी प्रश्नों का बहुत अच्छे से उत्तर दिया है।
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
+                            <span class="px-3 py-1 bg-stone-100 rounded-xl text-xs text-stone-600 border border-stone-200 font-semibold">
+                                <i class="fa-solid fa-clock text-amber-500 mr-1"></i> समय: <span id="resultTimeTaken" class="font-bold text-stone-900">00:00</span>
+                            </span>
+                            <span class="px-3 py-1 bg-stone-100 rounded-xl text-xs text-stone-600 border border-stone-200 font-semibold">
+                                <i class="fa-solid fa-bullseye text-orange-500 mr-1"></i> सटीकता: <span id="accuracyText" class="font-bold text-stone-900">0%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards Row -->
+                <div class="grid grid-cols-3 gap-3 max-w-md mx-auto">
+                    <div class="p-3 bg-emerald-50/60 rounded-2xl border border-emerald-100 text-center">
+                        <span class="block text-xs text-emerald-700 font-semibold mb-1">सही</span>
+                        <span id="statCorrect" class="text-lg font-black text-emerald-700">0</span>
+                    </div>
+                    <div class="p-3 bg-rose-50/60 rounded-2xl border border-rose-100 text-center">
+                        <span class="block text-xs text-rose-700 font-semibold mb-1">गलत</span>
+                        <span id="statIncorrect" class="text-lg font-black text-rose-700">0</span>
+                    </div>
+                    <div class="p-3 bg-amber-50/60 rounded-2xl border border-amber-100 text-center">
+                        <span class="block text-xs text-amber-700 font-semibold mb-1">छोड़े</span>
+                        <span id="statSkipped" class="text-lg font-black text-amber-700">0</span>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATE ACTION BOX -->
+                <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200/80 shadow-md max-w-lg mx-auto text-center space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-amber-900 font-extrabold text-base">
+                        <i class="fa-solid fa-certificate text-amber-500 text-xl"></i>
+                        <span>अपना डिजिटल प्रमाण पत्र (Certificate) डाउनलोड करें</span>
+                    </div>
+                    <p class="text-xs text-stone-600">इस टेस्ट को पूरा करने पर आपको **Mr. Md Imamul Kalam** के डिजिटल हस्ताक्षर के साथ सर्टिफिकेट मिलता है।</p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-2 max-w-md mx-auto">
+                        <input type="text" id="studentNameInput" placeholder="अपना नाम दर्ज करें (उदा० राहुल कुमार)" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 text-sm font-medium focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                        <button onclick="generateCertificate()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm whitespace-nowrap shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-award"></i> प्रमाण पत्र देखें
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <button onclick="retakeCurrentQuiz()" class="px-6 py-2.5 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md shadow-orange-500/20 transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right text-xs"></i> पुनः प्रयास करें
+                    </button>
+                    <button onclick="showHomeScreen()" class="px-6 py-2.5 rounded-2xl bg-white hover:bg-stone-100 border border-stone-200 font-bold text-stone-700 transition flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-house text-xs"></i> मुख्य पृष्ठ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Answer Review Key -->
+            <div class="white-card rounded-3xl p-6 space-y-4 border border-stone-200 shadow-lg">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-orange-600"></i> उत्तर समीक्षा (Answer Key)
+                    </h3>
+                    <span class="text-xs text-stone-500">सभी प्रश्नों के सही उत्तर</span>
+                </div>
+
+                <div id="reviewContainer" class="space-y-3 max-h-96 overflow-y-auto pr-2">
+                    <!-- Review Questions injected dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden bg-stone-900/60 backdrop-blur-sm flex items-center justify-center p-3 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border border-stone-200 p-4 sm:p-6 space-y-4 my-auto relative">
+            <!-- Modal Close Header -->
+            <div class="flex items-center justify-between border-b border-stone-200 pb-3">
+                <h3 class="text-lg font-bold text-stone-900 flex items-center gap-2">
+                    <i class="fa-solid fa-award text-amber-500"></i> आपका प्रमाणपत्र (Certificate)
+                </h3>
+                <button onclick="closeCertificateModal()" class="p-2 rounded-xl text-stone-400 hover:text-stone-700 hover:bg-stone-100 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- PRINTABLE CERTIFICATE CANVAS CONTAINER -->
+            <div id="certificatePrintContainer" class="p-2 bg-stone-100 rounded-2xl">
+                <div id="certificateCard" class="bg-white rounded-2xl p-6 sm:p-10 border-8 border-amber-500/30 relative overflow-hidden shadow-inner font-devanagari text-stone-800" style="background-image: radial-gradient(#f5f5f4 1px, transparent 1px); background-size: 16px 16px;">
+                    
+                    <!-- Decorative Ornate Corners -->
+                    <div class="absolute top-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-om"></i></div>
+                    <div class="absolute top-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-om"></i></div>
+                    <div class="absolute bottom-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-om"></i></div>
+                    <div class="absolute bottom-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-om"></i></div>
+
+                    <div class="text-center space-y-4 relative z-10">
+                        <!-- Top Header Logo & Badge -->
+                        <div class="flex items-center justify-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow">
+                                <i class="fa-solid fa-book-open text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-amber-800">बिहार बोर्ड क्लास 10th ई-लर्निंग</h4>
+                                <p class="text-[10px] text-stone-500">संस्कृत (Sanskrit) - पीयूषम् भाग-2</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Title -->
+                        <div>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase text-stone-900 tracking-wide font-serif text-amber-900">
+                                प्रमाणपत्र / CERTIFICATE
+                            </h2>
+                            <p class="text-xs sm:text-sm font-semibold text-stone-500 tracking-widest uppercase mt-1">OF ACHIEVEMENT & COMPLETION</p>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-stone-600 font-medium">प्रमाणित किया जाता है कि विद्यार्थी</p>
+
+                        <!-- Student Name -->
+                        <div class="py-1">
+                            <h3 id="certStudentName" class="text-2xl sm:text-4xl font-extrabold text-orange-700 underline decoration-amber-400 decoration-4 underline-offset-8">
+                                राहुल कुमार
+                            </h3>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-stone-700 leading-relaxed max-w-xl mx-auto font-medium">
+                            ने <strong>पीयूषम् भाग-2 (Class 10 Sanskrit Objective Quiz App)</strong> में सम्‍मिलित होकर उत्कृष्ट प्रदर्शन किया एवं सफलता प्राप्त की।
+                        </p>
+
+                        <!-- Score Details Pill -->
+                        <div class="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-2.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900 my-2 shadow-sm">
+                            <span>प्राप्तांक: <strong id="certScoreText" class="text-amber-700 text-sm">85%</strong></span>
+                            <span>•</span>
+                            <span>दिनांक: <strong id="certDateText" class="text-stone-800">24/08/2026</strong></span>
+                            <span>•</span>
+                            <span>स्थिति: <strong class="text-emerald-600">उत्तीर्ण (Passed)</strong></span>
+                        </div>
+
+                        <!-- Signatures Row -->
+                        <div class="pt-6 grid grid-cols-2 items-end gap-4 border-t border-stone-200 mt-4">
+                            <!-- Verification Seal Badge -->
+                            <div class="text-center sm:text-left space-y-1">
+                                <div class="w-14 h-14 rounded-full bg-amber-50 border-2 border-amber-500 flex items-center justify-center text-amber-600 mx-auto sm:mx-0 shadow-sm">
+                                    <i class="fa-solid fa-ribbon text-2xl"></i>
+                                </div>
+                                <p class="text-[10px] font-bold text-stone-500 uppercase">आधिकारिक डिजिटल मोहर</p>
+                            </div>
+
+                            <!-- Instructor Digital Signature -->
+                            <div class="text-center sm:text-right space-y-1">
+                                <div class="font-signature text-2xl sm:text-3xl text-stone-900 font-bold tracking-wide select-none">
+                                    Md Imamul Kalam
+                                </div>
+                                <div class="h-0.5 bg-stone-400 w-32 ml-auto"></div>
+                                <p class="text-xs font-extrabold text-stone-900">Mr. Md Imamul Kalam</p>
+                                <p class="text-[10px] text-stone-500 font-semibold">संस्थापक एवं क्विज़ निर्देशक</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Bottom Buttons -->
+            <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
+                <button onclick="downloadCertificateImage()" class="px-5 py-2.5 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs shadow-md shadow-orange-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> डाउनलोड करें (Image)
+                </button>
+                <button onclick="window.print()" class="px-5 py-2.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-md shadow-amber-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> प्रिंट करें
+                </button>
+                <button onclick="closeCertificateModal()" class="px-4 py-2.5 rounded-2xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs transition">
+                    बंद करें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM EXIT CONFIRMATION MODAL -->
+    <div id="exitModal" class="fixed inset-0 z-50 hidden bg-stone-900/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-4 shadow-2xl text-center border border-stone-200">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto text-xl font-bold">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="text-lg font-bold text-stone-900">क्या आप बाहर निकलना चाहते हैं?</h3>
+            <p class="text-xs text-stone-500">यदि आप अभी बाहर जाते हैं तो आपकी प्रगति मिट सकती है।</p>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <button onclick="executeExitQuiz()" class="px-4 py-2 rounded-xl bg-rose-600 text-white font-bold text-xs hover:bg-rose-700 transition">
+                    हाँ, बाहर निकलें
+                </button>
+                <button onclick="closeExitModal()" class="px-4 py-2 rounded-xl bg-stone-100 text-stone-700 font-bold text-xs hover:bg-stone-200 transition">
+                    नहीं, जारी रखें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-200 bg-white py-4 text-center text-xs text-stone-500 relative z-10 mt-auto">
+        <p>पीयूषम् (भाग 2) संस्कृतम् - Class 10 Objective Practice App</p>
+        <p class="mt-1 font-bold text-amber-600">Made by Mr. Md Imamul Kalam</p>
+    </footer>
+
+    <script>
+        // Authentic & 100% Accurate Questions Data for Class 10 Bihar Board Sanskrit (Piyusham Part-2)
+        const quizData = [
+            // Chapter 1: मङ्गलम् (Mangalam)
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "'मङ्गलम्' पाठ कहाँ से संकलित है?", options: ["पुराण से", "उपनिषद् से", "रामायण से", "महाभारत से"], correct: 1 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "'मङ्गलम्' पाठ में कितने मन्त्र (पद्य) संकलित हैं?", options: ["चत्वारः (4)", "पञ्च (5)", "सप्त (7)", "दश (10)"], correct: 1 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "उपनिषद् के रचनाकार कौन हैं?", options: ["कालिदास", "महर्षि व्यास", "बाणभट्ट", "माघ"], correct: 1 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "सत्य का मुख किस पात्र से ढका हुआ है?", options: ["हिरण्मयेन पात्रेण (स्वर्ण पात्र से)", "मृन्मयेन पात्रेण (मिट्टी के पात्र से)", "ताम्रमयेन पात्रेण", "रजत पात्र से"], correct: 0 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "'सत्यमेव जयते' किस उपनिषद् का मूल मन्त्र है?", options: ["इशावास्योपनिषद्", "कठोपनिषद्", "मुण्डकोपनिषद्", "श्वेताश्वतरोपनिषद्"], correct: 2 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "अणु से भी छोटा और महान् से भी महान् क्या है?", options: ["आत्मा", "मन", "बुद्धि", "शरीर"], correct: 0 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "नदियाँ अपने नाम और रूप को छोड़कर कहाँ विलीन हो जाती हैं?", options: ["सरोवर में", "नदी में", "समुद्र में", "तालाब में"], correct: 2 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "किसकी विजय होती है?", options: ["सत्य की", "असत्य की", "क्रोध की", "अज्ञान की"], correct: 0 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "किसकी विजय नहीं होती है?", options: ["सत्य की", "असत्य की", "धर्म की", "ज्ञान की"], correct: 1 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "अणोरणीयान् महतो महीयान्... यह पद किस उपनिषद् से लिया गया है?", options: ["कठोपनिषद्", "मुण्डकोपनिषद्", "ईशावास्योपनिषद्", "केनोपनिषद्"], correct: 0 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "विद्वान् अपने नाम और रूप को मुक्त होकर किसको प्राप्त करते हैं?", options: ["संसार को", "परमपुरुष (दिव्य ईश्वर) को", "अज्ञान को", "स्वर्ग को"], correct: 1 },
+            { chapter: 1, chapterTitle: "पाठ – 1 मङ्गलम् (Mangalam)", question: "देवलोक का मार्ग किससे प्रशस्त (विस्तृत) होता है?", options: ["सत्य से", "असत्य से", "धन से", "आलस्य से"], correct: 0 },
+
+            // Chapter 2: पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "'पाटलिपुत्रवैभवम्' पाठ में किस नगर का वर्णन है?", options: ["गया", "पाटलिपुत्र (पटना)", "नवादा", "वैशाली"], correct: 1 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "बुद्ध काल में पाटलिपुत्र का क्या नाम था?", options: ["पाटलिनगरम्", "पाटलिग्रामः", "पुष्पपुरम्", "कुसुमपुरम्"], correct: 1 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "एशिया महादेश का सबसे लंबा सेतु (पुल) कौन-सा है?", options: ["विक्रमशिला सेतु", "गाँधी सेतु", "राजेन्द्र सेतु", "नेहरू सेतु"], correct: 1 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "पाटलिपुत्र किस नदी के तट पर अवस्थित (स्थित) है?", options: ["पुनपुन", "गङ्गा", "सोन", "कोसी"], correct: 1 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "पटना का इतिहास कितना वर्ष पुराना माना जाता है?", options: ["2500 वर्ष", "2000 वर्ष", "1500 वर्ष", "1000 वर्ष"], correct: 0 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "'कुट्टनीमतारख्यम्' काव्य के रचनाकार कौन हैं?", options: ["दामोदरगुप्त", "राजशेखर", "बाणभट्ट", "विशाखदत्त"], correct: 0 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "'काव्यमीमांसा' नामक ग्रन्थ के रचनाकार कौन हैं?", options: ["दामोदरगुप्त", "राजशेखर", "चन्द्रगुप्त", "मेगास्थनीज"], correct: 1 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "कौमुदी महोत्सव किस ऋतु में मनाया जाता था?", options: ["वसन्त ऋतु", "वर्षा ऋतु", "शरद् ऋतु", "ग्रीष्म ऋतु"], correct: 2 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "कौमुदी महोत्सव किस वंश के शासनकाल में अत्यंत प्रचलित था?", options: ["मौर्य वंश", "गुप्त वंश", "मुगल वंश", "शुंग वंश"], correct: 1 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "यूनान का राजदूत कौन था जो चन्द्रगुप्त मौर्य के समय पटना आया था?", options: ["ह्वेनसांग", "फाह्यान", "मेगास्थनीज", "इत्सिंग"], correct: 2 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "पटना के उत्तर दिशा में कौन-सी नदी बहती है?", options: ["गङ्गा", "पुनपुन", "सोन", "गण्डक"], correct: 0 },
+            { chapter: 2, chapterTitle: "पाठ – 2 पाटलिपुत्रवैभवम् (Patliputra Vaibhavam)", question: "सिखों के 10वें गुरु गुरु गोविंद सिंह जी का जन्म स्थान कहाँ है?", options: ["पटना (पाटलिपुत्र)", "अमृतसर", "आनंदपुर", "दिल्ली"], correct: 0 },
+
+            // Chapter 3: अलसकथा (Alas Katha)
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "'अलसकथा' पाठ के रचयिता कौन हैं?", options: ["विद्यापति", "महात्मा विदुर", "कालिदास", "बाणभट्ट"], correct: 0 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "'अलसकथा' कथा ग्रन्थ किससे संकलित (उद्धृत) है?", options: ["पुरुषपरीक्षा", "हितोपदेश", "पंचतंत्र", "जातक कथा"], correct: 0 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "मिथिला का मन्त्री कौन था?", options: ["कर्मवीर", "बीरेश्वर (वीरेश्वर)", "धर्मवीर", "विद्यापति"], correct: 1 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "आलसियों की परीक्षा लेने के लिए कहाँ आग लगाई गई?", options: ["राजप्रसाद में", "आलसशाला में", "भोजनशाला में", "बाजार में"], correct: 1 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "आलसशाला में आग लगने पर कौन भाग गए?", options: ["वास्तविक आलसी", "धूर्त लोग (बनावटी आलसी)", "कर्मचारी", "मन्त्री"], correct: 1 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "आलसशाला में आग लगने पर भी कितने आलसी नहीं भागे?", options: ["द्वौ (2)", "त्रयः (3)", "चत्वारः (4)", "पञ्च (5)"], correct: 2 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "प्रथम आलसी ने कपड़े से मुँह ढँककर क्या कहा?", options: ["अहो कथमयं कोलाहलः? (यह कैसा शोर है?)", "आग लगी है", "भागो", "पानी डालो"], correct: 0 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "द्वितीय आलसी ने क्या कहा?", options: ["शोर मत करो", "तर्क्यते यदस्मिन् गृहे अग्निर्दग्धोऽस्ति (लगता है इस घर में आग लगी है)", "पानी लाओ", "चुप रहो"], correct: 1 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "तृतीय आलसी ने क्या कहा?", options: ["अरे वाचाल!", "कोऽपि तथा धार्मिको नास्ति... (कोई ऐसा धार्मिक नहीं है जो भीगा कंबल ढँक दे)", "भागो", "यह कैसा कोलाहल है?"], correct: 1 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "चतुर्थ आलसी ने सबको क्या सलाह दी?", options: ["अये वाचाल! कति वचनानि वक्तुं शक्नुथ? तुष्णीं कथं न तिष्ठथ? (अरे वाचाल! चुप क्यों नहीं रहते?)", "आग बुझाओ", "भाग चलो", "सो जाओ"], correct: 0 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "चारों आलसियों को आग से बाहर किसने निकाला?", options: ["राजा ने", "नियुक्ता पुरुषों ने (केश पकड़कर)", "धूर्तों ने", "सिपाही ने"], correct: 1 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "स्त्रीणां गतिः... स्त्रियों का एकमात्र रक्षक (गति) कौन है?", options: ["पतिः (पति)", "पुत्रः", "पिता", "माता"], correct: 0 },
+            { chapter: 3, chapterTitle: "पाठ – 3 अलसकथा (Alas Katha)", question: "बालानां गतिः... बच्चों की गति कौन होती है?", options: ["जननी (माता)", "पिता", "भाई", "बहन"], correct: 0 },
+
+            // Chapter 7: नीतिश्लोकाः (Neeti Shlokah)
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "'नीतिश्लोकाः' पाठ किस प्रसिद्ध ग्रन्थ से संकलित है?", options: ["विदुरनीति से", "चाणक्यनीति से", "भर्तृहरिनीति से", "शुक्रनीति से"], correct: 0 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "'विदुरनीति' किस ग्रन्थ का एक अंश विशेष है?", options: ["रामायण", "महाभारत", "उपनिषद्", "श्रीमद्भगवद्गीता"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "धृतराष्ट्र के प्रश्नों का उत्तर कौन दे रहे थे?", options: ["मन्त्री विदुर", "भीष्म", "द्रोणाचार्य", "कृष्ण"], correct: 0 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "विदुरनीति के अनुसार 'पण्डित' किसे कहा गया है?", options: ["जो विद्वान् हो", "जिसके कर्म को शीत, उष्ण, भय, अनुराग या समृद्धि बाधित न करे", "जो पूजा करे", "जो बहुत पढ़े"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "अनाहूतः प्रविशति अपृष्टो बहु भाषते... यह किस प्रकार के मनुष्य के लक्षण हैं?", options: ["पण्डित", "मूर्ख (अधम)", "साधु", "ज्ञानी"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "धर्म की रक्षा किससे होती है?", options: ["सत्य से", "अभ्यास से", "उबटन से", "सदाचार से"], correct: 0 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "विद्या की रक्षा किससे होती है?", options: ["सत्य से", "योग/अभ्यास (मृजया) से", "सदाचार से", "रूप से"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "रूप (सौन्दर्य) की रक्षा किससे होती है?", options: ["सत्य से", "मृजया (सफाई/उबटन) से", "विद्या से", "कुल से"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "खानदान (कुल) की रक्षा किससे होती है?", options: ["धन से", "वृत्त (सदाचार/आचरण) से", "विद्या से", "सत्य से"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "उन्नति चाहने वाले पुरुष को कितने दोषों को त्याग देना चाहिए?", options: ["पञ्च (5)", "षट् (6)", "सप्त (7)", "अष्ट (8)"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "काम, क्रोध और लोभ किसके तीन द्वार माने गए हैं?", options: ["स्वर्ग के", "नरक के", "मोक्ष के", "ज्ञान के"], correct: 1 },
+            { chapter: 7, chapterTitle: "पाठ – 7 नीतिश्लोकाः (Neeti Shlokah)", question: "परम तृप्ति देने वाली क्या है?", options: ["विद्या", "अहिंसा", "क्षमा", "धर्म"], correct: 0 },
+
+            // Chapter 10: मन्दाकिनीवर्णनम् (Mandakini Varnanam)
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "'मन्दाकिनीवर्णनम्' पाठ के रचनाकार कौन हैं?", options: ["महर्षि वाल्मीकि", "महर्षि व्यास", "कालिदास", "माघ"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "'मन्दाकिनीवर्णनम्' पाठ रामायण के किस काण्ड से संकलित है?", options: ["बालकाण्ड", "अयोध्याकाण्ड", "अरण्यकाण्ड", "किष्किन्धाकाण्ड"], correct: 1 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "श्री राम मन्दाकिनी नदी की शोभा किसे दिखा रहे हैं?", options: ["लक्ष्मण को", "सीता को (सीते)", "भरत को", "सुग्रीव को"], correct: 1 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "मन्दाकिनी नदी किस पर्वत के निकट बहती है?", options: ["चित्रकूट पर्वत", "हिमालय पर्वत", "विन्ध्याचल पर्वत", "मन्दार पर्वत"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "मन्दाकिनी नदी के जल में कौन स्नान कर रहे हैं?", options: ["मुनयः (ऋषिगण)", "देवता", "दानव", "पक्षी"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "'विशालाक्षी' (बड़ी आँखों वाली) कहकर राम किसे सम्बोधित करते हैं?", options: ["कौशल्या", "सीता", "अनुसूया", "उर्मिला"], correct: 1 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "मन्दाकिनी के जल को किसने गंदा (कलुषित) किया है?", options: ["मृगयूथैः (हिरणों के समूहों ने जल पीकर)", "हाथियों ने", "पक्षियों ने", "नाविकों ने"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "ऊर्ध्वबाहवः (अपनी भुजाओं को ऊपर उठाकर) सूर्य की उपासना कौन कर रहे हैं?", options: ["मुनिगण", "राजा", "पक्षी", "सैनिक"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "रामायण ग्रन्थ के रचनाकार कौन हैं?", options: ["महर्षि वाल्मीकि", "तुलसीदास", "व्यास", "कालिदास"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "चित्रकूट स्थित मन्दाकिनी का वर्णन रामायण के किस सर्ग में है?", options: ["95वें सर्ग में", "50वें सर्ग में", "100वें सर्ग में", "80वें सर्ग में"], correct: 0 },
+            { chapter: 10, chapterTitle: "पाठ – 10 मन्दाकिनीवर्णनम् (Mandakini Varnanam)", question: "हंस और सारस से सेवित विचित्र तटों वाली नदी कौन-सी है?", options: ["मन्दाकिनी", "गङ्गा", "यमुना", "सरयू"], correct: 0 },
+
+            // Chapter 11: व्याघ्रपथिककथा (Byaghra Pathik Katha)
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "'व्याघ्रपथिककथा' पाठ के रचयिता कौन हैं?", options: ["नारायण पण्डित", "विष्णु शर्मा", "विद्यापति", "कालिदास"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "'व्याघ्रपथिककथा' किस प्रसिद्ध नीतिकथा ग्रन्थ से ली गई है?", options: ["हितोपदेश", "पंचतंत्र", "जातक कथा", "कथासरित्सागर"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "बूढ़ा बाघ हाथ में क्या लिए सरोवर के तट पर बैठा था?", options: ["कुश एवं सुवर्णकङ्कणम् (सोने का कंगन)", "तलवार", "फूल", "फल"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "'भो भो पांथ! इदम् सुवर्णकङ्कणं गृह्यताम्' कौन पुकार रहा था?", options: ["वृद्ध व्याघ्र (बूढ़ा बाघ)", "पथिक", "राजा", "शिकारी"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "पथिक किसके लोभ में फँस गया?", options: ["सोने के कंगन के लोभ में", "भोजन के लोभ में", "कपड़े के लोभ में", "मणि के लोभ में"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "कंगन लेने गया पथिक कहाँ फँस गया?", options: ["महापङ्के (गहरे कीचड़ में)", "नदी में", "कुएँ में", "झाड़ी में"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "बाघ की शारीरिक स्थिति कैसी थी?", options: ["गलितनखदन्तः (गले हुए नख व दाँत वाला वृद्ध)", "युवा एवं बलवान", "सुन्दर", "छोटा"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "'व्याघ्रपथिककथा' से हमें क्या शिक्षा मिलती है?", options: ["लोभ का दुष्परिणाम (लोभात् क्रोधः/विनाशः प्रभवति)", "सत्य बोलना", "कठिन परिश्रम", "दान देना"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "अविश्वासयोग्य पात्र (जैसे हिंसक बाघ) पर विश्वास करने से क्या परिणाम होता है?", options: ["विनाश/मृत्यु", "लाभ", "सुख", "उन्नति"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "कीचड़ में फँसे पथिक को बाघ ने क्या किया?", options: ["पकड़कर मार डाला और खा गया", "बचाया", "कंगन दे दिया", "छोड़ दिया"], correct: 0 },
+            { chapter: 11, chapterTitle: "पाठ – 11 व्याघ्रपथिककथा (Byaghra Pathik Katha)", question: "हितोपदेश कैसा ग्रन्थ है?", options: ["पशुपक्षी कथाओं पर आधारित नीतिपरक ग्रन्थ", "धार्मिक ग्रन्थ", "ऐतिहासिक ग्रन्थ", "नाट्य ग्रन्थ"], correct: 0 },
+
+            // Chapter 12: कर्णस्य दानवीरता (Karnas Daanveerta)
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "'कर्णस्य दानवीरता' पाठ के रचयिता कौन हैं?", options: ["भास (महाकवि भास)", "कालिदास", "भारवि", "भवभूति"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "'कर्णस्य दानवीरता' पाठ भास के किस नाटक (रूपक) से संकलित है?", options: ["कर्णभारम्", "दूतावाक्यम्", "उरुभङ्गम्", "बालचरितम्"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण किस देश का राजा था?", options: ["अङ्ग देश का (अङ्गराजः)", "मगध का", "काशी का", "कोशल का"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण के पास जन्म से ही सुरक्षा हेतु क्या विद्यमान था?", options: ["कवच और कुण्डल", "धनुष और बाण", "गदा", "मुकुट"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "इन्द्र छद्मवेष (ब्राह्मण रूप) में कर्ण के पास क्या माँगने आए?", options: ["महत्तरां भिक्षां (कवच और कुण्डल)", "गायें", "घोड़े", "सोना"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण के कवच-कुण्डल की क्या विशेषता थी?", options: ["जब तक वह देह पर रहता, तब तक कोई उसे मार नहीं सकता था", "वह बहुत भारी था", "वह चमकता था", "वह सोने का था"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण ने प्रथम बार इन्द्र को क्या दान में देने का प्रस्ताव रखा?", options: ["सहस्रं गवां (हज़ार गायें)", "हाथी", "घोड़े", "पृथ्वी"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "जब कर्ण ने हाथी, घोड़े व राज्य देने की बात की, तो इन्द्र ने क्या कहा?", options: ["'नेच्छामि, नेच्छामि' (नहीं चाहता, नहीं चाहता)", "दे दो", "बहुत अच्छा", "धन्यवाद"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "शल्यराज (कर्ण के सारथी) ने कर्ण को कवच-कुण्डल देने से रोकने हेतु क्या कहा?", options: ["'न दातव्यं, न दातव्यं' (मत दीजिए, मत दीजिए)", "दे दीजिए", "सोचिए", "भाग जाइए"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण के अनुसार समय बीतने पर क्या नष्ट हो जाता है?", options: ["शिक्षा", "दान", "होम", "कीर्ति"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण के अनुसार क्या हमेशा अमर रहता है?", options: ["हुतं च दत्तं च (दान और होम)", "धन", "शरीर", "राज्य"], correct: 0 },
+            { chapter: 12, chapterTitle: "पाठ – 12 कर्णस्य दानवीरता (Karnas Daanveerta)", question: "कर्ण किसका पुत्र था?", options: ["सूर्य एवं कुन्ती का पुत्र", "पाण्डु का", "धृतराष्ट्र का", "इन्द्र का"], correct: 0 }
+        ];
+
+        let activeQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let currentChapter = 'all';
+        let isSoundEnabled = true;
+        let quizMode = 'practice';
+        let timerInterval = null;
+        let secondsElapsed = 0;
+        let lastPercentageScore = 0;
+
+        const AudioEngine = {
+            ctx: null,
+            init() {
+                try {
+                    if (!this.ctx) {
+                        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                        if (AudioCtx) {
+                            this.ctx = new AudioCtx();
+                        }
+                    }
+                    if (this.ctx && this.ctx.state === 'suspended') {
+                        this.ctx.resume();
+                    }
+                } catch (e) {
+                    console.log('AudioContext not supported or blocked');
+                }
+            },
+            playCorrect() {
+                if (!isSoundEnabled) return;
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    const now = this.ctx.currentTime;
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, now);
+                    osc.frequency.exponentialRampToValueAtTime(659.25, now + 0.1);
+                    osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.2);
+
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+
+                    osc.start(now);
+                    osc.stop(now + 0.35);
+                } catch (err) {}
+            },
+            playIncorrect() {
+                if (!isSoundEnabled) return;
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    const now = this.ctx.currentTime;
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, now);
+                    osc.frequency.linearRampToValueAtTime(140, now + 0.25);
+
+                    gain.gain.setValueAtTime(0.2, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+
+                    osc.start(now);
+                    osc.stop(now + 0.3);
+                } catch (err) {}
+            },
+            playFanfare() {
+                if (!isSoundEnabled) return;
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    const notes = [440, 554.37, 659.25, 880];
+                    notes.forEach((freq, index) => {
+                        const now = this.ctx.currentTime + (index * 0.1);
+                        const osc = this.ctx.createOscillator();
+                        const gain = this.ctx.createGain();
+
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, now);
+
+                        gain.gain.setValueAtTime(0.25, now);
+                        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+
+                        osc.connect(gain);
+                        gain.connect(this.ctx.destination);
+
+                        osc.start(now);
+                        osc.stop(now + 0.4);
+                    });
+                } catch (err) {}
+            }
+        };
+
+        function toggleSound() {
+            isSoundEnabled = !isSoundEnabled;
+            const icon = document.getElementById('soundIcon');
+            if (isSoundEnabled) {
+                icon.className = 'fa-solid fa-volume-high text-base text-orange-600';
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark text-base text-stone-400';
+            }
+        }
+
+        function shareOnWhatsApp() {
+            const message = encodeURIComponent(
+                "📚 बिहार बोर्ड कक्षा 10वीं संस्कृत (पीयूषम् भाग-2) ऑब्जेक्टिव क्विज़ टेस्ट!\n" +
+                "सभी 7 अध्यायों के प्रश्न हल करें और ऑनलाइन प्रमाण पत्र प्राप्त करें।\n" +
+                "Author: Mr. Md Imamul Kalam\n" +
+                "अभी ऐप खोलें और टेस्ट दें:"
+            );
+            window.open('https://api.whatsapp.com/send?text=' + message, '_blank');
+        }
+
+        function renderChapterGrid() {
+            const grid = document.getElementById('chapterGrid');
+            const chapterMap = {};
+
+            quizData.forEach(function(q) {
+                if (!chapterMap[q.chapter]) {
+                    chapterMap[q.chapter] = {
+                        title: q.chapterTitle,
+                        count: 0
+                    };
+                }
+                chapterMap[q.chapter].count++;
+            });
+
+            grid.innerHTML = '';
+            Object.keys(chapterMap).sort(function(a, b) { return Number(a) - Number(b); }).forEach(function(chapNum) {
+                const chap = chapterMap[chapNum];
+                const card = document.createElement('div');
+                card.className = 'white-card white-card-hover rounded-2xl p-5 border border-stone-200 flex flex-col justify-between space-y-4 cursor-pointer';
+                card.onclick = function() { startQuiz(chapNum); };
+
+                card.innerHTML = 
+                    '<div class="space-y-2">' +
+                        '<div class="flex items-center justify-between">' +
+                            '<span class="text-xs font-bold text-orange-800 bg-orange-50 px-2.5 py-1 rounded-md border border-orange-100">Chapter ' + chapNum + '</span>' +
+                            '<span class="text-xs text-stone-500 font-medium"><i class="fa-regular fa-file-lines text-stone-400 mr-1"></i>' + chap.count + ' प्रश्न</span>' +
+                        '</div>' +
+                        '<h4 class="text-base font-bold text-stone-900 group-hover:text-orange-600 transition">' + chap.title + '</h4>' +
+                    '</div>' +
+                    '<div class="pt-2 flex items-center justify-between border-t border-stone-100 text-xs text-stone-500 font-medium">' +
+                        '<span>वस्तुनिष्ठ अभ्यास</span>' +
+                        '<span class="text-orange-600 font-bold flex items-center gap-1">शुरू करें <i class="fa-solid fa-chevron-right text-[10px]"></i></span>' +
+                    '</div>';
+                grid.appendChild(card);
+            });
+        }
+
+        function startQuiz(chapterFilter) {
+            currentChapter = chapterFilter;
+            const checkedMode = document.querySelector('input[name="quizMode"]:checked');
+            quizMode = checkedMode ? checkedMode.value : 'practice';
+
+            if (chapterFilter === 'all') {
+                activeQuestions = quizData.slice();
+                document.getElementById('activeQuizTitle').innerText = 'सम्पूर्ण संस्कृत (पीयूषम् भाग-2)';
+            } else {
+                activeQuestions = quizData.filter(function(q) { return String(q.chapter) === String(chapterFilter); });
+                document.getElementById('activeQuizTitle').innerText = 'Chapter ' + chapterFilter;
+            }
+
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            secondsElapsed = 0;
+
+            const timerContainer = document.getElementById('timerContainer');
+            if (quizMode === 'exam') {
+                timerContainer.classList.remove('hidden');
+                startTimer();
+            } else {
+                timerContainer.classList.add('hidden');
+                clearInterval(timerInterval);
+            }
+
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            renderQuestion();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            const timerDisplay = document.getElementById('quizTimer');
+            timerInterval = setInterval(function() {
+                secondsElapsed++;
+                const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+                const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+                timerDisplay.innerText = mins + ':' + secs;
+            }, 1000);
+        }
+
+        function renderQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const total = activeQuestions.length;
+
+            document.getElementById('currentQuestionNum').innerText = currentQuestionIndex + 1;
+            document.getElementById('totalQuestionsNum').innerText = total;
+            document.getElementById('questionTag').innerText = 'प्रश्न ' + (currentQuestionIndex + 1) + ' of ' + total + ' | Ch-' + q.chapter;
+            document.getElementById('questionText').innerText = q.question;
+
+            const progressPercent = ((currentQuestionIndex + 1) / total) * 100;
+            document.getElementById('quizProgressBar').style.width = progressPercent + '%';
+
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+
+            const optionPrefixes = ['(क)', '(ख)', '(ग)', '(घ)'];
+            const hasAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
+            const selectedOpt = userAnswers[currentQuestionIndex];
+
+            q.options.forEach(function(optText, idx) {
+                const btn = document.createElement('button');
+                let btnStyle = 'bg-white border-stone-200 text-stone-800 hover:border-stone-400 hover:bg-stone-50 shadow-sm';
+
+                if (hasAnswered) {
+                    if (quizMode === 'practice') {
+                        if (idx === q.correct) {
+                            btnStyle = 'bg-emerald-50 border-emerald-500 text-emerald-900 font-bold shadow-md';
+                        } else if (idx === selectedOpt && selectedOpt !== q.correct) {
+                            btnStyle = 'bg-rose-50 border-rose-400 text-rose-900 font-medium';
+                        } else {
+                            btnStyle = 'bg-stone-50 border-stone-200 text-stone-400 opacity-60';
+                        }
+                    } else {
+                        if (idx === selectedOpt) {
+                            btnStyle = 'bg-orange-50 border-orange-500 text-orange-900 font-bold shadow-md';
+                        } else {
+                            btnStyle = 'bg-white border-stone-200 text-stone-600';
+                        }
+                    }
+                }
+
+                btn.className = 'option-btn w-full text-left p-4 rounded-2xl border flex items-center justify-between text-sm sm:text-base font-medium transition ' + btnStyle;
+                btn.onclick = function() { selectOption(idx); };
+
+                let iconHtml = '';
+                if (hasAnswered && quizMode === 'practice' && idx === q.correct) {
+                    iconHtml = '<i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>';
+                } else if (hasAnswered && quizMode === 'practice' && idx === selectedOpt && selectedOpt !== q.correct) {
+                    iconHtml = '<i class="fa-solid fa-circle-xmark text-rose-500 text-lg"></i>';
+                } else if (hasAnswered && quizMode === 'exam' && idx === selectedOpt) {
+                    iconHtml = '<i class="fa-solid fa-check text-orange-600 text-lg"></i>';
+                }
+
+                btn.innerHTML = 
+                    '<div class="flex items-center gap-3">' +
+                        '<span class="w-8 h-8 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center text-xs font-bold text-orange-800 shrink-0">' +
+                            optionPrefixes[idx] +
+                        '</span>' +
+                        '<span>' + optText + '</span>' +
+                    '</div>' + iconHtml;
+
+                optionsContainer.appendChild(btn);
+            });
+
+            const feedbackBox = document.getElementById('feedbackBox');
+            if (quizMode === 'practice' && hasAnswered) {
+                feedbackBox.classList.remove('hidden');
+                const isCorrect = selectedOpt === q.correct;
+                if (isCorrect) {
+                    feedbackBox.className = 'p-4 rounded-2xl border bg-emerald-50 border-emerald-300 text-emerald-900 flex items-center justify-between';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-check"></i>';
+                    document.getElementById('feedbackText').innerText = 'समीचीनम्! (बिलकुल सही उत्तर! शाबाश!)';
+                } else {
+                    feedbackBox.className = 'p-4 rounded-2xl border bg-rose-50 border-rose-300 text-rose-900 flex items-center justify-between';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center text-sm font-bold';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    document.getElementById('feedbackText').innerText = 'गलत उत्तर! सही उत्तर है: ' + optionPrefixes[q.correct] + ' ' + q.options[q.correct];
+                }
+            } else {
+                feedbackBox.classList.add('hidden');
+            }
+
+            document.getElementById('prevBtn').disabled = (currentQuestionIndex === 0);
+
+            if (currentQuestionIndex === total - 1) {
+                document.getElementById('nextBtn').classList.add('hidden');
+                document.getElementById('submitQuizBtn').classList.remove('hidden');
+            } else {
+                document.getElementById('nextBtn').classList.remove('hidden');
+                document.getElementById('submitQuizBtn').classList.add('hidden');
+            }
+        }
+
+        function selectOption(optionIndex) {
+            userAnswers[currentQuestionIndex] = optionIndex;
+            const q = activeQuestions[currentQuestionIndex];
+
+            if (quizMode === 'practice') {
+                if (optionIndex === q.correct) {
+                    AudioEngine.playCorrect();
+                } else {
+                    AudioEngine.playIncorrect();
+                }
+            }
+
+            renderQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            const targetIndex = currentQuestionIndex + direction;
+            if (targetIndex >= 0 && targetIndex < activeQuestions.length) {
+                currentQuestionIndex = targetIndex;
+                renderQuestion();
+            }
+        }
+
+        function confirmExitQuiz() {
+            if (Object.keys(userAnswers).length > 0) {
+                document.getElementById('exitModal').classList.remove('hidden');
+            } else {
+                showHomeScreen();
+            }
+        }
+
+        function closeExitModal() {
+            document.getElementById('exitModal').classList.add('hidden');
+        }
+
+        function executeExitQuiz() {
+            closeExitModal();
+            showHomeScreen();
+        }
+
+        function showHomeScreen() {
+            clearInterval(timerInterval);
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let skippedCount = 0;
+            const total = activeQuestions.length;
+
+            activeQuestions.forEach(function(q, idx) {
+                if (userAnswers.hasOwnProperty(idx)) {
+                    if (userAnswers[idx] === q.correct) {
+                        correctCount++;
+                    } else {
+                        incorrectCount++;
+                    }
+                } else {
+                    skippedCount++;
+                }
+            });
+
+            const percentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+            lastPercentageScore = percentage;
+
+            document.getElementById('correctAnswersCount').innerText = correctCount;
+            document.getElementById('totalResultQuestions').innerText = total;
+            document.getElementById('percentageText').innerText = percentage + '%';
+            document.getElementById('accuracyText').innerText = percentage + '%';
+
+            document.getElementById('statCorrect').innerText = correctCount;
+            document.getElementById('statIncorrect').innerText = incorrectCount;
+            document.getElementById('statSkipped').innerText = skippedCount;
+
+            const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+            const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+            document.getElementById('resultTimeTaken').innerText = mins + ':' + secs;
+
+            // Animate Circle Ring
+            const circle = document.getElementById('resultProgressRing');
+            if (circle) {
+                const radius = circle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+                const offset = circumference - (percentage / 100) * circumference;
+                circle.style.strokeDashoffset = offset;
+            }
+
+            // Performance Badge text
+            const badge = document.getElementById('performanceBadge');
+            const note = document.getElementById('resultFeedbackNote');
+
+            if (percentage >= 80) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200';
+                badge.innerText = 'अतिउत्तमम्! Outstanding 🎉';
+                note.innerText = 'आपकी तैयारी बहुत मजबूत है! ऐसे ही लगन से पढ़ते रहें।';
+                if (typeof confetti === 'function') {
+                    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                }
+                AudioEngine.playFanfare();
+            } else if (percentage >= 50) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200';
+                badge.innerText = 'उत्तमम् प्रयास! Good Job 👍';
+                note.innerText = 'आपका प्रदर्शन अच्छा है, थोड़ा और अभ्यास करके आप 90%+ ला सकते हैं।';
+            } else {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-rose-100 text-rose-800 border border-rose-200';
+                badge.innerText = 'पुनः अभ्यास आवश्यकम् 📚';
+                note.innerText = 'घबराएं नहीं, एक बार पुनः अध्याय को पढ़ें और फिर से टेस्ट दें।';
+            }
+
+            renderReviewAnswers();
+
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function retakeCurrentQuiz() {
+            startQuiz(currentChapter);
+        }
+
+        function renderReviewAnswers() {
+            const container = document.getElementById('reviewContainer');
+            container.innerHTML = '';
+            const optionPrefixes = ['(क)', '(ख)', '(ग)', '(घ)'];
+
+            activeQuestions.forEach(function(q, idx) {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+                const isSkipped = !userAnswers.hasOwnProperty(idx);
+
+                const item = document.createElement('div');
+                item.className = 'p-4 rounded-2xl border text-xs sm:text-sm space-y-2 ' +
+                    (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : isSkipped ? 'bg-amber-50/50 border-amber-200' : 'bg-rose-50/50 border-rose-200');
+
+                let userAnsHtml = '';
+                if (!isCorrect && !isSkipped) {
+                    userAnsHtml = '<p><strong>आपका उत्तर:</strong> <span class="text-rose-700">' + optionPrefixes[userAns] + ' ' + q.options[userAns] + '</span></p>';
+                }
+
+                item.innerHTML = 
+                    '<div class="flex items-start justify-between gap-2 font-bold text-stone-900">' +
+                        '<span>प्र० ' + (idx + 1) + '. ' + q.question + '</span>' +
+                        '<span class="shrink-0 text-xs px-2 py-0.5 rounded-full ' +
+                            (isCorrect ? 'bg-emerald-100 text-emerald-800' : isSkipped ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800') + '">' +
+                            (isCorrect ? 'सही' : isSkipped ? 'छोड़ा' : 'गलत') +
+                        '</span>' +
+                    '</div>' +
+                    '<div class="text-xs space-y-1 text-stone-700">' +
+                        '<p><strong>सही उत्तर:</strong> <span class="text-emerald-700 font-bold">' + optionPrefixes[q.correct] + ' ' + q.options[q.correct] + '</span></p>' +
+                        userAnsHtml +
+                    '</div>';
+
+                container.appendChild(item);
+            });
+        }
+
+        function generateCertificate() {
+            const nameInput = document.getElementById('studentNameInput').value.trim();
+            if (!nameInput) {
+                alert('कृपया अपना नाम दर्ज करें!');
+                return;
+            }
+
+            document.getElementById('certStudentName').innerText = nameInput;
+            document.getElementById('certScoreText').innerText = lastPercentageScore + '%';
+
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('hi-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            document.getElementById('certDateText').innerText = dateStr;
+
+            document.getElementById('certificateModal').classList.remove('hidden');
+        }
+
+        function closeCertificateModal() {
+            document.getElementById('certificateModal').classList.add('hidden');
+        }
+
+        function downloadCertificateImage() {
+            const certElement = document.getElementById('certificateCard');
+            if (typeof html2canvas === 'function') {
+                html2canvas(certElement, {
+                    scale: 2,
+                    useCORS: true
+                }).then(function(canvas) {
+                    const studentName = document.getElementById('studentNameInput').value.trim() || 'Student';
+                    const link = document.createElement('a');
+                    link.download = 'Sanskrit_Certificate_' + studentName + '.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                });
+            } else {
+                window.print();
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            renderChapterGrid();
+        });
+ document.getElementById('backBtn').addEventListener('click', () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html'; 
+            }
+        });
+
+    </script>
+</body>
+</html>

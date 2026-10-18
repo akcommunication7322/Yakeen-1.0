@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>लोकतांत्रिक राजनीति - Class 10 Objective Quiz & Certificate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#026597',
+                            700: '#034e75',
+                            800: '#073c59',
+                            900: '#0c3248'
+                        },
+                        whatsapp: {
+                            500: '#25D366',
+                            600: '#1da851'
+                        }
+                    },
+                    fontFamily: {
+                        devanagari: ['Noto Sans Devanagari', 'Outfit', 'sans-serif'],
+                        signature: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            color: #0f172a;
+        }
+
+        .white-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .white-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .white-card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px -5px rgba(2, 132, 199, 0.12);
+            border-color: #38bdf8;
+        }
+
+        .option-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateX(4px);
+        }
+
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificatePrintContainer, #certificatePrintContainer * {
+                visibility: visible;
+            }
+            #certificatePrintContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+
+
+/* Stylish Back Button - Fixed to Top Left & Hidden by Default */
+        .btn-back {
+            position: fixed;   
+            top: 20px;         
+            left: 20px;        
+            z-index: 9999;     
+            
+            /* Hidden State Controls */
+            opacity: 0.1;               /* Button 90% transparent rahega */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth look-and-hide effect */
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* SVG Arrow styling */
+        .btn-back svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+
+        /* Trigger: Cursor lane par ya Mobile par Finger touch karne par */
+        .btn-back:hover, 
+        .btn-back:focus,
+        .btn-back:active {
+            opacity: 1;                 /* Poora visible ho jayega */
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Arrow animation on hover */
+        .btn-back:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* Click effect */
+        .btn-back:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+	<!-- Hidden Back Button -->
+    <button class="btn-back" id="backBtn">
+        <svg viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Go Back</span>
+    </button>
+
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showHomeScreen()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center shadow-md shadow-sky-500/20 text-white font-bold">
+                    <i class="fa-solid fa-scale-balanced text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+                        लोकतांत्रिक राजनीति
+                        <span class="text-[10px] bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded-full border border-sky-200">Class 10</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 font-medium hidden sm:block">राजनीति विज्ञान (Political Science) वस्तुनिष्ठ प्रश्न अभ्यास एवं डिजिटल सर्टिफिकेट</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <button onclick="shareOnWhatsApp()" class="px-3 py-2 rounded-xl bg-whatsapp-500 hover:bg-whatsapp-600 text-white font-bold text-xs flex items-center gap-2 shadow-md shadow-emerald-500/20 transition active:scale-95" title="दोस्तों को शेयर करें">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span class="hidden sm:inline">शेयर करें</span>
+                </button>
+
+                <button id="soundToggleBtn" onclick="toggleSound()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="ध्वनि चालू/बंद करें">
+                    <i class="fa-solid fa-volume-high text-base text-sky-600" id="soundIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-6 relative z-10 flex flex-col justify-center">
+
+        <section id="homeScreen" class="space-y-6">
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border border-slate-200 shadow-xl bg-gradient-to-b from-white to-sky-50/50">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-12 -top-12 w-48 h-48 bg-indigo-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs sm:text-sm font-semibold mb-3">
+                    <i class="fa-solid fa-award text-sky-600"></i> बिहार बोर्ड राजनीति विज्ञान (Political Science) स्पेशल
+                </div>
+
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+                    लोकतांत्रिक राजनीति (वस्तुनिष्ठ प्रश्नोत्तरी)
+                </h2>
+                
+                <div class="inline-block mt-1 mb-4">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold text-xs sm:text-sm tracking-wide shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Made by Mr. Md Imamul Kalam
+                    </span>
+                </div>
+
+                <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                    मैट्रिक परीक्षा की पूर्ण तैयारी करें। सभी अध्यायों के वस्तुनिष्ठ प्रश्नों का सही उत्तर दें, तुरंत स्कोर जांचें और **Mr. Md Imamul Kalam** द्वारा हस्ताक्षरित डिजिटल सर्टिफिकेट प्राप्त करें।
+                </p>
+
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-slate-700 hover:border-sky-400 transition">
+                        <input type="radio" name="quizMode" value="practice" checked class="w-4 h-4 text-sky-600 focus:ring-sky-500">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> प्रैक्टिस मोड (तुरंत उत्तर)
+                    </label>
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-slate-700 hover:border-sky-400 transition">
+                        <input type="radio" name="quizMode" value="exam" class="w-4 h-4 text-sky-600 focus:ring-sky-500">
+                        <i class="fa-solid fa-stopwatch text-rose-500"></i> परीक्षा मोड (टाइमर)
+                    </label>
+                </div>
+            </div>
+
+            <div class="white-card white-card-hover rounded-2xl p-6 border-l-8 border-l-sky-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-center sm:text-left">
+                    <span class="text-xs font-bold tracking-wider text-sky-600 uppercase bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">सम्पूर्ण टेस्ट</span>
+                    <h3 class="text-xl font-extrabold text-slate-900">सभी अध्यायों का महा-टेस्ट (All Chapters)</h3>
+                    <p class="text-xs text-slate-500 font-medium">लोकतांत्रिक राजनीति के अति-महत्वपूर्ण प्रश्न | तुरंत प्रमाणपत्र प्राप्त करें</p>
+                </div>
+                <button onclick="startQuiz('all')" class="w-full sm:w-auto px-7 py-3 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-bold shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+                    <span>पूरा टेस्ट शुरू करें</span>
+                    <i class="fa-solid fa-play text-sm"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3 my-2">
+                <div class="h-px bg-slate-200 flex-grow"></div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">अध्याय अनुसार अभ्यास करें</span>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="chapterGrid">
+            </div>
+        </section>
+
+        <section id="quizScreen" class="hidden space-y-6">
+            <div class="white-card rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <button onclick="confirmExitQuiz()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="मुख्य पृष्ठ पर जाएं">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div>
+                        <h2 id="activeQuizTitle" class="text-base sm:text-lg font-extrabold text-slate-900">Chapter 1</h2>
+                        <span id="activeQuizSubtitle" class="text-xs text-slate-500 font-medium">वस्तुनिष्ठ प्रश्न अभ्यास</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div id="timerContainer" class="hidden flex items-center gap-2 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 text-amber-800 font-mono font-bold text-sm">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="quizTimer">00:00</span>
+                    </div>
+
+                    <div class="bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                        प्रश्न: <span id="currentQuestionNum" class="text-sky-600 text-sm font-extrabold">1</span> / <span id="totalQuestionsNum" class="text-sm font-bold">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                <div id="quizProgressBar" class="bg-gradient-to-r from-sky-500 to-indigo-600 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+            </div>
+
+            <div class="white-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl border border-slate-200 relative">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span id="questionTag" class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-bold">Political Science Question</span>
+                    </div>
+                    <h3 id="questionText" class="text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
+                    </h3>
+                </div>
+
+                <div id="optionsContainer" class="space-y-3">
+                </div>
+
+                <div id="feedbackBox" class="hidden p-4 rounded-2xl border text-sm font-medium transition-all duration-300 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div id="feedbackIcon" class="w-8 h-8 rounded-full flex items-center justify-center text-lg"></div>
+                        <span id="feedbackText" class="text-sm sm:text-base font-bold"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-3">
+                <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-semibold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-chevron-left text-xs"></i> पिछला
+                </button>
+
+                <button id="nextBtn" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold shadow-lg shadow-sky-500/25 transition flex items-center gap-2">
+                    <span>अगला</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <button id="submitQuizBtn" onclick="submitQuiz()" class="hidden px-7 py-2.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/25 transition flex items-center gap-2">
+                    <span>सबमिट करें</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="resultScreen" class="hidden space-y-6">
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center space-y-6 border border-slate-200 shadow-xl relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-bold text-sky-800">
+                    <i class="fa-solid fa-trophy text-amber-500"></i> क्विज़ परिणाम रिपोर्ट कार्ड
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">आपका कुल परिणाम</h2>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 py-2">
+                    <div class="relative w-40 h-40 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <circle class="text-slate-100" stroke-width="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                            <circle id="resultProgressRing" class="progress-ring__circle text-sky-500" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="percentageText" class="text-3xl font-black text-slate-900">0%</span>
+                            <span class="text-xs text-slate-500 uppercase font-bold">प्राप्तांक</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center sm:text-left space-y-2">
+                        <div id="performanceBadge" class="inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                            उत्कृष्ट प्रदर्शन!
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">
+                            प्राप्त अंक: <span id="correctAnswersCount" class="text-emerald-600 font-extrabold text-2xl">0</span> / <span id="totalResultQuestions" class="text-slate-600">0</span>
+                        </h3>
+                        <p id="resultFeedbackNote" class="text-xs sm:text-sm text-slate-600 max-w-xs leading-relaxed">
+                            आपने सभी प्रश्नों का बहुत अच्छे से उत्तर दिया है।
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-xl text-xs text-slate-600 border border-slate-200 font-semibold">
+                                <i class="fa-solid fa-clock text-amber-500 mr-1"></i> समय: <span id="resultTimeTaken" class="font-bold text-slate-900">00:00</span>
+                            </span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-xl text-xs text-slate-600 border border-slate-200 font-semibold">
+                                <i class="fa-solid fa-bullseye text-sky-500 mr-1"></i> सटीकता: <span id="accuracyText" class="font-bold text-slate-900">0%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3 max-w-md mx-auto">
+                    <div class="p-3 bg-emerald-50/60 rounded-2xl border border-emerald-100 text-center">
+                        <span class="block text-xs text-emerald-700 font-semibold mb-1">सही</span>
+                        <span id="statCorrect" class="text-lg font-black text-emerald-700">0</span>
+                    </div>
+                    <div class="p-3 bg-rose-50/60 rounded-2xl border border-rose-100 text-center">
+                        <span class="block text-xs text-rose-700 font-semibold mb-1">गलत</span>
+                        <span id="statIncorrect" class="text-lg font-black text-rose-700">0</span>
+                    </div>
+                    <div class="p-3 bg-amber-50/60 rounded-2xl border border-amber-100 text-center">
+                        <span class="block text-xs text-amber-700 font-semibold mb-1">छोड़े</span>
+                        <span id="statSkipped" class="text-lg font-black text-amber-700">0</span>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-sky-50 to-amber-50 border border-amber-200/80 shadow-md max-w-lg mx-auto text-center space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-amber-800 font-extrabold text-base">
+                        <i class="fa-solid fa-certificate text-amber-500 text-xl"></i>
+                        <span>अपना डिजिटल प्रमाण पत्र (Certificate) डाउनलोड करें</span>
+                    </div>
+                    <p class="text-xs text-slate-600">इस टेस्ट को पूरा करने पर आपको **Mr. Md Imamul Kalam** के डिजिटल हस्ताक्षर के साथ सर्टिफिकेट मिलता है।</p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-2 max-w-md mx-auto">
+                        <input type="text" id="studentNameInput" placeholder="अपना नाम दर्ज करें (उदा० राहुल कुमार)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        <button onclick="generateCertificate()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm whitespace-nowrap shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-award"></i> प्रमाण पत्र देखें
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <button onclick="retakeCurrentQuiz()" class="px-6 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold shadow-md shadow-sky-500/20 transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right text-xs"></i> पुनः प्रयास करें
+                    </button>
+                    <button onclick="showHomeScreen()" class="px-6 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-bold text-slate-700 transition flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-house text-xs"></i> मुख्य पृष्ठ
+                    </button>
+                </div>
+            </div>
+
+            <div class="white-card rounded-3xl p-6 space-y-4 border border-slate-200 shadow-lg">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-sky-600"></i> उत्तर समीक्षा (Answer Key)
+                    </h3>
+                    <span class="text-xs text-slate-500">सभी प्रश्नों के सही उत्तर</span>
+                </div>
+
+                <div id="reviewContainer" class="space-y-3 max-h-96 overflow-y-auto pr-2">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border border-slate-200 p-4 sm:p-6 space-y-4 my-auto relative">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-award text-amber-500"></i> आपका प्रमाणपत्र (Certificate)
+                </h3>
+                <button onclick="closeCertificateModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div id="certificatePrintContainer" class="p-2 bg-slate-100 rounded-2xl">
+                <div id="certificateCard" class="bg-white rounded-2xl p-6 sm:p-10 border-8 border-amber-500/30 relative overflow-hidden shadow-inner font-devanagari text-slate-800" style="background-image: radial-gradient(#f1f5f9 1px, transparent 1px); background-size: 16px 16px;">
+                    
+                    <div class="absolute top-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute top-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute bottom-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute bottom-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+
+                    <div class="text-center space-y-4 relative z-10">
+                        <div class="flex items-center justify-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow">
+                                <i class="fa-solid fa-scale-balanced text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-amber-800">बिहार बोर्ड क्लास 10th ई-लर्निंग</h4>
+                                <p class="text-[10px] text-slate-500">राजनीति विज्ञान (Political Science) - लोकतांत्रिक राजनीति</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase text-slate-900 tracking-wide font-serif text-amber-900">
+                                प्रमाणपत्र / CERTIFICATE
+                            </h2>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500 tracking-widest uppercase mt-1">OF ACHIEVEMENT & COMPLETION</p>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium">प्रमाणित किया जाता है कि विद्यार्थी</p>
+
+                        <div class="py-1">
+                            <h3 id="certStudentName" class="text-2xl sm:text-4xl font-extrabold text-sky-700 underline decoration-amber-400 decoration-4 underline-offset-8">
+                                राहुल कुमार
+                            </h3>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-xl mx-auto font-medium">
+                            ने <strong>लोकतांत्रिक राजनीति (Class 10 Political Science Objective Quiz App)</strong> में सम्‍मिलित होकर उत्कृष्ट प्रदर्शन किया एवं सफलता प्राप्त की।
+                        </p>
+
+                        <div class="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-2.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900 my-2 shadow-sm">
+                            <span>प्राप्तांक: <strong id="certScoreText" class="text-amber-700 text-sm">85%</strong></span>
+                            <span>•</span>
+                            <span>दिनांक: <strong id="certDateText" class="text-slate-800">21/08/2026</strong></span>
+                            <span>•</span>
+                            <span>स्थिति: <strong class="text-emerald-600">उत्तीर्ण (Passed)</strong></span>
+                        </div>
+
+                        <div class="pt-6 grid grid-cols-2 items-end gap-4 border-t border-slate-200 mt-4">
+                            <div class="text-center sm:text-left space-y-1">
+                                <div class="w-14 h-14 rounded-full bg-amber-50 border-2 border-amber-500 flex items-center justify-center text-amber-600 mx-auto sm:mx-0 shadow-sm">
+                                    <i class="fa-solid fa-ribbon text-2xl"></i>
+                                </div>
+                                <p class="text-[10px] font-bold text-slate-500 uppercase">आधिकारिक डिजिटल मोहर</p>
+                            </div>
+
+                            <div class="text-center sm:text-right space-y-1">
+                                <div class="font-signature text-2xl sm:text-3xl text-slate-900 font-bold tracking-wide select-none">
+                                    Md Imamul Kalam
+                                </div>
+                                <div class="h-0.5 bg-slate-400 w-32 ml-auto"></div>
+                                <p class="text-xs font-extrabold text-slate-900">Mr. Md Imamul Kalam</p>
+                                <p class="text-[10px] text-slate-500 font-semibold">संस्थापक एवं क्विज़ निर्देशक</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
+                <button onclick="downloadCertificateImage()" class="px-5 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow-md shadow-sky-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> डाउनलोड करें (Image)
+                </button>
+                <button onclick="window.print()" class="px-5 py-2.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-md shadow-amber-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> प्रिंट करें
+                </button>
+                <button onclick="closeCertificateModal()" class="px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+                    बंद करें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="exitModal" class="fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-4 shadow-2xl text-center border border-slate-200">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto text-xl font-bold">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">क्या आप बाहर निकलना चाहते हैं?</h3>
+            <p class="text-xs text-slate-500">यदि आप अभी बाहर जाते हैं तो आपकी प्रगति मिट सकती है।</p>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <button onclick="executeExitQuiz()" class="px-4 py-2 rounded-xl bg-rose-600 text-white font-bold text-xs hover:bg-rose-700 transition">
+                    हाँ, बाहर निकलें
+                </button>
+                <button onclick="closeExitModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs hover:bg-slate-200 transition">
+                    नहीं, जारी रखें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-slate-200 bg-white py-4 text-center text-xs text-slate-500 relative z-10 mt-auto">
+        <p>लोकतांत्रिक राजनीति (Political Science) Class 10 Objective Practice App</p>
+        <p class="mt-1 font-bold text-amber-600">Made by Mr. Md Imamul Kalam</p>
+    </footer>
+
+    <script>
+        // Exact 100% Accurate Data extracted from poltacnic.rtf
+        const quizData = [
+            // Chapter 1
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में महिलाओं के लिए 50% आरक्षण की व्यवस्था निम्नांकित में से किस संस्था में की गई है?", options: ["लोकसभा", "पंचायती राज व्यवस्था", "विधानसभा", "राज्यसभा"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "ग्राम पंचायत का कार्यकाल कितने वर्ष का होता है?", options: ["4 वर्ष", "5 वर्ष", "6 वर्ष", "2 वर्ष"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "झारखंड राज्य का गठन कब हुआ था?", options: ["1 नवम्बर 2000", "10 नवम्बर 2000", "15 नवम्बर 2000", "15 नवम्बर 2001"], correct: 2 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारतीय संविधान की 8वीं अनुसूची में कितनी भाषाओं को स्थान दिया गया है?", options: ["21", "22", "18", "20"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में किस प्रकार की शासन प्रणाली है?", options: ["संघीय और अध्यक्षीय", "संघीय और संसदीय", "एकात्मक और अध्यक्षीय", "एकात्मक और संघीय"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में पहला नगर निगम कहाँ बना?", options: ["पटना में", "मद्रास (चेन्नई) में", "नागपुर में", "बॉम्बे (मुंबई) में"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में वोट देने की न्यूनतम उम्र क्या है?", options: ["16 वर्ष", "18 वर्ष", "21 वर्ष", "25 वर्ष"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में महिलाओं के लिए आरक्षण की व्यवस्था है-", options: ["लोकसभा", "विधानसभा", "पंचायती राज संस्थाएं", "मंत्रिमंडल"], correct: 2 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "निम्नलिखित में से कौन-सा केंद्र शासित प्रदेश है?", options: ["उत्तराखंड", "छत्तीसगढ़", "चंडीगढ़", "केरल"], correct: 2 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारतीय संविधान के बारे में कौन-सा कथन गलत है?", options: ["यह धर्म के आधार पर भेदभाव की मनाही करता है", "यह एक धर्म को राजकीय धर्म बनाता है", "सभी लोगों को कोई भी धर्म मानने की आजादी देता है", "किसी धार्मिक समुदाय में सभी नागरिकों को बराबरी का अधिकार देता है"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में सर्वोच्च न्यायालय के मुख्य न्यायाधीश की नियुक्ति कौन करता है?", options: ["प्रधानमंत्री", "राष्ट्रपति", "संसद", "उपराष्ट्रपति"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "16वीं लोकसभा का चुनाव किस वर्ष हुआ?", options: ["2012", "2013", "2014", "2015"], correct: 2 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "सर्वप्रथम पंचायती राज की शुरुआत किस राज्य में हुई?", options: ["राजस्थान", "पंजाब", "उत्तर प्रदेश", "बिहार"], correct: 0 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "पंचायत समिति का प्रधान कौन होता है?", options: ["मुखिया", "प्रखंड विकास पदाधिकारी", "सरपंच", "प्रमुख"], correct: 3 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "17वीं लोकसभा का चुनाव किस वर्ष हुआ?", options: ["2014", "2019", "2017", "2018"], correct: 1 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "बिहार में पंचायती राज संस्थाओं में महिलाओं के लिए कितनी सीटें आरक्षित हैं?", options: ["50%", "25%", "33%", "30%"], correct: 0 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "संविधान का अनुच्छेद 15 किसको प्रतिबंधित करता है?", options: ["धर्म-वंश-जाति-लिंग या जन्मस्थान के आधार पर भेदभाव", "छुआछूत", "दहेज प्रथा", "बाल श्रम"], correct: 0 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "इंडिका पुस्तक के लेखक कौन हैं?", options: ["मेगास्थनीज", "कमल", "अरस्तू", "अकबर"], correct: 0 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "निम्नलिखित में से किसे 'विशेष राज्य का दर्जा' प्राप्त था (पूर्वतः)?", options: ["बिहार", "उत्तर प्रदेश", "जम्मू-कश्मीर", "आंध्र प्रदेश"], correct: 2 },
+            { chapter: 1, chapterTitle: "इकाई 1: लोकतंत्र में सत्ता की साझेदारी", question: "भारत में राष्ट्रीय महिला आयोग अधिनियम कब बना?", options: ["1960", "1970", "1980", "1990"], correct: 3 },
+
+            // Chapter 3 / Unit 3
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "वर्ष 1975 भारतीय राजनीति में किसलिए जाना जाता है?", options: ["इस वर्ष आम चुनाव हुए थे", "श्रीमती इंदिरा गांधी प्रधानमंत्री बनी थीं", "देश में अंदरूनी आपातकाल लागू हुआ था", "जनता पार्टी की सरकार बनी थी"], correct: 2 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "भारतीय लोकतंत्र में सत्ता के विरुद्ध जनाक्रोश किस दशक से प्रारंभ हुआ?", options: ["1960 के दशक से", "1970 के दशक से", "1980 के दशक से", "1990 के दशक से"], correct: 1 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "बिहार में संपूर्ण क्रांति का नेतृत्व निम्नलिखित में से किसने किया?", options: ["मोरारजी देसाई", "नीतीश कुमार", "इन्दिरा गांधी", "जयप्रकाश नारायण"], correct: 3 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "भारत में हुए 1977 के आम चुनाव में किस पार्टी को बहुमत मिला?", options: ["कांग्रेस पार्टी को", "जनता पार्टी को", "कम्युनिस्ट पार्टी को", "किसी पार्टी को नहीं"], correct: 1 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "चिपको आंदोलन निम्नलिखित में से किससे संबंधित नहीं है?", options: ["अंगू के पेड़ काटने की अनुमति से", "आर्थिक शोषण की मुक्ति से", "शराबखोरी के विरुद्ध आवाज से", "कांग्रेस पार्टी के विरोध से"], correct: 3 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "दलित पैंथर्स के कार्यक्रम से निम्नलिखित कौन संबंधित नहीं है?", options: ["दलित सेना का गठन", "जाति प्रथा का उन्मूलन", "भूमिहीन गरीब किसान की उन्नति", "औद्योगिक मजदूरों की शोषण से मुक्ति"], correct: 0 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "भारतीय किसान यूनियन के नेता कौन थे?", options: ["मोरारजी देसाई", "जयप्रकाश नारायण", "महेंद्र सिंह टिकैत", "चौधरी चरण सिंह"], correct: 2 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "ताड़ी विरोधी आंदोलन निम्नलिखित में से किस प्रांत में शुरू किया गया?", options: ["बिहार", "उत्तर प्रदेश", "आंध्र प्रदेश", "तमिलनाडु"], correct: 2 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "नर्मदा घाटी परियोजना किन राज्यों से संबंधित है?", options: ["बिहार, उत्तर प्रदेश, मध्य प्रदेश", "तमिलनाडु, केरल, कर्नाटक", "पश्चिम बंगाल, उत्तर प्रदेश, पंजाब", "गुजरात, महाराष्ट्र, मध्य प्रदेश"], correct: 3 },
+            { chapter: 3, chapterTitle: "इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष", question: "सूचना के अधिकार आंदोलन की शुरुआत कहाँ से हुई?", options: ["राजस्थान", "दिल्ली", "तमिलनाडु", "बिहार"], correct: 0 },
+
+            // Chapter 4 / Unit 4
+            { chapter: 4, chapterTitle: "इकाई 4: लोकतंत्र की उपलब्धियां", question: "लोकतंत्र जनता का, जनता द्वारा तथा जनता के लिए शासन है, यह कथन किसका है?", options: ["अरस्तू", "अब्राहम लिंकन", "रूसो", "ग्रीन"], correct: 1 },
+            { chapter: 4, chapterTitle: "इकाई 4: लोकतंत्र की उपलब्धियां", question: "निम्न में से कौन-सी एक बात लोकतांत्रिक व्यवस्थाओं के अनुरूप नहीं है?", options: ["कानून के समक्ष समानता", "स्वतंत्र एवं निष्पक्ष चुनाव", "उत्तरदायी शासन व्यवस्था", "बहुसंख्यकों का शासन"], correct: 3 },
+            { chapter: 4, chapterTitle: "इकाई 4: लोकतंत्र की उपलब्धियां", question: "लोकतांत्रिक व्यवस्थाओं ने निम्नांकित किन मुद्दों पर सफलता पाई है?", options: ["राजनैतिक असमानता को समाप्त कर दिया है", "लोगों के बीच टकरावों को समाप्त कर दिया है", "बहुमत समूह और अल्पमत समूह के साथ एक सा व्यवहार करता है", "समाज की आखिरी पंक्ति में खड़े लोगों के बीच आर्थिक पैमाना कम कर दिया है"], correct: 0 },
+            { chapter: 4, chapterTitle: "इकाई 4: लोकतंत्र की उपलब्धियां", question: "आज दुनिया के लगभग कितने देशों में लोकतंत्र विद्यमान है?", options: ["100 देशों में", "50 देशों में", "150 देशों में", "200 देशों में"], correct: 0 },
+
+            // Chapter 5 / Unit 5
+            { chapter: 5, chapterTitle: "इकाई 5: लोकतंत्र की चुनौतियाँ", question: "क्षेत्रवाद की भावना का एक कुपरिणाम है-", options: ["अपने क्षेत्र से लगाव", "राष्ट्रहित", "राष्ट्रीय एकता", "अलगाववाद"], correct: 3 },
+            { chapter: 5, chapterTitle: "इकाई 5: लोकतंत्र की चुनौतियाँ", question: "15वीं लोकसभा चुनाव से पूर्व लोकतंत्र में महिलाओं की भागीदारी थी-", options: ["10 प्रतिशत", "15 प्रतिशत", "33 प्रतिशत", "50 प्रतिशत"], correct: 0 },
+            { chapter: 5, chapterTitle: "इकाई 5: लोकतंत्र की चुनौतियाँ", question: "लोकतंत्र की सफलता निर्भर करती है-", options: ["नागरिकों की उदासीनता पर", "नागरिकों के गैर-कानूनी कार्रवाई पर", "नागरिकों की विवेकपूर्ण सहभागिता पर", "नागरिकों द्वारा अपनी जाति के हितों की रक्षा पर"], correct: 2 },
+            { chapter: 5, chapterTitle: "इकाई 5: लोकतंत्र की चुनौतियाँ", question: "किस देश में प्रत्यक्ष लोकतंत्र है?", options: ["स्विट्जरलैंड", "भारत", "ब्रिटेन", "अमेरिका"], correct: 0 }
+        ];
+
+        // App State Variables
+        let currentQuizQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let quizMode = 'practice';
+        let timerInterval = null;
+        let timeElapsed = 0;
+        let isSoundOn = true;
+        let lastPercentageScore = 0;
+
+        // Audio Effects (Web Audio API)
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(type) {
+            if (!isSoundOn) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                if (type === 'correct') {
+                    osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+                    gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.3);
+                } else if (type === 'wrong') {
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+                    osc.frequency.setValueAtTime(164.81, audioCtx.currentTime + 0.1); // E3
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.35);
+                } else if (type === 'complete') {
+                    osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(880, audioCtx.currentTime + 0.2);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.5);
+                }
+            } catch (e) {
+                console.log('Audio playback error:', e);
+            }
+        }
+
+        function toggleSound() {
+            isSoundOn = !isSoundOn;
+            const icon = document.getElementById('soundIcon');
+            if (isSoundOn) {
+                icon.className = 'fa-solid fa-volume-high text-base text-sky-600';
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark text-base text-slate-400';
+            }
+        }
+
+        function renderChapterGrid() {
+            const grid = document.getElementById('chapterGrid');
+            grid.innerHTML = '';
+
+            const chapters = [
+                { num: 1, title: 'इकाई 1: लोकतंत्र में सत्ता की साझेदारी', icon: 'fa-scale-balanced', color: 'from-sky-500 to-blue-600' },
+                { num: 3, title: 'इकाई 3: लोकतंत्र में प्रतिस्पर्धा एवं संघर्ष', icon: 'fa-users-line', color: 'from-amber-500 to-orange-600' },
+                { num: 4, title: 'इकाई 4: लोकतंत्र की उपलब्धियां', icon: 'fa-trophy', color: 'from-emerald-500 to-teal-600' },
+                { num: 5, title: 'इकाई 5: लोकतंत्र की चुनौतियाँ', icon: 'fa-flag', color: 'from-indigo-500 to-purple-600' }
+            ];
+
+            chapters.forEach(ch => {
+                const count = quizData.filter(q => q.chapter === ch.num).length;
+                const card = document.createElement('div');
+                card.className = 'white-card white-card-hover rounded-2xl p-5 border border-slate-200 flex flex-col justify-between cursor-pointer space-y-4';
+                card.onclick = () => startQuiz(ch.num);
+
+                card.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr ${ch.color} flex items-center justify-center text-white text-xl font-bold shadow-md">
+                            <i class="fa-solid ${ch.icon}"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">${count} प्रश्न</span>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-extrabold text-slate-900 leading-snug mb-1">${ch.title}</h4>
+                        <p class="text-xs text-slate-500 font-medium">बिहार बोर्ड परीक्षा हेतु महत्वपूर्ण वस्तुनिष्ठ प्रश्न</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-sky-600">
+                        <span>अभ्यास शुरू करें</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function startQuiz(chapterNum) {
+            const selectedMode = document.querySelector('input[name="quizMode"]:checked').value;
+            quizMode = selectedMode;
+
+            if (chapterNum === 'all') {
+                currentQuizQuestions = [...quizData];
+                document.getElementById('activeQuizTitle').innerText = 'सम्पूर्ण लोकतांत्रिक राजनीति (All Chapters)';
+            } else {
+                currentQuizQuestions = quizData.filter(q => q.chapter === chapterNum);
+                const chObj = currentQuizQuestions[0];
+                document.getElementById('activeQuizTitle').innerText = chObj ? chObj.chapterTitle : `Chapter ${chapterNum}`;
+            }
+
+            currentQuestionIndex = 0;
+            userAnswers = new Array(currentQuizQuestions.length).fill(null);
+            timeElapsed = 0;
+
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            const timerContainer = document.getElementById('timerContainer');
+            if (quizMode === 'exam') {
+                timerContainer.classList.remove('hidden');
+                startTimer();
+            } else {
+                timerContainer.classList.add('hidden');
+                clearInterval(timerInterval);
+            }
+
+            renderQuestion();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            document.getElementById('quizTimer').innerText = '00:00';
+            timerInterval = setInterval(() => {
+                timeElapsed++;
+                const mins = Math.floor(timeElapsed / 60).toString().padStart(2, '0');
+                const secs = (timeElapsed % 60).toString().padStart(2, '0');
+                document.getElementById('quizTimer').innerText = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function renderQuestion() {
+            const q = currentQuizQuestions[currentQuestionIndex];
+            const total = currentQuizQuestions.length;
+
+            document.getElementById('currentQuestionNum').innerText = currentQuestionIndex + 1;
+            document.getElementById('totalQuestionsNum').innerText = total;
+
+            const progressPct = ((currentQuestionIndex + 1) / total) * 100;
+            document.getElementById('quizProgressBar').style.width = `${progressPct}%`;
+
+            document.getElementById('questionTag').innerText = q.chapterTitle || "Political Science Question";
+            document.getElementById('questionText').innerText = `${currentQuestionIndex + 1}. ${q.question}`;
+
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            const feedbackBox = document.getElementById('feedbackBox');
+            feedbackBox.classList.add('hidden');
+
+            const selectedOptionIndex = userAnswers[currentQuestionIndex];
+
+            q.options.forEach((optText, optIdx) => {
+                const btn = document.createElement('button');
+                btn.className = `option-btn w-full text-left p-4 rounded-2xl border font-semibold text-sm sm:text-base flex items-center justify-between transition-all duration-200 ${
+                    selectedOptionIndex === optIdx
+                        ? 'border-sky-500 bg-sky-50 text-sky-900 shadow-md ring-2 ring-sky-400'
+                        : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-800'
+                }`;
+
+                btn.onclick = () => selectOption(optIdx);
+
+                const optionLetter = String.fromCharCode(65 + optIdx); // A, B, C, D
+
+                let statusBadge = `<span class="w-7 h-7 rounded-xl bg-slate-100 border border-slate-300 text-slate-600 font-bold text-xs flex items-center justify-center">${optionLetter}</span>`;
+
+                if (selectedOptionIndex !== null && quizMode === 'practice') {
+                    btn.disabled = true;
+                    if (optIdx === q.correct) {
+                        btn.className = 'option-btn w-full text-left p-4 rounded-2xl border-2 border-emerald-500 bg-emerald-50 text-emerald-900 font-bold flex items-center justify-between shadow';
+                        statusBadge = `<span class="w-7 h-7 rounded-xl bg-emerald-500 text-white font-bold text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>`;
+                    } else if (optIdx === selectedOptionIndex) {
+                        btn.className = 'option-btn w-full text-left p-4 rounded-2xl border-2 border-rose-500 bg-rose-50 text-rose-900 font-bold flex items-center justify-between shadow';
+                        statusBadge = `<span class="w-7 h-7 rounded-xl bg-rose-500 text-white font-bold text-xs flex items-center justify-center"><i class="fa-solid fa-xmark"></i></span>`;
+                    }
+                }
+
+                btn.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        ${statusBadge}
+                        <span>${optText}</span>
+                    </div>
+                `;
+
+                container.appendChild(btn);
+            });
+
+            if (selectedOptionIndex !== null && quizMode === 'practice') {
+                feedbackBox.classList.remove('hidden');
+                const isCorrect = selectedOptionIndex === q.correct;
+                const feedbackIcon = document.getElementById('feedbackIcon');
+                const feedbackText = document.getElementById('feedbackText');
+
+                if (isCorrect) {
+                    feedbackBox.className = 'p-4 rounded-2xl border border-emerald-200 bg-emerald-50 text-emerald-800 flex items-center justify-between shadow-sm';
+                    feedbackIcon.className = 'w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center text-lg font-bold';
+                    feedbackIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    feedbackText.innerText = 'बिल्कुल सही उत्तर! बहुत बढ़िया।';
+                } else {
+                    feedbackBox.className = 'p-4 rounded-2xl border border-rose-200 bg-rose-50 text-rose-800 flex items-center justify-between shadow-sm';
+                    feedbackIcon.className = 'w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center text-lg font-bold';
+                    feedbackIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    feedbackText.innerText = `गलत उत्तर! सही उत्तर: (${String.fromCharCode(65 + q.correct)}) ${q.options[q.correct]}`;
+                }
+            }
+
+            document.getElementById('prevBtn').disabled = (currentQuestionIndex === 0);
+
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitQuizBtn');
+
+            if (currentQuestionIndex === total - 1) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+        }
+
+        function selectOption(optionIndex) {
+            userAnswers[currentQuestionIndex] = optionIndex;
+            const q = currentQuizQuestions[currentQuestionIndex];
+
+            if (quizMode === 'practice') {
+                if (optionIndex === q.correct) {
+                    playSound('correct');
+                } else {
+                    playSound('wrong');
+                }
+            }
+
+            renderQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            currentQuestionIndex += direction;
+            if (currentQuestionIndex < 0) currentQuestionIndex = 0;
+            if (currentQuestionIndex >= currentQuizQuestions.length) {
+                currentQuestionIndex = currentQuizQuestions.length - 1;
+            }
+            renderQuestion();
+        }
+
+        function confirmExitQuiz() {
+            document.getElementById('exitModal').classList.remove('hidden');
+        }
+
+        function closeExitModal() {
+            document.getElementById('exitModal').classList.add('hidden');
+        }
+
+        function executeExitQuiz() {
+            closeExitModal();
+            clearInterval(timerInterval);
+            showHomeScreen();
+        }
+
+        function showHomeScreen() {
+            clearInterval(timerInterval);
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+            playSound('complete');
+
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let skippedCount = 0;
+
+            currentQuizQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                if (userAns === null) {
+                    skippedCount++;
+                } else if (userAns === q.correct) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                }
+            });
+
+            const total = currentQuizQuestions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+            lastPercentageScore = percentage;
+
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+
+            document.getElementById('correctAnswersCount').innerText = correctCount;
+            document.getElementById('totalResultQuestions').innerText = total;
+            document.getElementById('percentageText').innerText = `${percentage}%`;
+            document.getElementById('accuracyText').innerText = `${percentage}%`;
+
+            document.getElementById('statCorrect').innerText = correctCount;
+            document.getElementById('statIncorrect').innerText = incorrectCount;
+            document.getElementById('statSkipped').innerText = skippedCount;
+
+            const mins = Math.floor(timeElapsed / 60).toString().padStart(2, '0');
+            const secs = (timeElapsed % 60).toString().padStart(2, '0');
+            document.getElementById('resultTimeTaken').innerText = `${mins}:${secs}`;
+
+            const badge = document.getElementById('performanceBadge');
+            const note = document.getElementById('resultFeedbackNote');
+
+            if (percentage >= 80) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200';
+                badge.innerText = 'उत्कृष्ट प्रदर्शन! (Excellent)';
+                note.innerText = 'बधाई हो! आपने परीक्षा में बहुत शानदार अंक प्राप्त किए हैं।';
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+            } else if (percentage >= 50) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200';
+                badge.innerText = 'अच्छा प्रदर्शन! (Good Job)';
+                note.innerText = 'आपने अच्छा प्रयास किया। थोड़ी और तैयारी से आप 90%+ ला सकते हैं।';
+            } else {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-rose-100 text-rose-800 border border-rose-200';
+                badge.innerText = 'सुधार की आवश्यकता (Keep Practicing)';
+                note.innerText = 'कृपया अध्यायों का पुनः अध्ययन करें और पुनः प्रयास करें।';
+            }
+
+            const strokeDashoffset = 251.2 - (251.2 * percentage) / 100;
+            document.getElementById('resultProgressRing').style.strokeDashoffset = strokeDashoffset;
+
+            renderReviewKey();
+        }
+
+        function renderReviewKey() {
+            const container = document.getElementById('reviewContainer');
+            container.innerHTML = '';
+
+            currentQuizQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+
+                const item = document.createElement('div');
+                item.className = `p-4 rounded-2xl border ${
+                    isCorrect
+                        ? 'bg-emerald-50/50 border-emerald-200'
+                        : userAns === null
+                        ? 'bg-amber-50/50 border-amber-200'
+                        : 'bg-rose-50/50 border-rose-200'
+                }`;
+
+                item.innerHTML = `
+                    <div class="flex items-start justify-between gap-2">
+                        <h5 class="text-sm font-bold text-slate-900">${idx + 1}. ${q.question}</h5>
+                        <span class="text-xs font-bold px-2 py-0.5 rounded-md whitespace-nowrap ${
+                            isCorrect ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+                        }">
+                            ${isCorrect ? 'सही' : 'गलत/छोड़ा'}
+                        </span>
+                    </div>
+                    <div class="mt-2 text-xs space-y-1 font-medium">
+                        <p class="text-slate-600">आपका उत्तर: <strong class="${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${
+                            userAns !== null ? q.options[userAns] : 'कोई उत्तर नहीं दिया'
+                        }</strong></p>
+                        <p class="text-emerald-800">सही उत्तर: <strong>${q.options[q.correct]}</strong></p>
+                    </div>
+                `;
+
+                container.appendChild(item);
+            });
+        }
+
+        function retakeCurrentQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = new Array(currentQuizQuestions.length).fill(null);
+            timeElapsed = 0;
+
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            if (quizMode === 'exam') {
+                startTimer();
+            }
+
+            renderQuestion();
+        }
+
+        function shareOnWhatsApp() {
+            const text = "Class 10th 'लोकतांत्रिक राजनीति' (Political Science) के सभी अति-महत्वपूर्ण Objective Questions का ऑनलाइन टेस्ट दें और तुरंत Certificate प्राप्त करें! Developed by Mr. Md Imamul Kalam.";
+            const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        function generateCertificate() {
+            const nameInput = document.getElementById('studentNameInput').value.trim();
+            if (!nameInput) {
+                alert('कृपया अपना नाम दर्ज करें!');
+                return;
+            }
+
+            document.getElementById('certStudentName').innerText = nameInput;
+            document.getElementById('certScoreText').innerText = `${lastPercentageScore}%`;
+
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('hi-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            document.getElementById('certDateText').innerText = dateStr;
+
+            document.getElementById('certificateModal').classList.remove('hidden');
+        }
+
+        function closeCertificateModal() {
+            document.getElementById('certificateModal').classList.add('hidden');
+        }
+
+        function downloadCertificateImage() {
+            const certElement = document.getElementById('certificateCard');
+            html2canvas(certElement, {
+                scale: 2,
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `Political_Science_Certificate_${document.getElementById('studentNameInput').value.trim() || 'Student'}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderChapterGrid();
+        });
+
+        document.getElementById('backBtn').addEventListener('click', () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html'; 
+            }
+        });
+
+    </script>
+</body>
+</html>

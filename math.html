@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कक्षा 10 गणित (Mathematics) - Class 10 Objective Quiz & Certificate</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Devanagari & Modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Html2Canvas Library for Certificate Download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#026597',
+                            700: '#034e75',
+                            800: '#073c59',
+                            900: '#0c3248'
+                        },
+                        whatsapp: {
+                            500: '#25D366',
+                            600: '#1da851'
+                        }
+                    },
+                    fontFamily: {
+                        devanagari: ['Noto Sans Devanagari', 'Outfit', 'sans-serif'],
+                        signature: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            color: #0f172a;
+        }
+
+        .white-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .white-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .white-card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px -5px rgba(2, 132, 199, 0.12);
+            border-color: #38bdf8;
+        }
+
+        .option-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateX(4px);
+        }
+
+        /* Animated Progress Ring */
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Print styles for certificate */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificatePrintContainer, #certificatePrintContainer * {
+                visibility: visible;
+            }
+            #certificatePrintContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+
+ /* Stylish Back Button - Fixed to Top Left & Hidden by Default */
+        .btn-back {
+            position: fixed;   
+            top: 20px;         
+            left: 20px;        
+            z-index: 9999;     
+            
+            /* Hidden State Controls */
+            opacity: 0.1;               /* Button 90% transparent rahega */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth look-and-hide effect */
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* SVG Arrow styling */
+        .btn-back svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+
+        /* Trigger: Cursor lane par ya Mobile par Finger touch karne par */
+        .btn-back:hover, 
+        .btn-back:focus,
+        .btn-back:active {
+            opacity: 1;                 /* Poora visible ho jayega */
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Arrow animation on hover */
+        .btn-back:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* Click effect */
+        .btn-back:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+ <!-- Hidden Back Button -->
+    <button class="btn-back" id="backBtn">
+        <svg viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Go Back</span>
+    </button>
+
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+            <!-- App Logo & Title -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showHomeScreen()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center shadow-md shadow-sky-500/20 text-white font-bold">
+                    <i class="fa-solid fa-calculator text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+                        गणित (Mathematics)
+                        <span class="text-[10px] bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded-full border border-sky-200">Class 10</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 font-medium hidden sm:block">बिहार बोर्ड 10th वस्तुनिष्ठ प्रश्न अभ्यास एवं ई-सर्टिफिकेट</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons: WhatsApp Share & Sound Toggle -->
+            <div class="flex items-center space-x-2">
+                <!-- WhatsApp Share Button -->
+                <button onclick="shareOnWhatsApp()" class="px-3 py-2 rounded-xl bg-whatsapp-500 hover:bg-whatsapp-600 text-white font-bold text-xs flex items-center gap-2 shadow-md shadow-emerald-500/20 transition active:scale-95" title="दोस्तों को शेयर करें">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span class="hidden sm:inline">शेयर करें</span>
+                </button>
+
+                <!-- Sound Toggle -->
+                <button id="soundToggleBtn" onclick="toggleSound()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="ध्वनि चालू/बंद करें">
+                    <i class="fa-solid fa-volume-high text-base text-sky-600" id="soundIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-6 relative z-10 flex flex-col justify-center">
+
+        <!-- SCREEN 1: HOME / CHAPTER SELECTION -->
+        <section id="homeScreen" class="space-y-6">
+            <!-- Author Banner Header Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border border-slate-200 shadow-xl bg-gradient-to-b from-white to-sky-50/50">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-12 -top-12 w-48 h-48 bg-indigo-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs sm:text-sm font-semibold mb-3">
+                    <i class="fa-solid fa-award text-sky-600"></i> बिहार बोर्ड गणित (Mathematics) स्पेशल
+                </div>
+
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+                    कक्षा 10 गणित : सम्पूर्ण चैप्टर वस्तुनिष्ठ प्रश्नोत्तर
+                </h2>
+                
+                <!-- Made By Badge -->
+                <div class="inline-block mt-1 mb-4">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold text-xs sm:text-sm tracking-wide shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Made by Mr. Md Imamul Kalam
+                    </span>
+                </div>
+
+                <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                    मैट्रिक परीक्षा की 100% सटीक तैयारी करें। गणित के सभी 15 अध्यायों के वस्तुनिष्ठ प्रश्नों को हल करें, अपना स्कोर देखें और **Mr. Md Imamul Kalam** द्वारा हस्ताक्षरित डिजिटल प्रमाणपत्र प्राप्त करें।
+                </p>
+
+                <!-- Mode Selection Toggle -->
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-slate-700 hover:border-sky-400 transition">
+                        <input type="radio" name="quizMode" value="practice" checked class="w-4 h-4 text-sky-600 focus:ring-sky-500">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> प्रैक्टिस मोड (तुरंत उत्तर)
+                    </label>
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-slate-700 hover:border-sky-400 transition">
+                        <input type="radio" name="quizMode" value="exam" class="w-4 h-4 text-sky-600 focus:ring-sky-500">
+                        <i class="fa-solid fa-stopwatch text-rose-500"></i> परीक्षा मोड (टाइमर)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Full Quiz Master CTA Banner -->
+            <div class="white-card white-card-hover rounded-2xl p-6 border-l-8 border-l-sky-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-center sm:text-left">
+                    <span class="text-xs font-bold tracking-wider text-sky-600 uppercase bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">सम्पूर्ण टेस्ट</span>
+                    <h3 class="text-xl font-extrabold text-slate-900">गणित के सभी 15 अध्यायों का महा-टेस्ट (All Chapters)</h3>
+                    <p class="text-xs text-slate-500 font-medium">कुल 150+ अति-महत्वपूर्ण वस्तुनिष्ठ प्रश्न | तुरंत प्रमाणपत्र प्राप्त करें</p>
+                </div>
+                <button onclick="startQuiz('all')" class="w-full sm:w-auto px-7 py-3 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-bold shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+                    <span>पूरा टेस्ट शुरू करें</span>
+                    <i class="fa-solid fa-play text-sm"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3 my-2">
+                <div class="h-px bg-slate-200 flex-grow"></div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">अध्याय अनुसार अभ्यास करें</span>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <!-- Chapter Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="chapterGrid">
+                <!-- Dynamically Inserted Chapter Cards -->
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ACTIVE QUIZ -->
+        <section id="quizScreen" class="hidden space-y-6">
+            <!-- Quiz Header Bar -->
+            <div class="white-card rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <button onclick="confirmExitQuiz()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="मुख्य पृष्ठ पर जाएं">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div>
+                        <h2 id="activeQuizTitle" class="text-base sm:text-lg font-extrabold text-slate-900">Chapter 1</h2>
+                        <span id="activeQuizSubtitle" class="text-xs text-slate-500 font-medium">वस्तुनिष्ठ प्रश्न अभ्यास</span>
+                    </div>
+                </div>
+
+                <!-- Timer & Counter -->
+                <div class="flex items-center gap-3">
+                    <div id="timerContainer" class="hidden flex items-center gap-2 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 text-amber-800 font-mono font-bold text-sm">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="quizTimer">00:00</span>
+                    </div>
+
+                    <div class="bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                        प्रश्न: <span id="currentQuestionNum" class="text-sky-600 text-sm font-extrabold">1</span> / <span id="totalQuestionsNum" class="text-sm font-bold">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Top Progress Bar -->
+            <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                <div id="quizProgressBar" class="bg-gradient-to-r from-sky-500 to-indigo-600 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl border border-slate-200 relative">
+                <!-- Question Text -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span id="questionTag" class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-bold">Chapter Question</span>
+                    </div>
+                    <h3 id="questionText" class="text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
+                        <!-- Question content -->
+                    </h3>
+                </div>
+
+                <!-- Options List -->
+                <div id="optionsContainer" class="space-y-3">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Feedback Message Box (Practice Mode) -->
+                <div id="feedbackBox" class="hidden p-4 rounded-2xl border text-sm font-medium transition-all duration-300 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div id="feedbackIcon" class="w-8 h-8 rounded-full flex items-center justify-center text-lg"></div>
+                        <span id="feedbackText" class="text-sm sm:text-base font-bold"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Navigation Footer -->
+            <div class="flex items-center justify-between gap-3">
+                <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-semibold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-chevron-left text-xs"></i> पिछला
+                </button>
+
+                <button id="nextBtn" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold shadow-lg shadow-sky-500/25 transition flex items-center gap-2">
+                    <span>अगला</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <button id="submitQuizBtn" onclick="submitQuiz()" class="hidden px-7 py-2.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/25 transition flex items-center gap-2">
+                    <span>सबमिट करें</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & SCORE CARD -->
+        <section id="resultScreen" class="hidden space-y-6">
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center space-y-6 border border-slate-200 shadow-xl relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-bold text-sky-800">
+                    <i class="fa-solid fa-trophy text-amber-500"></i> क्विज़ परिणाम रिपोर्ट कार्ड
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">आपका कुल परिणाम</h2>
+
+                <!-- Percentage Score Badge & Radial Circle -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 py-2">
+                    <!-- SVG Progress Circle -->
+                    <div class="relative w-40 h-40 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <!-- Background Circle -->
+                            <circle class="text-slate-100" stroke-width="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                            <!-- Animated Circle -->
+                            <circle id="resultProgressRing" class="progress-ring__circle text-sky-500" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="percentageText" class="text-3xl font-black text-slate-900">0%</span>
+                            <span class="text-xs text-slate-500 uppercase font-bold">प्राप्तांक</span>
+                        </div>
+                    </div>
+
+                    <!-- Performance Grade & Score Breakdown -->
+                    <div class="text-center sm:text-left space-y-2">
+                        <div id="performanceBadge" class="inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                            उत्कृष्ट प्रदर्शन!
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">
+                            प्राप्त अंक: <span id="correctAnswersCount" class="text-emerald-600 font-extrabold text-2xl">0</span> / <span id="totalResultQuestions" class="text-slate-600">0</span>
+                        </h3>
+                        <p id="resultFeedbackNote" class="text-xs sm:text-sm text-slate-600 max-w-xs leading-relaxed">
+                            आपने सभी प्रश्नों का बहुत अच्छे से उत्तर दिया है।
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-xl text-xs text-slate-600 border border-slate-200 font-semibold">
+                                <i class="fa-solid fa-clock text-amber-500 mr-1"></i> समय: <span id="resultTimeTaken" class="font-bold text-slate-900">00:00</span>
+                            </span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-xl text-xs text-slate-600 border border-slate-200 font-semibold">
+                                <i class="fa-solid fa-bullseye text-sky-500 mr-1"></i> सटीकता: <span id="accuracyText" class="font-bold text-slate-900">0%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards Row -->
+                <div class="grid grid-cols-3 gap-3 max-w-md mx-auto">
+                    <div class="p-3 bg-emerald-50/60 rounded-2xl border border-emerald-100 text-center">
+                        <span class="block text-xs text-emerald-700 font-semibold mb-1">सही</span>
+                        <span id="statCorrect" class="text-lg font-black text-emerald-700">0</span>
+                    </div>
+                    <div class="p-3 bg-rose-50/60 rounded-2xl border border-rose-100 text-center">
+                        <span class="block text-xs text-rose-700 font-semibold mb-1">गलत</span>
+                        <span id="statIncorrect" class="text-lg font-black text-rose-700">0</span>
+                    </div>
+                    <div class="p-3 bg-amber-50/60 rounded-2xl border border-amber-100 text-center">
+                        <span class="block text-xs text-amber-700 font-semibold mb-1">छोड़े</span>
+                        <span id="statSkipped" class="text-lg font-black text-amber-700">0</span>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATE ACTION BOX -->
+                <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-sky-50 to-amber-50 border border-amber-200/80 shadow-md max-w-lg mx-auto text-center space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-amber-800 font-extrabold text-base">
+                        <i class="fa-solid fa-certificate text-amber-500 text-xl"></i>
+                        <span>अपना डिजिटल प्रमाण पत्र (Certificate) डाउनलोड करें</span>
+                    </div>
+                    <p class="text-xs text-slate-600">इस टेस्ट को पूरा करने पर आपको **Mr. Md Imamul Kalam** के डिजिटल हस्ताक्षर के साथ सर्टिफिकेट मिलता है।</p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-2 max-w-md mx-auto">
+                        <input type="text" id="studentNameInput" placeholder="अपना नाम दर्ज करें (उदा० राहुल कुमार)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        <button onclick="generateCertificate()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm whitespace-nowrap shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-award"></i> प्रमाण पत्र देखें
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <button onclick="retakeCurrentQuiz()" class="px-6 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold shadow-md shadow-sky-500/20 transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right text-xs"></i> पुनः प्रयास करें
+                    </button>
+                    <button onclick="showHomeScreen()" class="px-6 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-bold text-slate-700 transition flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-house text-xs"></i> मुख्य पृष्ठ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Answer Review Key -->
+            <div class="white-card rounded-3xl p-6 space-y-4 border border-slate-200 shadow-lg">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-sky-600"></i> उत्तर समीक्षा (Answer Key)
+                    </h3>
+                    <span class="text-xs text-slate-500">सभी प्रश्नों के सही उत्तर</span>
+                </div>
+
+                <div id="reviewContainer" class="space-y-3 max-h-96 overflow-y-auto pr-2">
+                    <!-- Review Questions injected dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border border-slate-200 p-4 sm:p-6 space-y-4 my-auto relative">
+            <!-- Modal Close Header -->
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-award text-amber-500"></i> आपका प्रमाणपत्र (Certificate)
+                </h3>
+                <button onclick="closeCertificateModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- PRINTABLE CERTIFICATE CANVAS CONTAINER -->
+            <div id="certificatePrintContainer" class="p-2 bg-slate-100 rounded-2xl">
+                <div id="certificateCard" class="bg-white rounded-2xl p-6 sm:p-10 border-8 border-amber-500/30 relative overflow-hidden shadow-inner font-devanagari text-slate-800" style="background-image: radial-gradient(#f1f5f9 1px, transparent 1px); background-size: 16px 16px;">
+                    
+                    <!-- Decorative Ornate Corners -->
+                    <div class="absolute top-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute top-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute bottom-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute bottom-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+
+                    <div class="text-center space-y-4 relative z-10">
+                        <!-- Top Header Logo & Badge -->
+                        <div class="flex items-center justify-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow">
+                                <i class="fa-solid fa-calculator text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-amber-800">बिहार बोर्ड क्लास 10th ई-लर्निंग</h4>
+                                <p class="text-[10px] text-slate-500">गणित (Mathematics) - ऑब्जेक्टिव परीक्षा सफलता</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Title -->
+                        <div>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase text-slate-900 tracking-wide font-serif text-amber-900">
+                                प्रमाणपत्र / CERTIFICATE
+                            </h2>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500 tracking-widest uppercase mt-1">OF ACHIEVEMENT & COMPLETION</p>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium">प्रमाणित किया जाता है कि विद्यार्थी</p>
+
+                        <!-- Student Name -->
+                        <div class="py-1">
+                            <h3 id="certStudentName" class="text-2xl sm:text-4xl font-extrabold text-sky-700 underline decoration-amber-400 decoration-4 underline-offset-8">
+                                राहुल कुमार
+                            </h3>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-xl mx-auto font-medium">
+                            ने <strong>कक्षा 10 गणित (Class 10th Mathematics Objective Quiz App)</strong> में सम्‍मिलित होकर उत्कृष्ट प्रदर्शन किया एवं सफलता प्राप्त की।
+                        </p>
+
+                        <!-- Score Details Pill -->
+                        <div class="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-2.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900 my-2 shadow-sm">
+                            <span>प्राप्तांक: <strong id="certScoreText" class="text-amber-700 text-sm">85%</strong></span>
+                            <span>•</span>
+                            <span>दिनांक: <strong id="certDateText" class="text-slate-800">22/08/2026</strong></span>
+                            <span>•</span>
+                            <span>स्थिति: <strong class="text-emerald-600">उत्तीर्ण (Passed)</strong></span>
+                        </div>
+
+                        <!-- Signatures Row -->
+                        <div class="pt-6 grid grid-cols-2 items-end gap-4 border-t border-slate-200 mt-4">
+                            <!-- Verification Seal Badge -->
+                            <div class="text-center sm:text-left space-y-1">
+                                <div class="w-14 h-14 rounded-full bg-amber-50 border-2 border-amber-500 flex items-center justify-center text-amber-600 mx-auto sm:mx-0 shadow-sm">
+                                    <i class="fa-solid fa-ribbon text-2xl"></i>
+                                </div>
+                                <p class="text-[10px] font-bold text-slate-500 uppercase">आधिकारिक डिजिटल मोहर</p>
+                            </div>
+
+                            <!-- Instructor Digital Signature -->
+                            <div class="text-center sm:text-right space-y-1">
+                                <div class="font-signature text-2xl sm:text-3xl text-slate-900 font-bold tracking-wide select-none">
+                                    Md Imamul Kalam
+                                </div>
+                                <div class="h-0.5 bg-slate-400 w-32 ml-auto"></div>
+                                <p class="text-xs font-extrabold text-slate-900">Mr. Md Imamul Kalam</p>
+                                <p class="text-[10px] text-slate-500 font-semibold">संस्थापक एवं क्विज़ निर्देशक</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Bottom Buttons -->
+            <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
+                <button onclick="downloadCertificateImage()" class="px-5 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow-md shadow-sky-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> डाउनलोड करें (Image)
+                </button>
+                <button onclick="window.print()" class="px-5 py-2.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-md shadow-amber-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> प्रिंट करें
+                </button>
+                <button onclick="closeCertificateModal()" class="px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+                    बंद करें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM EXIT CONFIRMATION MODAL -->
+    <div id="exitModal" class="fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-4 shadow-2xl text-center border border-slate-200">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto text-xl font-bold">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">क्या आप बाहर निकलना चाहते हैं?</h3>
+            <p class="text-xs text-slate-500">यदि आप अभी बाहर जाते हैं तो आपकी प्रगति मिट सकती है।</p>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <button onclick="executeExitQuiz()" class="px-4 py-2 rounded-xl bg-rose-600 text-white font-bold text-xs hover:bg-rose-700 transition">
+                    हाँ, बाहर निकलें
+                </button>
+                <button onclick="closeExitModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs hover:bg-slate-200 transition">
+                    नहीं, जारी रखें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-4 text-center text-xs text-slate-500 relative z-10 mt-auto">
+        <p>कक्षा 10 गणित (Mathematics) Bihar Board Objective Practice Quiz App</p>
+        <p class="mt-1 font-bold text-amber-600">Made by Mr. Md Imamul Kalam</p>
+    </footer>
+
+    <script>
+        // Class 10 Math Objective Question Bank (15 Chapters)
+        const quizData = [
+            // Chapter 1: वास्तविक संख्याएँ (Real Numbers)
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "π (पाई) कौन सी संख्या है?", options: ["परिमेय संख्या", "अपरिमेय संख्या", "पूर्णांक संख्या", "इनमें से कोई नहीं"], correct: 1 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "दो परिमेय संख्याओं के बीच कितनी परिमेय संख्याएँ हो सकती हैं?", options: ["1", "2", "3", "अनंत"], correct: 3 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "17/8 का दशमलव प्रसार कैसा होगा?", options: ["शांत", "अशांत आवर्ती", "अशांत अनावर्ती", "इनमें से कोई नहीं"], correct: 0 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "√3 एक ______ संख्या है।", options: ["परिमेय", "अपरिमेय", "प्राकृत", "सम"], correct: 1 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "दो लगातार अभाज्य संख्याओं का म०स० (HCF) कितना होता है?", options: ["0", "1", "2", "3"], correct: 1 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "सबसे छोटी अभाज्य संख्या और सबसे छोटी भाज्य संख्या का गुणनफल क्या होगा?", options: ["2", "4", "6", "8"], correct: 3 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "6/15 का दशमलव प्रसार कैसा होता है?", options: ["शांत", "अशांत", "आवर्ती", "इनमें से कोई नहीं"], correct: 0 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "यदि p और q दो अभाज्य संख्याएँ हैं, तो उनका ल०स० (LCM) क्या होगा?", options: ["p + q", "p - q", "p × q", "p / q"], correct: 2 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "यूक्लिड विभाजन प्रमेयिका a = bq + r में r के लिए कौन सा कथन सत्य है?", options: ["0 ≤ r < b", "0 < r ≤ b", "0 ≤ r ≤ b", "0 < r < b"], correct: 0 },
+            { chapter: 1, chapterTitle: "Chapter 1: वास्तविक संख्याएँ", question: "निम्नलिखित में कौन अभाज्य संख्या है?", options: ["15", "23", "12", "75"], correct: 1 },
+
+            // Chapter 2: बहुपद (Polynomials)
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "रैखिक बहुपद के शून्यकों की संख्या कितनी होती है?", options: ["0", "1", "2", "3"], correct: 1 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "द्विघात बहुपद x² + 3x + 2 के शून्यक क्या होंगे?", options: ["1, 2", "-1, -2", "1, -2", "-1, 2"], correct: 1 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "यदि बहुपद P(x) = x² - 2x - 6 के शून्यक α और β हों, तो α · β का मान होगा:", options: ["-6", "6", "2", "-2"], correct: 0 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "घात 1 वाले बहुपद को क्या कहते हैं?", options: ["द्विघात बहुपद", "त्रिघात बहुपद", "रैखिक बहुपद", "बहुपद नहीं"], correct: 2 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "द्विघात बहुपद का व्यापक रूप है:", options: ["ax + b", "ax² + bx + c", "ax³ + bx² + cx + d", "ax² + b"], correct: 1 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "यदि बहुपद x² - kx + 8 के शून्यकों का योग 6 है, तो k का मान होगा:", options: ["8", "-8", "6", "-6"], correct: 2 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "त्रिघात बहुपद के अधिकतम कितने शून्यक हो सकते हैं?", options: ["1", "2", "3", "4"], correct: 2 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "द्विघात बहुपद x² - 3 के शून्यक होंगे:", options: ["(3, -3)", "(√3, -√3)", "(√3, √3)", "(-3, -3)"], correct: 1 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "यदि α, β द्विघात बहुपद ax² + bx + c के शून्यक हों, तो α + β = ", options: ["c/a", "-b/a", "b/a", "-c/a"], correct: 1 },
+            { chapter: 2, chapterTitle: "Chapter 2: बहुपद", question: "त्रिघात बहुपद ax³ + bx² + cx + d के शून्यकों α, β, γ का गुणनफल αβγ = ", options: ["-d/a", "d/a", "c/a", "-b/a"], correct: 0 },
+
+            // Chapter 3: दो चरों वाले रैखिक समीकरण युग्म
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "रैखिक समीकरण युग्म a₁x + b₁y + c₁ = 0 और a₂x + b₂y + c₂ = 0 का अद्वितीय हल होगा यदि:", options: ["a₁/a₂ ≠ b₁/b₂", "a₁/a₂ = b₁/b₂ ≠ c₁/c₂", "a₁/a₂ = b₁/b₂ = c₁/c₂", "a₁/a₂ = c₁/c₂"], correct: 0 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "समीकरण युग्म x + 2y = 5 और 3x + 6y = 15 के कितने हल होंगे?", options: ["एक हल", "कोई हल नहीं", "अनंत हल", "दो हल"], correct: 2 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "दो चरों में दो एकघातीय समीकरणों के आलेख यदि प्रतिच्छेदी रेखाएं हों, तो हलों की संख्या होगी:", options: ["केवल एक", "कोई हल नहीं", "अनंत हल", "तीन हल"], correct: 0 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "समीकरण x - y = 0 तथा x + y = 0 का हल होगा:", options: ["x = 1, y = 1", "x = 0, y = 0", "x = 2, y = -2", "x = -1, y = 1"], correct: 1 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "यदि a₁/a₂ = b₁/b₂ ≠ c₁/c₂ हो, तो समीकरण निकाय का हल होगा:", options: ["अद्वितीय हल", "कोई हल नहीं", "अनंत हल", "दो हल"], correct: 1 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "रैखिक समीकरण युग्म का आलेख यदि समांतर रेखाएँ हों, तो वह निकाय कैसा होता है?", options: ["असंगत (विरोधी)", "संगत (अविरोधी)", "आश्रित", "इनमें से कोई नहीं"], correct: 0 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "2x + 3y = 11 और 2x - 4y = -24 का हल क्या होगा?", options: ["x = 2, y = 3", "x = -2, y = 5", "x = -3, y = 1", "x = 0, y = 4"], correct: 1 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "k के किस मान के लिए kx + 2y = 5 तथा 3x + y = 1 का एक अद्वितीय हल होगा?", options: ["k ≠ 6", "k = 6", "k = 3", "k ≠ 3"], correct: 0 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "यदि दो रेखाएं संपाती हों, तो निकाय के कितने हल होते हैं?", options: ["एक", "कोई नहीं", "अनगिनत (अनंत)", "दो"], correct: 2 },
+            { chapter: 3, chapterTitle: "Chapter 3: दो चरों वाले रैखिक समीकरण युग्म", question: "x = 0 का आलेख कौन-सी रेखा होती है?", options: ["x-अक्ष", "y-अक्ष", "मूल बिंदु", "इनमें से कोई नहीं"], correct: 1 },
+
+            // Chapter 4: द्विघात समीकरण (Quadratic Equations)
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "द्विघात समीकरण ax² + bx + c = 0 का विविक्तकर (Discriminant, D) होता है:", options: ["b² - 4ac", "b² + 4ac", "4ac - b²", "-b ± √(b² - 4ac)"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "यदि D > 0 हो, तो द्विघात समीकरण के मूल कैसे होंगे?", options: ["वास्तविक और असमान", "वास्तविक और समान", "काल्पनिक (वास्तविक नहीं)", "इनमें से कोई नहीं"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "द्विघात समीकरण x² - 4x + 4 = 0 के मूलों की प्रकृति होगी:", options: ["वास्तविक और समान", "वास्तविक और असमान", "अवास्तविक", "अपरिमेय"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "समीकरण x² + 5x + 6 = 0 के मूल हैं:", options: ["2, 3", "-2, -3", "2, -3", "-2, 3"], correct: 1 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "यदि द्विघात समीकरण के मूल समान हों, तो D का मान कितना होगा?", options: ["0", "1", "> 0", "< 0"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "निम्नलिखित में कौन द्विघात समीकरण है?", options: ["x + 1/x = 2", "x² + 1/x² = 3", "x³ - x² = (x-1)³", "x(x+1) + 8 = (x+2)(x-2)"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "द्विघात समीकरण 2x² - 4x + 3 = 0 का विवेचक (D) होगा:", options: ["-8", "10", "-16", "8"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "यदि द्विघात समीकरण x² - px + q = 0 के मूल α, β हों, तो α² + β² का मान होगा:", options: ["p² - 2q", "p² + 2q", "p² - q", "p² + q"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "ax² + bx + c = 0 में मूल समान होने की शर्त क्या है?", options: ["b² = 4ac", "b² > 4ac", "b² < 4ac", "b = 4ac"], correct: 0 },
+            { chapter: 4, chapterTitle: "Chapter 4: द्विघात समीकरण", question: "यदि D < 0 हो, तो समीकरण के मूल कैसे होंगे?", options: ["वास्तविक नहीं (काल्पनिक)", "वास्तविक और समान", "वास्तविक और भिन्न", "परिमेय"], correct: 0 },
+
+            // Chapter 5: समांतर श्रेढ़ियाँ (Arithmetic Progressions)
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "A.P. 2, 7, 12, ... का 10वाँ पद क्या होगा?", options: ["47", "42", "50", "52"], correct: 0 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "A.P. का सार्व अंतर (Common Difference, d) हो सकता है:", options: ["केवल धनात्मक", "केवल ऋनात्मक", "शून्य", "धनात्मक, ऋणात्मक या शून्य तीनों"], correct: 3 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "प्रथम n प्राकृत संख्याओं के योग का सूत्र है:", options: ["n(n+1)/2", "n(n-1)/2", "n²", "2n + 1"], correct: 0 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "A.P. 10, 7, 4, ... का 30वाँ पद है:", options: ["97", "77", "-77", "-87"], correct: 2 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "यदि A.P. का प्रथम पद a तथा सार्व अंतर d हो, तो nवाँ पद (aₙ) होगा:", options: ["a + (n-1)d", "a + nd", "a - (n-1)d", "(n-1)d"], correct: 0 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "A.P. 3, 8, 13, 18, ... का कौन-सा पद 78 है?", options: ["12वाँ", "15वाँ", "16वाँ", "18वाँ"], correct: 2 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "क्रमागत पदों के अंतर को A.P. में क्या कहा जाता है?", options: ["प्रथम पद", "सार्व अंतर", "अंतिम पद", "योगफल"], correct: 1 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "प्रथम 100 प्राकृत संख्याओं का योगफल कितना होगा?", options: ["5050", "5005", "5500", "5055"], correct: 0 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "यदि a, b, c A.P. में हों, तो b का मान क्या होगा?", options: ["(a+c)/2", "a+c", "ac/2", "√(ac)"], correct: 0 },
+            { chapter: 5, chapterTitle: "Chapter 5: समांतर श्रेढ़ियाँ", question: "A.P. 2, 4, 6, 8, ... का सार्व अंतर है:", options: ["1", "2", "3", "4"], correct: 1 },
+
+            // Chapter 6: त्रिभुज (Triangles)
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "सभी वृत्त होते हैं:", options: ["सर्वांगसम", "समरूप", "समान क्षेत्रफल वाले", "इनमें से कोई नहीं"], correct: 1 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "दो समरूप त्रिभुजों की भुजाओं का अनुपात 4 : 9 है। उनके क्षेत्रफलों का अनुपात होगा:", options: ["2 : 3", "16 : 81", "81 : 16", "4 : 9"], correct: 1 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "थेल्स प्रमेय (Thales Theorem) के अनुसार यदि △ABC में DE || BC हो, तो:", options: ["AD/DB = AE/EC", "AD/AB = AE/EC", "AB/DB = AC/EC", "AD/EC = AE/DB"], correct: 0 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "पाइथागोरस प्रमेय का संबंध किस त्रिभुज से है?", options: ["समकोण त्रिभुज", "समबाहु त्रिभुज", "विषमबाहु त्रिभुज", "न्यूनकोण त्रिभुज"], correct: 0 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "यदि किसी त्रिभुज की दो भुजाएं बराबर हों, तो उसे क्या कहते हैं?", options: ["समबाहु त्रिभुज", "समद्विबाहु त्रिभुज", "विषमबाहु त्रिभुज", "समकोण त्रिभुज"], correct: 1 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "दो समरूप त्रिभुजों के क्षेत्रफल 64 सेमी² और 121 सेमी² हैं। उनकी संगत भुजाओं का अनुपात होगा:", options: ["8 : 11", "11 : 8", "64 : 121", "4 : 11"], correct: 0 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "समबाहु त्रिभुज का प्रत्येक कोण कितना डिग्री होता है?", options: ["30°", "45°", "60°", "90°"], correct: 2 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "सभी वर्ग होते हैं:", options: ["समरूप", "सर्वांगसम", "समान", "इनमें से कोई नहीं"], correct: 0 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "यदि △ABC ~ △DEF और ∠A = 47°, ∠B = 83° हो, तो ∠C का मान होगा:", options: ["50°", "60°", "70°", "80°"], correct: 0 },
+            { chapter: 6, chapterTitle: "Chapter 6: त्रिभुज", question: "समकोण त्रिभुज में सबसे बड़ी भुजा को क्या कहते हैं?", options: ["लंब", "आधार", "कर्ण", "माध्यिका"], correct: 2 },
+
+            // Chapter 7: निर्देशांक ज्यामिति (Coordinate Geometry)
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "बिंदु (3, -4) किस चतुर्थांश (Quadrant) में स्थित है?", options: ["प्रथम", "द्वितीय", "तृतीय", "चतुर्थ"], correct: 3 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "मूल बिंदु (Origin) के निर्देशांक होते हैं:", options: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"], correct: 0 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "बिंदुओं (2, 3) और (4, 1) के बीच की दूरी होगी:", options: ["2√2", "2", "4", "2√3"], correct: 0 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "बिंदु (x, y) की मूल बिंदु से दूरी होती है:", options: ["√(x² + y²)", "x + y", "√(x² - y²)", "x² + y²"], correct: 0 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "y-अक्ष से किसी बिंदु की दूरी कहलाती है:", options: ["y-निर्देशांक", "x-निर्देशांक (भुज)", "कोटी", "मूल बिंदु"], correct: 1 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "बिंदु (-2, -3) किस चतुर्थांश में है?", options: ["प्रथम", "द्वितीय", "तृतीय", "चतुर्थ"], correct: 2 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "(x₁, y₁) और (x₂, y₂) को मिलाने वाले रेखाखंड के मध्य-बिंदु का निर्देशांक है:", options: ["((x₁+x₂)/2, (y₁+y₂)/2)", "((x₁-x₂)/2, (y₁-y₂)/2)", "(x₁+x₂, y₁+y₂)", "(x₁/2, y₁/2)"], correct: 0 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "x-अक्ष पर स्थित किसी बिंदु का y-निर्देशांक कितना होता है?", options: ["0", "1", "-1", "x"], correct: 0 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "बिंदु (-6, 8) की मूल बिंदु से दूरी क्या होगी?", options: ["8", "2√7", "10", "6"], correct: 2 },
+            { chapter: 7, chapterTitle: "Chapter 7: निर्देशांक ज्यामिति", question: "बिंदु (4, 5) में भुज (Abscissa) का मान है:", options: ["4", "5", "9", "1"], correct: 0 },
+
+            // Chapter 8: त्रिकोणमिति का परिचय (Introduction to Trigonometry)
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "sin²θ + cos²θ का मान क्या होता है?", options: ["0", "1", "-1", "2"], correct: 1 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "tan 45° का मान कितना होता है?", options: ["0", "1/√3", "1", "√3"], correct: 2 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "यदि sinθ = 3/5 हो, तो cosθ का मान होगा:", options: ["4/5", "3/4", "5/4", "5/3"], correct: 0 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "1 + tan²θ बराबर होता है:", options: ["sec²θ", "cosec²θ", "cot²θ", "cos²θ"], correct: 0 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "sin(90° - θ) = ", options: ["sinθ", "cosθ", "tanθ", "cotθ"], correct: 1 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "sec² 60° - 1 का मान क्या होगा?", options: ["2", "3", "4", "1"], correct: 1 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "cos 0° का मान है:", options: ["0", "1", "1/2", "अपरिभाषित"], correct: 1 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "यदि tanθ = 1 हो, तो θ का मान होगा:", options: ["30°", "45°", "60°", "90°"], correct: 1 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "sin 18° / cos 72° का मान क्या होगा?", options: ["0", "1", "1/2", "2"], correct: 1 },
+            { chapter: 8, chapterTitle: "Chapter 8: त्रिकोणमिति का परिचय", question: "cot²θ - cosec²θ = ", options: ["1", "-1", "0", "2"], correct: 1 },
+
+            // Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग (Applications of Trigonometry)
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "जब प्रेक्षक की आंख वस्तु से नीचे होती है और वह ऊपर देखता है, तो बनने वाला कोण कहलाता है:", options: ["उन्नयन कोण", "अवनमन कोण", "समकोण", "सरल कोण"], correct: 0 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "6 मीटर ऊंचे खंभे की छाया जमीन पर 2√3 मीटर लंबी है, तो सूर्य का उन्नयन कोण होगा:", options: ["30°", "45°", "60°", "90°"], correct: 2 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "मीनार के पाद बिंदु से 100 मीटर दूरी पर उन्नयन कोण 30° है। मीनार की ऊंचाई होगी:", options: ["100/√3 मीटर", "100√3 मीटर", "50 मीटर", "200 मीटर"], correct: 0 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "जब वस्तु प्रेक्षक की आंख के क्षैतिज स्तर से नीचे होती है, तो बनने वाला कोण है:", options: ["उन्नयन कोण", "अवनमन कोण", "अधिक कोण", "ऋजु कोण"], correct: 1 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "उन्नयन कोण और अवनमन कोण में क्या संबंध होता है?", options: ["समान (बराबर)", "असमान", "पूरक", "संपूरक"], correct: 0 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "12 मीटर ऊंचे खंभे की छाया 4√3 मीटर है। सूर्य का उन्नयन कोण क्या होगा?", options: ["30°", "45°", "60°", "75°"], correct: 2 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "एक समकोण त्रिभुज में उन्नयन कोण 45° और आधार 10 मी है, तो ऊंचाई होगी:", options: ["5 मी", "10 मी", "10√3 मी", "20 मी"], correct: 1 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "मीनार के पाद से 30 मी दूरी पर शिखर का उन्नयन कोण 30° है। मीनार की ऊंचाई है:", options: ["10√3 मी", "30√3 मी", "10 मी", "15 मी"], correct: 0 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "20 मी ऊंची मीनार की छाया 20√3 मी है। सूर्य का उन्नयन कोण है:", options: ["30°", "45°", "60°", "90°"], correct: 0 },
+            { chapter: 9, chapterTitle: "Chapter 9: त्रिकोणमिति के कुछ अनुप्रयोग", question: "खंभे की लंबाई और उसकी छाया का अनुपात 1 : √3 है। सूर्य का उन्नयन कोण है:", options: ["30°", "45°", "60°", "75°"], correct: 0 },
+
+            // Chapter 10: वृत्त (Circles)
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "वृत्त के किसी बिंदु पर खींची गई स्पर्श रेखा स्पर्श बिंदु से जाने वाली त्रिज्या पर होती है:", options: ["समांतर", "लंब", "त्रिछी", "द्विभाजक"], correct: 1 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "बाह्य बिंदु से वृत्त पर कितनी स्पर्श रेखाएँ खींची जा सकती हैं?", options: ["1", "2", "3", "अनंत"], correct: 1 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "वृत्त के केंद्र पर बना कुल कोण कितना होता है?", options: ["90°", "180°", "270°", "360°"], correct: 3 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "किसी वृत्त की स्पर्श रेखा उसे कितने बिंदुओं पर प्रतिच्छेद करती है?", options: ["केवल एक बिंदु पर", "दो बिंदुओं पर", "तीन बिंदुओं पर", "एक भी नहीं"], correct: 0 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "5 सेमी त्रिज्या वाले वृत्त के केंद्र से 13 सेमी दूर स्थित बिंदु से स्पर्श रेखा की लंबाई होगी:", options: ["10 सेमी", "11 सेमी", "12 सेमी", "14 सेमी"], correct: 2 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "एक वृत्त पर कितनी समांतर स्पर्श रेखाएँ हो सकती हैं?", options: ["1", "2", "4", "अनंत"], correct: 1 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "वृत्त की सबसे बड़ी जीवा (Chord) को क्या कहते हैं?", options: ["चाप", "व्यास", "त्रिज्या", "स्पर्श रेखा"], correct: 1 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "वृत्त के बाह्य बिंदु P से खींची गई स्पर्श रेखाओं PA और PB की लंबाई में संबंध होता है:", options: ["PA > PB", "PA < PB", "PA = PB", "PA = 2PB"], correct: 2 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "यदि दो वृत्त एक दूसरे को अंतः स्पर्श करते हैं, तो उभयनिष्ठ स्पर्श रेखाओं की संख्या होगी:", options: ["1", "2", "3", "0"], correct: 0 },
+            { chapter: 10, chapterTitle: "Chapter 10: वृत्त", question: "दो अलग-अलग वृत्तों की अधिकतम कितनी उभयनिष्ठ स्पर्श रेखाएं हो सकती हैं?", options: ["2", "3", "4", "1"], correct: 2 },
+
+            // Chapter 11: रचनाएँ (Constructions)
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "एक रेखाखंड को 3 : 2 के अनुपात में विभाजित करने के लिए किरण पर न्यूनतम कितने बिंदु अंकित करेंगे?", options: ["3", "2", "5", "6"], correct: 2 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "बाह्य बिंदु से वृत्त पर स्पर्श रेखा खींचने के लिए बाह्य बिंदु व केंद्र के बीच की रेखा का क्या खींचते हैं?", options: ["लंब समद्विभाजक", "कोण समद्विभाजक", "समांतर रेखा", "माध्यिका"], correct: 0 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "दिए गए त्रिभुज के समरूप त्रिभुज रचना में स्केल गुणक 3/5 है, तो किरण पर कितने समान भाग बनते हैं?", options: ["3", "5", "8", "2"], correct: 1 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "रेखाखंड AB को 2 : 3 के अनुपात में बाँटने के लिए A से खींची किरण AX पर कितने बिंदु अंकित होंगे?", options: ["2", "3", "5", "6"], correct: 2 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "स्केल गुणक 4/3 होने पर नया समरूप त्रिभुज मूल त्रिभुज से होगा:", options: ["छोटा", "बड़ा", "बराबर", "इनमें से कोई नहीं"], correct: 1 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "स्केल गुणक p/q में यदि p < q हो, तो नया त्रिभुज मूल त्रिभुज से होगा:", options: ["छोटा", "बड़ा", "समान", "दुगुना"], correct: 0 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "किसी कोण का समद्विभाजक उस कोण को कितने भागों में बांटता है?", options: ["2 बराबर भाग", "3 बराबर भाग", "4 बराबर भाग", "अमान्य"], correct: 0 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "रेखाखंड का लंब समद्विभाजक रेखाखंड को कितने डिग्री पर काटता है?", options: ["45°", "60°", "90°", "180°"], correct: 2 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "वृत्त की त्रिज्या और स्पर्श रेखा के बीच का कोण होता है:", options: ["90°", "60°", "45°", "30°"], correct: 0 },
+            { chapter: 11, chapterTitle: "Chapter 11: रचनाएँ", question: "वृत्त के बाहर स्थित बिंदु से कितनी स्पर्श रेखाएँ खींची जा सकती हैं?", options: ["1", "2", "3", "अनंत"], correct: 1 },
+
+            // Chapter 12: वृतों से संबंधित क्षेत्रफल (Areas Related to Circles)
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "r त्रिज्या वाले वृत्त का क्षेत्रफल होता है:", options: ["πr²", "2πr", "πr", "4πr²"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "r त्रिज्या वाले वृत्त की परिधि होती है:", options: ["πr²", "2πr", "2πr²", "πr/2"], correct: 1 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "θ कोण वाले त्रिज्यखंड (Sector) का क्षेत्रफल होता है:", options: ["(θ/360°) × πr²", "(θ/360°) × 2πr", "(θ/180°) × πr²", "(θ/90°) × πr²"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "यदि वृत्त की त्रिज्या दोगुनी कर दी जाए, तो नए और पुराने वृत्तों के क्षेत्रफलों का अनुपात होगा:", options: ["2 : 1", "4 : 1", "1 : 2", "1 : 4"], correct: 1 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "θ कोण वाले त्रिज्यखंड के चाप की लंबाई होती है:", options: ["(θ/360°) × 2πr", "(θ/360°) × πr²", "(θ/180°) × πr", "(θ/90°) × 2πr"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "यदि वृत्त का परिमाप और क्षेत्रफल संख्यात्मक रूप से बराबर हों, तो त्रिज्या होगी:", options: ["2 मात्रक", "π मात्रक", "4 मात्रक", "7 मात्रक"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "दो वृत्तों की त्रिज्याएँ 19 सेमी व 9 सेमी हैं। दोनों की परिधियों के योग के बराबर परिधि वाले वृत्त की त्रिज्या होगी:", options: ["28 सेमी", "10 सेमी", "38 सेमी", "20 सेमी"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "अर्धवृत्त का परिमाप क्या होता है?", options: ["r(π + 2)", "πr", "2πr", "πr²"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "7 सेमी त्रिज्या वाले अर्धवृत्त का क्षेत्रफल होगा:", options: ["77 सेमी²", "154 सेमी²", "38.5 सेमी²", "308 सेमी²"], correct: 0 },
+            { chapter: 12, chapterTitle: "Chapter 12: वृतों से संबंधित क्षेत्रफल", question: "यदि वृत्त का व्यास 14 सेमी है, तो इसका क्षेत्रफल होगा:", options: ["154 सेमी²", "44 सेमी²", "308 सेमी²", "616 सेमी²"], correct: 0 },
+
+            // Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन (Surface Areas and Volumes)
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "r त्रिज्या वाले गोले का आयतन होता है:", options: ["(4/3)πr³", "4πr²", "(2/3)πr³", "2πr²"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "बेलन का वक्र पृष्ठीय क्षेत्रफल होता है:", options: ["2πrh", "πr²h", "2πr(r+h)", "πrl"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "शंकु (Cone) का आयतन होता है:", options: ["(1/3)πr²h", "πr²h", "2πrh", "(4/3)πr³"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "घन का आयतन 125 सेमी³ है, तो इसकी एक भुजा होगी:", options: ["5 सेमी", "25 सेमी", "15 सेमी", "10 सेमी"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "r त्रिज्या और h ऊंचाई वाले बेलन का संपूर्ण पृष्ठीय क्षेत्रफल है:", options: ["2πr(r + h)", "2πrh", "πr²h", "2πr²"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "अर्धगोले का संपूर्ण पृष्ठीय क्षेत्रफल होता है:", options: ["3πr²", "2πr²", "4πr²", "(2/3)πr³"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "a भुजा वाले घन का विकर्ण (Diagonal) होता है:", options: ["a√3", "a√2", "3a", "a³/3"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "दो गोलों के आयतनों का अनुपात 8 : 27 है। उनकी त्रिज्याओं का अनुपात होगा:", options: ["2 : 3", "4 : 9", "3 : 2", "9 : 4"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "शंकु की तिर्यक ऊंचाई (l) का सूत्र है:", options: ["√(r² + h²)", "r + h", "√(r² - h²)", "r² + h²"], correct: 0 },
+            { chapter: 13, chapterTitle: "Chapter 13: पृष्ठीय क्षेत्रफल एवं आयतन", question: "घनाभ (Cuboid) का आयतन होता है:", options: ["l × b × h", "2(lb + bh + hl)", "l + b + h", "a³"], correct: 0 },
+
+            // Chapter 14: सांख्यिकी (Statistics)
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "वर्ग अंतराल 10 – 20 का वर्ग चिह्न (Class Mark) क्या होगा?", options: ["15", "10", "20", "30"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "प्रथम 5 प्राकृत संख्याओं का माध्य (Mean) क्या होगा?", options: ["3", "2", "4", "5"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "आँकड़ों 2, 3, 4, 2, 6, 2, 7, 2 का बहुलक (Mode) होगा:", options: ["2", "3", "4", "7"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "माध्य, मध्यका और बहुलक के बीच सही संबंध है:", options: ["बहुलक = 3 × मध्यका - 2 × माध्य", "माध्य = 3 × मध्यका - 2 × बहुलक", "मध्यका = 3 × बहुलक - 2 × माध्य", "बहुलक = 2 × मध्यका - 3 × माध्य"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "वर्ग अंतराल 15 – 25 का वर्ग आमाप (Class Size) है:", options: ["10", "15", "20", "40"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "संचयी बारंबारता वक्र को क्या कहते हैं?", options: ["तोरण (Ogive)", "आयतिचित्र", "बारंबारता बहुभुज", "स्तंभ आलेख"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "यदि किसी वितरण का माध्य 20 और मध्यका 22 हो, तो बहुलक होगा:", options: ["26", "24", "22", "20"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "प्रेक्षणों 3, 5, 2, 8, 7, 9, 1 की मध्यका (Median) होगी:", options: ["5", "3", "7", "2"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "बारंबारता बंटन में सबसे अधिक बारंबारता वाले वर्ग को क्या कहते हैं?", options: ["बहुलक वर्ग", "माध्यक वर्ग", "संचयी वर्ग", "प्राथमिक वर्ग"], correct: 0 },
+            { chapter: 14, chapterTitle: "Chapter 14: सांख्यिकी", question: "0, 2, 4, 6, 8 का समांतर माध्य होगा:", options: ["4", "5", "3", "2"], correct: 0 },
+
+            // Chapter 15: प्रायिकता (Probability)
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "किसी निश्चित (Sure) घटना की प्रायिकता होती है:", options: ["1", "0", "1/2", "अनंत"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "किसी असंभव (Impossible) घटना की प्रायिकता होती है:", options: ["0", "1", "-1", "1/2"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "किसी भी घटना की प्रायिकता P(E) का मान किसके बीच होता है?", options: ["0 ≤ P(E) ≤ 1", "-1 ≤ P(E) ≤ 1", "0 < P(E) < 1", "1 ≤ P(E) ≤ 2"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "P(E) + P(E नहीं) = ", options: ["1", "0", "-1", "2"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "एक पासे (Dice) को फेंकने पर संख्या 6 आने की प्रायिकता क्या होगी?", options: ["1/6", "1/2", "6", "5/6"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "एक सिक्के को उछालने पर 'चित' (Head) आने की प्रायिकता क्या होगी?", options: ["1/2", "1", "0", "1/4"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "ताश के 52 पत्तों में से एक पत्ता निकाला जाता है। इसके लाल रंग का राजा होने की प्रायिकता है:", options: ["1/26", "2/13", "1/52", "1/13"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "निम्नलिखित में से कौन-सी संख्या किसी घटना की प्रायिकता नहीं हो सकती?", options: ["-1.5", "15%", "0.7", "2/3"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "एक थैले में 3 लाल और 5 काली गेंदें हैं। लाल गेंद निकलने की प्रायिकता होगी:", options: ["3/8", "5/8", "3/5", "1/8"], correct: 0 },
+            { chapter: 15, chapterTitle: "Chapter 15: प्रायिकता", question: "एक लीप वर्ष (Leap Year) में 53 रविवार होने की प्रायिकता क्या होगी?", options: ["2/7", "1/7", "53/366", "3/7"], correct: 0 }
+        ];
+
+        // Global State variables
+        let activeQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let currentChapter = 'all';
+        let isSoundEnabled = true;
+        let quizMode = 'practice';
+        let timerInterval = null;
+        let secondsElapsed = 0;
+        let lastPercentageScore = 0;
+
+        const AudioEngine = {
+            ctx: null,
+            init() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    this.ctx = new AudioCtx();
+                }
+            },
+            playCorrect() {
+                if (!isSoundEnabled) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, now);
+                osc.frequency.exponentialRampToValueAtTime(659.25, now + 0.1);
+                osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.2);
+
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.35);
+            },
+            playIncorrect() {
+                if (!isSoundEnabled) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(220, now);
+                osc.frequency.linearRampToValueAtTime(140, now + 0.25);
+
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.3);
+            },
+            playFanfare() {
+                if (!isSoundEnabled) return;
+                this.init();
+                const notes = [440, 554.37, 659.25, 880];
+                notes.forEach((freq, index) => {
+                    const now = this.ctx.currentTime + (index * 0.1);
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, now);
+
+                    gain.gain.setValueAtTime(0.25, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                });
+            }
+        };
+
+        function toggleSound() {
+            isSoundEnabled = !isSoundEnabled;
+            const icon = document.getElementById('soundIcon');
+            if (isSoundEnabled) {
+                icon.className = 'fa-solid fa-volume-high text-base text-sky-600';
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark text-base text-slate-400';
+            }
+        }
+
+        function shareOnWhatsApp() {
+            const message = encodeURIComponent(
+                "📐 बिहार बोर्ड कक्षा 10वीं गणित (Mathematics) ऑब्जेक्टिव क्विज़ टेस्ट!\n" +
+                "सभी 15 अध्यायों के प्रश्न हल करें और ऑनलाइन डिजिटल प्रमाणपत्र प्राप्त करें।\n" +
+                "Author: Mr. Md Imamul Kalam\n" +
+                "अभी ऐप खोलें और टेस्ट दें:"
+            );
+            window.open(`https://api.whatsapp.com/send?text=${message}`, '_blank');
+        }
+
+        // Render Chapter Selection Grid on Init
+        function renderChapterGrid() {
+            const grid = document.getElementById('chapterGrid');
+            const chapterMap = {};
+
+            quizData.forEach(q => {
+                if (!chapterMap[q.chapter]) {
+                    chapterMap[q.chapter] = {
+                        title: q.chapterTitle,
+                        count: 0
+                    };
+                }
+                chapterMap[q.chapter].count++;
+            });
+
+            grid.innerHTML = '';
+            Object.keys(chapterMap).sort((a,b) => Number(a) - Number(b)).forEach(chapNum => {
+                const chap = chapterMap[chapNum];
+                const card = document.createElement('div');
+                card.className = 'white-card white-card-hover rounded-2xl p-5 border border-slate-200 flex flex-col justify-between space-y-4 cursor-pointer';
+                card.onclick = () => startQuiz(chapNum);
+
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">Chapter ${chapNum}</span>
+                            <span class="text-xs text-slate-500 font-medium"><i class="fa-regular fa-file-lines text-slate-400 mr-1"></i>${chap.count} प्रश्न</span>
+                        </div>
+                        <h4 class="text-base font-bold text-slate-900 group-hover:text-sky-600 transition">${chap.title}</h4>
+                    </div>
+                    <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs text-slate-500 font-medium">
+                        <span>वस्तुनिष्ठ अभ्यास</span>
+                        <span class="text-sky-600 font-bold flex items-center gap-1">शुरू करें <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Start Quiz
+        function startQuiz(chapterFilter) {
+            currentChapter = chapterFilter;
+            quizMode = document.querySelector('input[name="quizMode"]:checked').value;
+
+            if (chapterFilter === 'all') {
+                activeQuestions = [...quizData];
+                document.getElementById('activeQuizTitle').innerText = 'सम्पूर्ण गणित (Mathematics) All 15 Chapters';
+            } else {
+                activeQuestions = quizData.filter(q => q.chapter == chapterFilter);
+                document.getElementById('activeQuizTitle').innerText = `Chapter ${chapterFilter}`;
+            }
+
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            secondsElapsed = 0;
+
+            const timerContainer = document.getElementById('timerContainer');
+            if (quizMode === 'exam') {
+                timerContainer.classList.remove('hidden');
+                startTimer();
+            } else {
+                timerContainer.classList.add('hidden');
+                clearInterval(timerInterval);
+            }
+
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            renderQuestion();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            const timerDisplay = document.getElementById('quizTimer');
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+                const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+                timerDisplay.innerText = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function renderQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const total = activeQuestions.length;
+
+            document.getElementById('currentQuestionNum').innerText = currentQuestionIndex + 1;
+            document.getElementById('totalQuestionsNum').innerText = total;
+            document.getElementById('questionTag').innerText = `प्रश्न ${currentQuestionIndex + 1} of ${total} | Ch-${q.chapter}`;
+            document.getElementById('questionText').innerText = q.question;
+
+            const progressPercent = ((currentQuestionIndex + 1) / total) * 100;
+            document.getElementById('quizProgressBar').style.width = `${progressPercent}%`;
+
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+
+            const optionPrefixes = ['(क)', '(ख)', '(ग)', '(घ)'];
+            const hasAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
+            const selectedOpt = userAnswers[currentQuestionIndex];
+
+            q.options.forEach((optText, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `option-btn w-full text-left p-4 rounded-2xl border flex items-center justify-between text-sm sm:text-base font-medium transition `;
+
+                let btnStyle = 'bg-white border-slate-200 text-slate-800 hover:border-slate-400 hover:bg-slate-50 shadow-sm';
+
+                if (hasAnswered) {
+                    if (quizMode === 'practice') {
+                        if (idx === q.correct) {
+                            btnStyle = 'bg-emerald-50 border-emerald-500 text-emerald-900 font-bold shadow-md';
+                        } else if (idx === selectedOpt && selectedOpt !== q.correct) {
+                            btnStyle = 'bg-rose-50 border-rose-400 text-rose-900 font-medium';
+                        } else {
+                            btnStyle = 'bg-slate-50 border-slate-200 text-slate-400 opacity-60';
+                        }
+                    } else {
+                        if (idx === selectedOpt) {
+                            btnStyle = 'bg-sky-50 border-sky-500 text-sky-900 font-bold shadow-md';
+                        } else {
+                            btnStyle = 'bg-white border-slate-200 text-slate-600';
+                        }
+                    }
+                }
+
+                btn.className += ` ${btnStyle}`;
+                btn.onclick = () => selectOption(idx);
+
+                btn.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-xs font-bold text-sky-700 shrink-0">
+                            ${optionPrefixes[idx]}
+                        </span>
+                        <span>${optText}</span>
+                    </div>
+                    ${hasAnswered && quizMode === 'practice' && idx === q.correct ? '<i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>' : ''}
+                    ${hasAnswered && quizMode === 'practice' && idx === selectedOpt && selectedOpt !== q.correct ? '<i class="fa-solid fa-circle-xmark text-rose-500 text-lg"></i>' : ''}
+                    ${hasAnswered && quizMode === 'exam' && idx === selectedOpt ? '<i class="fa-solid fa-check text-sky-600 text-lg"></i>' : ''}
+                `;
+
+                optionsContainer.appendChild(btn);
+            });
+
+            // Feedback Box Handling for Practice Mode
+            const feedbackBox = document.getElementById('feedbackBox');
+            if (quizMode === 'practice' && hasAnswered) {
+                feedbackBox.classList.remove('hidden');
+                const isCorrect = selectedOpt === q.correct;
+                if (isCorrect) {
+                    feedbackBox.className = 'p-4 rounded-2xl border bg-emerald-50 border-emerald-300 text-emerald-900 flex items-center justify-between';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-check"></i>';
+                    document.getElementById('feedbackText').innerText = 'बिलकुल सही उत्तर! शाबाश!';
+                } else {
+                    feedbackBox.className = 'p-4 rounded-2xl border bg-rose-50 border-rose-300 text-rose-900 flex items-center justify-between';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center text-sm font-bold';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    document.getElementById('feedbackText').innerText = `गलत उत्तर! सही उत्तर है: ${optionPrefixes[q.correct]} ${q.options[q.correct]}`;
+                }
+            } else {
+                feedbackBox.classList.add('hidden');
+            }
+
+            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+
+            if (currentQuestionIndex === total - 1) {
+                document.getElementById('nextBtn').classList.add('hidden');
+                document.getElementById('submitQuizBtn').classList.remove('hidden');
+            } else {
+                document.getElementById('nextBtn').classList.remove('hidden');
+                document.getElementById('submitQuizBtn').classList.add('hidden');
+            }
+        }
+
+        function selectOption(optionIndex) {
+            userAnswers[currentQuestionIndex] = optionIndex;
+            const q = activeQuestions[currentQuestionIndex];
+
+            if (quizMode === 'practice') {
+                if (optionIndex === q.correct) {
+                    AudioEngine.playCorrect();
+                } else {
+                    AudioEngine.playIncorrect();
+                }
+            }
+
+            renderQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            const targetIndex = currentQuestionIndex + direction;
+            if (targetIndex >= 0 && targetIndex < activeQuestions.length) {
+                currentQuestionIndex = targetIndex;
+                renderQuestion();
+            }
+        }
+
+        function confirmExitQuiz() {
+            if (Object.keys(userAnswers).length > 0) {
+                document.getElementById('exitModal').classList.remove('hidden');
+            } else {
+                showHomeScreen();
+            }
+        }
+
+        function closeExitModal() {
+            document.getElementById('exitModal').classList.add('hidden');
+        }
+
+        function executeExitQuiz() {
+            closeExitModal();
+            showHomeScreen();
+        }
+
+        function showHomeScreen() {
+            clearInterval(timerInterval);
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let skippedCount = 0;
+            const total = activeQuestions.length;
+
+            activeQuestions.forEach((q, idx) => {
+                if (userAnswers.hasOwnProperty(idx)) {
+                    if (userAnswers[idx] === q.correct) {
+                        correctCount++;
+                    } else {
+                        incorrectCount++;
+                    }
+                } else {
+                    skippedCount++;
+                }
+            });
+
+            const percentage = Math.round((correctCount / total) * 100);
+            lastPercentageScore = percentage;
+
+            document.getElementById('correctAnswersCount').innerText = correctCount;
+            document.getElementById('totalResultQuestions').innerText = total;
+            document.getElementById('percentageText').innerText = `${percentage}%`;
+            document.getElementById('accuracyText').innerText = `${percentage}%`;
+
+            document.getElementById('statCorrect').innerText = correctCount;
+            document.getElementById('statIncorrect').innerText = incorrectCount;
+            document.getElementById('statSkipped').innerText = skippedCount;
+
+            const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+            const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+            document.getElementById('resultTimeTaken').innerText = `${mins}:${secs}`;
+
+            // Animate Circle Ring
+            const circle = document.getElementById('resultProgressRing');
+            const radius = circle.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+            const offset = circumference - (percentage / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+
+            // Performance Badge text
+            const badge = document.getElementById('performanceBadge');
+            const note = document.getElementById('resultFeedbackNote');
+
+            if (percentage >= 80) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200';
+                badge.innerText = 'उत्कृष्ट प्रदर्शन! Outstanding 🎉';
+                note.innerText = 'आपकी गणित की तैयारी बहुत मजबूत है! ऐसे ही लगन से पढ़ते रहें।';
+                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                AudioEngine.playFanfare();
+            } else if (percentage >= 50) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200';
+                badge.innerText = 'अच्छा प्रयास! Good Job 👍';
+                note.innerText = 'आपका प्रदर्शन अच्छा है, थोड़ा और सूत्रों का अभ्यास करके आप 90%+ ला सकते हैं।';
+            } else {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-rose-100 text-rose-800 border border-rose-200';
+                badge.innerText = 'पुनः सुधार की आवश्यकता है 📚';
+                note.innerText = 'घबराएं नहीं, एक बार पुनः गणितीय सूत्रों को समझें और फिर से टेस्ट दें।';
+            }
+
+            renderReviewAnswers();
+
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function retakeCurrentQuiz() {
+            startQuiz(currentChapter);
+        }
+
+        function renderReviewAnswers() {
+            const container = document.getElementById('reviewContainer');
+            container.innerHTML = '';
+            const optionPrefixes = ['(क)', '(ख)', '(ग)', '(घ)'];
+
+            activeQuestions.forEach((q, idx) => {
+                const userAns = userAnswers[idx];
+                const isCorrect = userAns === q.correct;
+                const isSkipped = !userAnswers.hasOwnProperty(idx);
+
+                const item = document.createElement('div');
+                item.className = `p-4 rounded-2xl border text-xs sm:text-sm space-y-2 ${
+                    isCorrect ? 'bg-emerald-50/50 border-emerald-200' : isSkipped ? 'bg-amber-50/50 border-amber-200' : 'bg-rose-50/50 border-rose-200'
+                }`;
+
+                item.innerHTML = `
+                    <div class="flex items-start justify-between gap-2 font-bold text-slate-900">
+                        <span>प्र० ${idx + 1}. ${q.question}</span>
+                        <span class="shrink-0 text-xs px-2 py-0.5 rounded-full ${
+                            isCorrect ? 'bg-emerald-100 text-emerald-800' : isSkipped ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
+                        }">
+                            ${isCorrect ? 'सही' : isSkipped ? 'छोड़ा' : 'गलत'}
+                        </span>
+                    </div>
+                    <div class="text-xs space-y-1 text-slate-700">
+                        <p><strong>सही उत्तर:</strong> <span class="text-emerald-700 font-bold">${optionPrefixes[q.correct]} ${q.options[q.correct]}</span></p>
+                        ${!isCorrect && !isSkipped ? `<p><strong>आपका उत्तर:</strong> <span class="text-rose-700">${optionPrefixes[userAns]} ${q.options[userAns]}</span></p>` : ''}
+                    </div>
+                `;
+
+                container.appendChild(item);
+            });
+        }
+
+        // Certificate Functions
+        function generateCertificate() {
+            const nameInput = document.getElementById('studentNameInput').value.trim();
+            if (!nameInput) {
+                alert('कृपया अपना नाम दर्ज करें!');
+                return;
+            }
+
+            document.getElementById('certStudentName').innerText = nameInput;
+            document.getElementById('certScoreText').innerText = `${lastPercentageScore}%`;
+
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('hi-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            document.getElementById('certDateText').innerText = dateStr;
+
+            document.getElementById('certificateModal').classList.remove('hidden');
+        }
+
+        function closeCertificateModal() {
+            document.getElementById('certificateModal').classList.add('hidden');
+        }
+
+        function downloadCertificateImage() {
+            const certElement = document.getElementById('certificateCard');
+            html2canvas(certElement, {
+                scale: 2,
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `Math_Certificate_${document.getElementById('studentNameInput').value.trim() || 'Student'}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+
+        // Initialize App on DOM Content Loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            renderChapterGrid();
+        });
+
+ document.getElementById('backBtn').addEventListener('click', () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html'; 
+            }
+        });
+
+    </script>
+</body>
+</html>

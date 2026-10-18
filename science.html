@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विज्ञान (Science) - Class 10 Objective Quiz & Certificate</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Devanagari & Modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Html2Canvas Library for Certificate Download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#026597',
+                            700: '#034e75',
+                            800: '#073c59',
+                            900: '#0c3248'
+                        },
+                        whatsapp: {
+                            500: '#25D366',
+                            600: '#1da851'
+                        }
+                    },
+                    fontFamily: {
+                        devanagari: ['Noto Sans Devanagari', 'Outfit', 'sans-serif'],
+                        signature: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', 'Outfit', sans-serif;
+            background-color: #f8fafc;
+            min-height: 100vh;
+            color: #0f172a;
+        }
+
+        .white-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        .white-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .white-card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px -5px rgba(2, 132, 199, 0.12);
+            border-color: #38bdf8;
+        }
+
+        .option-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-btn:hover:not(:disabled) {
+            transform: translateX(4px);
+        }
+
+        /* Animated Progress Ring */
+        .progress-ring__circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Print styles for certificate */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #certificatePrintContainer, #certificatePrintContainer * {
+                visibility: visible;
+            }
+            #certificatePrintContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+ /* Stylish Back Button - Fixed to Top Left & Hidden by Default */
+        .btn-back {
+            position: fixed;   
+            top: 20px;         
+            left: 20px;        
+            z-index: 9999;     
+            
+            /* Hidden State Controls */
+            opacity: 0.1;               /* Button 90% transparent rahega */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth look-and-hide effect */
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* SVG Arrow styling */
+        .btn-back svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+
+        /* Trigger: Cursor lane par ya Mobile par Finger touch karne par */
+        .btn-back:hover, 
+        .btn-back:focus,
+        .btn-back:active {
+            opacity: 1;                 /* Poora visible ho jayega */
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-color: #1a1a1a;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Arrow animation on hover */
+        .btn-back:hover svg {
+            transform: translateX(-4px);
+        }
+
+        /* Click effect */
+        .btn-back:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+<!-- Hidden Back Button -->
+    <button class="btn-back" id="backBtn">
+        <svg viewBox="0 0 24 24">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Go Back</span>
+    </button>
+
+
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+            <!-- App Logo & Title -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showHomeScreen()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center shadow-md shadow-sky-500/20 text-white font-bold">
+                    <i class="fa-solid fa-atom text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+                        विज्ञान (Science)
+                        <span class="text-[10px] bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded-full border border-sky-200">Class 10</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 font-medium hidden sm:block">भौतिकी, रसायन एवं जीव विज्ञान वस्तुनिष्ठ अभ्यास एवं प्रमाण पत्र</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons: WhatsApp Share & Sound Toggle -->
+            <div class="flex items-center space-x-2">
+                <!-- WhatsApp Share Button -->
+                <button onclick="shareOnWhatsApp()" class="px-3 py-2 rounded-xl bg-whatsapp-500 hover:bg-whatsapp-600 text-white font-bold text-xs flex items-center gap-2 shadow-md shadow-emerald-500/20 transition active:scale-95" title="दोस्तों को शेयर करें">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span class="hidden sm:inline">शेयर करें</span>
+                </button>
+
+                <!-- Sound Toggle -->
+                <button id="soundToggleBtn" onclick="toggleSound()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="ध्वनि चालू/बंद करें">
+                    <i class="fa-solid fa-volume-high text-base text-sky-600" id="soundIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-6 relative z-10 flex flex-col justify-center">
+
+        <!-- SCREEN 1: HOME / CHAPTER SELECTION -->
+        <section id="homeScreen" class="space-y-6">
+            <!-- Author Banner Header Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden border border-slate-200 shadow-xl bg-gradient-to-b from-white to-sky-50/50">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-12 -top-12 w-48 h-48 bg-indigo-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs sm:text-sm font-semibold mb-3">
+                    <i class="fa-solid fa-flask text-sky-600"></i> बिहार बोर्ड विज्ञान (Physics, Chemistry, Biology) स्पेशल
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+                    विज्ञान : वस्तुनिष्ठ प्रश्नोत्तरी
+                </h2>
+                
+                <!-- Made By Badge -->
+                <div class="inline-block mt-1 mb-4">
+                    <span class="px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 font-bold text-xs sm:text-sm tracking-wide shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-check text-amber-500"></i> Made by Mr. Md Imamul Kalam
+                    </span>
+                </div>
+
+                <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+                    मैट्रिक परीक्षा की पूर्ण तैयारी करें। भौतिकी, रसायन एवं जीव विज्ञान के सभी 16 अध्यायों का अभ्यास करें, स्कोर जांचें और **Mr. Md Imamul Kalam** द्वारा हस्ताक्षरित डिजिटल सर्टिफिकेट प्राप्त करें।
+                </p>
+
+                <!-- Mode Selection Toggle -->
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-slate-700 hover:border-sky-400 transition">
+                        <input type="radio" name="quizMode" value="practice" checked class="w-4 h-4 text-sky-600 focus:ring-sky-500">
+                        <i class="fa-solid fa-lightbulb text-amber-500"></i> प्रैक्टिस मोड (तुरंत उत्तर)
+                    </label>
+                    <label class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer text-xs sm:text-sm font-semibold text-slate-700 hover:border-sky-400 transition">
+                        <input type="radio" name="quizMode" value="exam" class="w-4 h-4 text-sky-600 focus:ring-sky-500">
+                        <i class="fa-solid fa-stopwatch text-rose-500"></i> परीक्षा मोड (टाइमर)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Full Quiz Master CTA Banner -->
+            <div class="white-card white-card-hover rounded-2xl p-6 border-l-8 border-l-sky-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="space-y-1 text-center sm:text-left">
+                    <span class="text-xs font-bold tracking-wider text-sky-600 uppercase bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">सम्पूर्ण टेस्ट</span>
+                    <h3 class="text-xl font-extrabold text-slate-900">सभी 16 अध्यायों का महा-टेस्ट (All Chapters)</h3>
+                    <p class="text-xs text-slate-500 font-medium">भौतिकी, रसायन व जीव विज्ञान के अति-महत्वपूर्ण वस्तुनिष्ठ प्रश्न | तुरंत प्रमाणपत्र प्राप्त करें</p>
+                </div>
+                <button onclick="startQuiz('all')" class="w-full sm:w-auto px-7 py-3 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-bold shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+                    <span>पूरा टेस्ट शुरू करें</span>
+                    <i class="fa-solid fa-play text-sm"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-3 my-2">
+                <div class="h-px bg-slate-200 flex-grow"></div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">अध्याय अनुसार अभ्यास करें (16 Chapters)</span>
+                <div class="h-px bg-slate-200 flex-grow"></div>
+            </div>
+
+            <!-- Chapter Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="chapterGrid">
+                <!-- Dynamically Inserted Chapter Cards -->
+            </div>
+
+            <!-- SECTION 1: CHAPTER & PART WISE IMPORTANT QUESTIONS QUIZ (SUBJECT SELECTION) -->
+            <div class="mt-12 space-y-6 pt-6 border-t border-slate-200">
+                <div class="white-card rounded-3xl p-6 sm:p-8 border border-sky-100 shadow-xl bg-gradient-to-br from-white via-sky-50/20 to-indigo-50/30">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold mb-2 border border-sky-200">
+                                <i class="fa-solid fa-brain"></i> पार्ट व विषयवार स्पेशल
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                                विषय एवं भाग अनुसार महत्वपूर्ण प्रश्न क्विज़
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 font-medium mt-1">
+                                अपने पसंदीदा विषय पर क्लिक करें और उसके मुख्य अध्यायों के V.V.I प्रश्नों का क्विज़ हल करें:
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Subject Wise Quiz Trigger Buttons -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                        <!-- Physics Filter Quiz Card -->
+                        <div onclick="filterSubjectQuizzes('physics')" class="p-5 rounded-2xl bg-white border border-sky-200 hover:border-sky-500 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group">
+                            <div class="space-y-3">
+                                <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl font-bold group-hover:bg-sky-600 group-hover:text-white transition">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition">भौतिकी (Physics)</h4>
+                                    <p class="text-xs text-slate-500">प्रकाश, मानव नेत्र, विद्युत एवं चुंबकत्व (Ch 1 - 5)</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-sky-600">
+                                <span>अध्याय लोड करें</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Chemistry Filter Quiz Card -->
+                        <div onclick="filterSubjectQuizzes('chemistry')" class="p-5 rounded-2xl bg-white border border-emerald-200 hover:border-emerald-500 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group">
+                            <div class="space-y-3">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold group-hover:bg-emerald-600 group-hover:text-white transition">
+                                    <i class="fa-solid fa-vial"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition">रसायन विज्ञान (Chemistry)</h4>
+                                    <p class="text-xs text-slate-500">अभिक्रिया, अम्ल-क्षार, धातु व कार्बन (Ch 6 - 10)</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600">
+                                <span>अध्याय लोड करें</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+
+                        <!-- Biology Filter Quiz Card -->
+                        <div onclick="filterSubjectQuizzes('biology')" class="p-5 rounded-2xl bg-white border border-rose-200 hover:border-rose-500 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group">
+                            <div class="space-y-3">
+                                <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl font-bold group-hover:bg-rose-600 group-hover:text-white transition">
+                                    <i class="fa-solid fa-dna"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-slate-900 group-hover:text-rose-600 transition">जीव विज्ञान (Biology)</h4>
+                                    <p class="text-xs text-slate-500">जैव प्रक्रम, जनन, आनुवंशिकता व पर्यावरण (Ch 11 - 16)</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-rose-600">
+                                <span>अध्याय लोड करें</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subject Selected Chapter Chapters Output Area -->
+                    <div id="subjectChapterList" class="hidden space-y-3 pt-4 border-t border-slate-200">
+                        <h4 id="subjectListTitle" class="text-base font-bold text-slate-900 flex items-center gap-2">
+                            <!-- Title inserted via JS -->
+                        </h4>
+                        <div id="subjectChapterGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <!-- Filtered chapters rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: FORMULAS & V.V.I. HIDDEN/COLLAPSIBLE NOTES SECTION -->
+            <div class="mt-8 space-y-6">
+                <div class="white-card rounded-3xl p-6 sm:p-8 border border-amber-200/80 shadow-xl bg-gradient-to-br from-white via-amber-50/30 to-sky-50/30">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-200 text-xs font-bold mb-2">
+                                <i class="fa-solid fa-star text-amber-500"></i> परीक्षा विशेषांक (Exam Special)
+                            </div>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+                                <i class="fa-solid fa-square-root-variable text-sky-600"></i> V.V.I Formulas & Collapsible Notes
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 font-medium mt-1">
+                                किसी भी नोट पर क्लिक करके उसका विवरण खोलें (Click on any note to reveal details):
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Subject Tabs -->
+                    <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3 mb-6">
+                        <button onclick="switchVVITab('physics')" id="tabPhysicsBtn" class="vvi-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 bg-sky-600 text-white shadow-md shadow-sky-500/20">
+                            <i class="fa-solid fa-atom"></i> <span>भौतिकी (Physics)</span>
+                        </button>
+                        <button onclick="switchVVITab('chemistry')" id="tabChemistryBtn" class="vvi-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                            <i class="fa-solid fa-vial"></i> <span>रसायन विज्ञान (Chemistry)</span>
+                        </button>
+                        <button onclick="switchVVITab('biology')" id="tabBiologyBtn" class="vvi-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                            <i class="fa-solid fa-dna"></i> <span>जीव विज्ञान (Biology)</span>
+                        </button>
+                    </div>
+
+                    <!-- TAB CONTENT: PHYSICS (Collapsible Accordion Notes) -->
+                    <div id="vviPhysicsContent" class="vvi-tab-content space-y-3">
+                        <!-- Mirror Formula -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteP1')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-sky-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-sky-600 text-xs"></i> 1. दर्पण सूत्र (Mirror Formula) & आवर्धन
+                                </span>
+                                <i id="icon-noteP1" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteP1" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <div class="p-3 rounded-xl bg-sky-50/50 font-mono text-center text-sm font-extrabold text-sky-800">
+                                    1/f = 1/v + 1/u
+                                </div>
+                                <p><strong>विवरण:</strong> f = फोकस दूरी, v = प्रतिबिंब दूरी, u = वस्तु दूरी</p>
+                                <p><strong>आवर्धन (m):</strong> m = -v/u = h'/h (प्रतिबिंब की ऊँचाई / वस्तु की ऊँचाई)</p>
+                            </div>
+                        </div>
+
+                        <!-- Lens Formula -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteP2')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-sky-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-sky-600 text-xs"></i> 2. लेंस सूत्र (Lens Formula) एवं क्षमता (Power of Lens)
+                                </span>
+                                <i id="icon-noteP2" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteP2" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <div class="p-3 rounded-xl bg-sky-50/50 font-mono text-center text-sm font-extrabold text-sky-800">
+                                    1/f = 1/v - 1/u &nbsp;|&nbsp; P = 1 / f(m)
+                                </div>
+                                <p><strong>SI मात्रक:</strong> लेंस की क्षमता का मात्रक <strong>डायोप्टर (Diopter - D)</strong> होता है।</p>
+                                <p><strong>नोट:</strong> उत्तल लेंस की फोकस दूरी धनात्मक (+) तथा अवतल लेंस की ऋणात्मक (-) होती है।</p>
+                            </div>
+                        </div>
+
+                        <!-- Ohm's Law & Resistance -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteP3')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-sky-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-sky-600 text-xs"></i> 3. ओम का नियम एवं प्रतिरोध संयोजन (Ohm's Law)
+                                </span>
+                                <i id="icon-noteP3" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteP3" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <div class="p-3 rounded-xl bg-indigo-50/50 font-mono text-center text-sm font-extrabold text-indigo-800">
+                                    V = I × R  ⇨  R = V / I
+                                </div>
+                                <p>• <strong>श्रेणीक्रम संयोजन:</strong> R_s = R₁ + R₂ + R₃</p>
+                                <p>• <strong>समांतरक्रम संयोजन:</strong> 1/R_p = 1/R₁ + 1/R₂ + 1/R₃</p>
+                                <p><strong>घरेलू परिपथ:</strong> हमारे घरों में उपकरण समांतर क्रम में जुड़े होते हैं।</p>
+                            </div>
+                        </div>
+
+                        <!-- Electric Power & Joule's Law -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteP4')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-sky-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-sky-600 text-xs"></i> 4. विद्युत शक्ति एवं कार्य (Electric Power & Energy)
+                                </span>
+                                <i id="icon-noteP4" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteP4" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <p>• <strong>विद्युत शक्ति (P):</strong> P = V × I = I²R = V²/R</p>
+                                <p>• <strong>जूल का तापीय नियम (H):</strong> H = I²Rt</p>
+                                <p>• <strong>यूनिट मान:</strong> 1 kWh (यूनिट) = 3.6 × 10⁶ जूल | 1 HP (अश्व शक्ति) = 746 वाट</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB CONTENT: CHEMISTRY (Collapsible Accordion Notes) -->
+                    <div id="vviChemistryContent" class="vvi-tab-content space-y-3 hidden">
+                        <!-- Important Salts -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteC1')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-emerald-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-emerald-600 text-xs"></i> 1. महत्वपूर्ण रासायनिक सूत्र (Salt Formulas)
+                                </span>
+                                <i id="icon-noteC1" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteC1" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700 font-mono">
+                                <p>• <strong>बेकिंग सोडा:</strong> NaHCO₃ (सोडियम बाइकार्बोनेट)</p>
+                                <p>• <strong>धावन सोडा:</strong> Na₂CO₃ · 10H₂O (सोडियम कार्बोनेट ডেकाहाइड्रेट)</p>
+                                <p>• <strong>विरंजक चूर्ण:</strong> CaOCl₂ (कैल्शियम ऑक्सीक्लोराइड)</p>
+                                <p>• <strong>प्लास्टर ऑफ पेरिस:</strong> CaSO₄ · ½H₂O</p>
+                                <p>• <strong>जिप्सम:</strong> CaSO₄ · 2H₂O</p>
+                            </div>
+                        </div>
+
+                        <!-- Hydrocarbons -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteC2')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-emerald-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-emerald-600 text-xs"></i> 2. हाइड्रोकार्बन सामान्य सूत्र (Alkanes, Alkenes, Alkynes)
+                                </span>
+                                <i id="icon-noteC2" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteC2" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700 font-mono">
+                                <p>• <strong>ऐल्केन (Alkane):</strong> C_n H_{2n+2} (उदा० मीथेन CH₄)</p>
+                                <p>• <strong>ऐल्कीन (Alkene):</strong> C_n H_{2n} (उदा० एथीन C₂H₄)</p>
+                                <p>• <strong>ऐल्काइन (Alkyne):</strong> C_n H_{2n-2} (उदा० एथाइन C₂H₂)</p>
+                            </div>
+                        </div>
+
+                        <!-- pH Values -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteC3')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-emerald-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-emerald-600 text-xs"></i> 3. मुख्य pH मान तालिका (pH Value Chart)
+                                </span>
+                                <i id="icon-noteC3" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteC3" class="hidden p-5 border-t border-slate-100 space-y-1 text-xs sm:text-sm text-slate-700">
+                                <p>• शुद्ध जल: <strong>7.0 (उदासीन)</strong></p>
+                                <p>• मानव रक्त: <strong>7.4</strong></p>
+                                <p>• सिरका: <strong>3.0</strong> | नींबू रस: <strong>2.2 - 2.4</strong></p>
+                                <p>• जठर रस (HCl): <strong>1.2</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB CONTENT: BIOLOGY (Collapsible Accordion Notes) -->
+                    <div id="vviBiologyContent" class="vvi-tab-content space-y-3 hidden">
+                        <!-- Key Definitions -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteB1')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-rose-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-rose-600 text-xs"></i> 1. नेफ्रॉन एवं न्यूरॉन में अंतर
+                                </span>
+                                <i id="icon-noteB1" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteB1" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <p>• <strong>नेफ्रॉन (Nephron):</strong> वृक्क (Kidney) की रचनात्मक एवं कार्यात्मक इकाई है जो उत्सर्जन में सहायक है।</p>
+                                <p>• <strong>न्यूरॉन (Neuron):</strong> तंत्रिका तंत्र की रचनात्मक व कार्यात्मक इकाई है जो संवेदनाओं का संवहन करती है।</p>
+                            </div>
+                        </div>
+
+                        <!-- Hormones -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteB2')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-rose-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-rose-600 text-xs"></i> 2. महत्वपूर्ण हार्मोन एवं रोग
+                                </span>
+                                <i id="icon-noteB2" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteB2" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <p>• <strong>इंसुलिन:</strong> अग्न्याशय से स्रावित | कमी से <em>मधुमेह (Diabetes)</em> होता है।</p>
+                                <p>• <strong>थायरोक्सिन:</strong> थायराइड ग्रंथि | आयोडीन की कमी से <em>घेंघा (Goitre)</em> रोग होता है।</p>
+                                <p>• <strong>पादप हार्मोन:</strong> ऑक्सिन, जिबरेलिन, साइटोकाइनिन (वृद्धि कारक)।</p>
+                            </div>
+                        </div>
+
+                        <!-- Genetics -->
+                        <div class="border border-slate-200 rounded-2xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="toggleNote('noteB3')" class="w-full px-5 py-4 text-left flex items-center justify-between gap-2 bg-slate-50 hover:bg-rose-50 transition">
+                                <span class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-eye text-rose-600 text-xs"></i> 3. आनुवंशिकता एवं गुणसूत्र (Genetics V.V.I)
+                                </span>
+                                <i id="icon-noteB3" class="fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+                            </button>
+                            <div id="noteB3" class="hidden p-5 border-t border-slate-100 space-y-2 text-xs sm:text-sm text-slate-700">
+                                <p>• आनुवंशिकी का पिता: <strong>ग्रैगर जॉन मेंडेल</strong> (मटर का पौधा)</p>
+                                <p>• मनुष्य में कुल गुणसूत्र: <strong>23 जोड़े (46 कुल)</strong></p>
+                                <p>• लिंग गुणसूत्र: महिला में <strong>XX</strong> तथा पुरुष में <strong>XY</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: ACTIVE QUIZ -->
+        <section id="quizScreen" class="hidden space-y-6">
+            <!-- Quiz Header Bar -->
+            <div class="white-card rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <button onclick="confirmExitQuiz()" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 transition" title="मुख्य पृष्ठ पर जाएं">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div>
+                        <h2 id="activeQuizTitle" class="text-base sm:text-lg font-extrabold text-slate-900">अध्याय 1</h2>
+                        <span id="activeQuizSubtitle" class="text-xs text-slate-500 font-medium">वस्तुनिष्ठ प्रश्न अभ्यास</span>
+                    </div>
+                </div>
+
+                <!-- Timer & Counter -->
+                <div class="flex items-center gap-3">
+                    <div id="timerContainer" class="hidden flex items-center gap-2 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200 text-amber-800 font-mono font-bold text-sm">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="quizTimer">00:00</span>
+                    </div>
+
+                    <div class="bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-700">
+                        प्रश्न: <span id="currentQuestionNum" class="text-sky-600 text-sm font-extrabold">1</span> / <span id="totalQuestionsNum" class="text-sm font-bold">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Top Progress Bar -->
+            <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                <div id="quizProgressBar" class="bg-gradient-to-r from-sky-500 to-indigo-600 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="white-card rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl border border-slate-200 relative">
+                <!-- Question Text -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span id="questionTag" class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-bold">Chapter Question</span>
+                    </div>
+                    <h3 id="questionText" class="text-lg sm:text-2xl font-bold text-slate-900 leading-snug">
+                        <!-- Question content -->
+                    </h3>
+                </div>
+
+                <!-- Options List -->
+                <div id="optionsContainer" class="space-y-3">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Feedback Message Box (Practice Mode) -->
+                <div id="feedbackBox" class="hidden p-4 rounded-2xl border text-sm font-medium transition-all duration-300 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center gap-3">
+                        <div id="feedbackIcon" class="w-8 h-8 rounded-full flex items-center justify-center text-lg"></div>
+                        <span id="feedbackText" class="text-sm sm:text-base font-bold"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Navigation Footer -->
+            <div class="flex items-center justify-between gap-3">
+                <button id="prevBtn" onclick="navigateQuestion(-1)" class="px-5 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-semibold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition flex items-center gap-2 shadow-sm">
+                    <i class="fa-solid fa-chevron-left text-xs"></i> पिछला
+                </button>
+
+                <button id="nextBtn" onclick="navigateQuestion(1)" class="px-6 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold shadow-lg shadow-sky-500/25 transition flex items-center gap-2">
+                    <span>अगला</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+
+                <button id="submitQuizBtn" onclick="submitQuiz()" class="hidden px-7 py-2.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-600/25 transition flex items-center gap-2">
+                    <span>सबमिट करें</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RESULTS & SCORE CARD -->
+        <section id="resultScreen" class="hidden space-y-6">
+            <div class="white-card rounded-3xl p-6 sm:p-8 text-center space-y-6 border border-slate-200 shadow-xl relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-xs font-bold text-sky-800">
+                    <i class="fa-solid fa-trophy text-amber-500"></i> क्विज़ परिणाम रिपोर्ट कार्ड
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">आपका कुल परिणाम</h2>
+
+                <!-- Percentage Score Badge & Radial Circle -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 py-2">
+                    <!-- SVG Progress Circle -->
+                    <div class="relative w-40 h-40 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100">
+                            <!-- Background Circle -->
+                            <circle class="text-slate-100" stroke-width="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                            <!-- Animated Circle -->
+                            <circle id="resultProgressRing" class="progress-ring__circle text-sky-500" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="percentageText" class="text-3xl font-black text-slate-900">0%</span>
+                            <span class="text-xs text-slate-500 uppercase font-bold">प्राप्तांक</span>
+                        </div>
+                    </div>
+
+                    <!-- Performance Grade & Score Breakdown -->
+                    <div class="text-center sm:text-left space-y-2">
+                        <div id="performanceBadge" class="inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                            उत्कृष्ट प्रदर्शन!
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">
+                            प्राप्त अंक: <span id="correctAnswersCount" class="text-emerald-600 font-extrabold text-2xl">0</span> / <span id="totalResultQuestions" class="text-slate-600">0</span>
+                        </h3>
+                        <p id="resultFeedbackNote" class="text-xs sm:text-sm text-slate-600 max-w-xs leading-relaxed">
+                            आपने सभी प्रश्नों का बहुत अच्छे से उत्तर दिया है।
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
+                            <span class="px-3 py-1 bg-slate-100 rounded-xl text-xs text-slate-600 border border-slate-200 font-semibold">
+                                <i class="fa-solid fa-clock text-amber-500 mr-1"></i> समय: <span id="resultTimeTaken" class="font-bold text-slate-900">00:00</span>
+                            </span>
+                            <span class="px-3 py-1 bg-slate-100 rounded-xl text-xs text-slate-600 border border-slate-200 font-semibold">
+                                <i class="fa-solid fa-bullseye text-sky-500 mr-1"></i> सटीकता: <span id="accuracyText" class="font-bold text-slate-900">0%</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Cards Row -->
+                <div class="grid grid-cols-3 gap-3 max-w-md mx-auto">
+                    <div class="p-3 bg-emerald-50/60 rounded-2xl border border-emerald-100 text-center">
+                        <span class="block text-xs text-emerald-700 font-semibold mb-1">सही</span>
+                        <span id="statCorrect" class="text-lg font-black text-emerald-700">0</span>
+                    </div>
+                    <div class="p-3 bg-rose-50/60 rounded-2xl border border-rose-100 text-center">
+                        <span class="block text-xs text-rose-700 font-semibold mb-1">गलत</span>
+                        <span id="statIncorrect" class="text-lg font-black text-rose-700">0</span>
+                    </div>
+                    <div class="p-3 bg-amber-50/60 rounded-2xl border border-amber-100 text-center">
+                        <span class="block text-xs text-amber-700 font-semibold mb-1">छोड़े</span>
+                        <span id="statSkipped" class="text-lg font-black text-amber-700">0</span>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATE ACTION BOX -->
+                <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-sky-50 to-amber-50 border border-amber-200/80 shadow-md max-w-lg mx-auto text-center space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-amber-800 font-extrabold text-base">
+                        <i class="fa-solid fa-certificate text-amber-500 text-xl"></i>
+                        <span>अपना डिजिटल प्रमाण पत्र (Certificate) डाउनलोड करें</span>
+                    </div>
+                    <p class="text-xs text-slate-600">इस टेस्ट को पूरा करने पर आपको **Mr. Md Imamul Kalam** के डिजिटल हस्ताक्षर के साथ सर्टिफिकेट मिलता है।</p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center gap-2 max-w-md mx-auto">
+                        <input type="text" id="studentNameInput" placeholder="अपना नाम दर्ज करें (उदा० राहुल कुमार)" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        <button onclick="generateCertificate()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm whitespace-nowrap shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-award"></i> प्रमाण पत्र देखें
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-3 pt-2">
+                    <button onclick="retakeCurrentQuiz()" class="px-6 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold shadow-md shadow-sky-500/20 transition flex items-center gap-2">
+                        <i class="fa-solid fa-rotate-right text-xs"></i> पुनः प्रयास करें
+                    </button>
+                    <button onclick="showHomeScreen()" class="px-6 py-2.5 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 font-bold text-slate-700 transition flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-house text-xs"></i> मुख्य पृष्ठ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Answer Review Key -->
+            <div class="white-card rounded-3xl p-6 space-y-4 border border-slate-200 shadow-lg">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-sky-600"></i> उत्तर समीक्षा (Answer Key)
+                    </h3>
+                    <span class="text-xs text-slate-500">सभी प्रश्नों के सही उत्तर</span>
+                </div>
+
+                <div id="reviewContainer" class="space-y-3 max-h-96 overflow-y-auto pr-2">
+                    <!-- Review Questions injected dynamically -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border border-slate-200 p-4 sm:p-6 space-y-4 my-auto relative">
+            <!-- Modal Close Header -->
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-award text-amber-500"></i> आपका प्रमाणपत्र (Certificate)
+                </h3>
+                <button onclick="closeCertificateModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- PRINTABLE CERTIFICATE CANVAS CONTAINER -->
+            <div id="certificatePrintContainer" class="p-2 bg-slate-100 rounded-2xl">
+                <div id="certificateCard" class="bg-white rounded-2xl p-6 sm:p-10 border-8 border-amber-500/30 relative overflow-hidden shadow-inner font-devanagari text-slate-800" style="background-image: radial-gradient(#f1f5f9 1px, transparent 1px); background-size: 16px 16px;">
+                    
+                    <!-- Decorative Ornate Corners -->
+                    <div class="absolute top-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute top-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute bottom-2 left-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <div class="absolute bottom-2 right-2 text-amber-500/40 text-3xl"><i class="fa-solid fa-dharmachakra"></i></div>
+
+                    <div class="text-center space-y-4 relative z-10">
+                        <!-- Top Header Logo & Badge -->
+                        <div class="flex items-center justify-center gap-2">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow">
+                                <i class="fa-solid fa-flask text-xl"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="text-xs font-bold uppercase tracking-widest text-amber-800">बिहार बोर्ड क्लास 10th ई-लर्निंग</h4>
+                                <p class="text-[10px] text-slate-500">विज्ञान (Science) ऑनलाइन मूल्यांकन प्रणाली</p>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Title -->
+                        <div>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase text-slate-900 tracking-wide font-serif text-amber-900">
+                                प्रमाणपत्र / CERTIFICATE
+                            </h2>
+                            <p class="text-xs sm:text-sm font-semibold text-slate-500 tracking-widest uppercase mt-1">OF ACHIEVEMENT & COMPLETION</p>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-600 font-medium">प्रमाणित किया जाता है कि विद्यार्थी</p>
+
+                        <!-- Student Name -->
+                        <div class="py-1">
+                            <h3 id="certStudentName" class="text-2xl sm:text-4xl font-extrabold text-sky-700 underline decoration-amber-400 decoration-4 underline-offset-8">
+                                राहुल कुमार
+                            </h3>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-xl mx-auto font-medium">
+                            ने <strong>विज्ञान (Class 10 Physics, Chemistry, Biology Objective Quiz App)</strong> में सम्मिलित होकर शानदार प्रदर्शन किया एवं सफलता प्राप्त की।
+                        </p>
+
+                        <!-- Score Details Pill -->
+                        <div class="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-2.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900 my-2 shadow-sm">
+                            <span>प्राप्तांक: <strong id="certScoreText" class="text-amber-700 text-sm">85%</strong></span>
+                            <span>•</span>
+                            <span>दिनांक: <strong id="certDateText" class="text-slate-800">10/08/2026</strong></span>
+                            <span>•</span>
+                            <span>स्थिति: <strong class="text-emerald-600">उत्तीर्ण (Passed)</strong></span>
+                        </div>
+
+                        <!-- Signatures Row -->
+                        <div class="pt-6 grid grid-cols-2 items-end gap-4 border-t border-slate-200 mt-4">
+                            <!-- Verification Seal Badge -->
+                            <div class="text-center sm:text-left space-y-1">
+                                <div class="w-14 h-14 rounded-full bg-amber-50 border-2 border-amber-500 flex items-center justify-center text-amber-600 mx-auto sm:mx-0 shadow-sm">
+                                    <i class="fa-solid fa-ribbon text-2xl"></i>
+                                </div>
+                                <p class="text-[10px] font-bold text-slate-500 uppercase">आधिकारिक डिजिटल मोहर</p>
+                            </div>
+
+                            <!-- Instructor Digital Signature -->
+                            <div class="text-center sm:text-right space-y-1">
+                                <div class="font-signature text-2xl sm:text-3xl text-slate-900 font-bold tracking-wide select-none">
+                                    Md Imamul Kalam
+                                </div>
+                                <div class="h-0.5 bg-slate-400 w-32 ml-auto"></div>
+                                <p class="text-xs font-extrabold text-slate-900">Mr. Md Imamul Kalam</p>
+                                <p class="text-[10px] text-slate-500 font-semibold">संस्थापक एवं क्विज़ निर्देशक</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Bottom Buttons -->
+            <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
+                <button onclick="downloadCertificateImage()" class="px-5 py-2.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow-md shadow-sky-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> डाउनलोड करें (Image)
+                </button>
+                <button onclick="window.print()" class="px-5 py-2.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-md shadow-amber-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> प्रिंट करें
+                </button>
+                <button onclick="closeCertificateModal()" class="px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+                    बंद करें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM EXIT CONFIRMATION MODAL -->
+    <div id="exitModal" class="fixed inset-0 z-50 hidden bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-4 shadow-2xl text-center border border-slate-200">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto text-xl font-bold">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">क्या आप बाहर निकलना चाहते हैं?</h3>
+            <p class="text-xs text-slate-500">यदि आप अभी बाहर जाते हैं तो आपकी प्रगति मिट सकती है।</p>
+            <div class="flex items-center justify-center gap-3 pt-2">
+                <button onclick="executeExitQuiz()" class="px-4 py-2 rounded-xl bg-rose-600 text-white font-bold text-xs hover:bg-rose-700 transition">
+                    हाँ, बाहर निकलें
+                </button>
+                <button onclick="closeExitModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs hover:bg-slate-200 transition">
+                    नहीं, जारी रखें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-4 text-center text-xs text-slate-500 relative z-10 mt-auto">
+        <p>विज्ञान (Science: Physics, Chemistry, Biology) Class 10 Objective Practice App</p>
+        <p class="mt-1 font-bold text-amber-600">Made by Mr. Md Imamul Kalam</p>
+    </footer>
+
+    <script>
+        // Raw Questions Data (Complete Bihar Board Class 10 Science Objective Questions across all 16 chapters)
+        const quizData = [
+            // ==================== PHYSICS (भौतिकी) ====================
+            // CHAPTER 1: प्रकाश-परावर्तन तथा अपवर्तन
+            {
+                chapter: 1,
+                chapterTitle: "Chapter 1: प्रकाश-परावर्तन तथा अपवर्तन",
+                question: "समतल दर्पण की फोकस दूरी होती है -",
+                options: ["अनंत", "शून्य", "21 सेमी", "50 सेमी"],
+                correct: 0
+            },
+            {
+                chapter: 1,
+                chapterTitle: "Chapter 1: प्रकाश-परावर्तन तथा अपवर्तन",
+                question: "प्रकाश के परावर्तन के कितने नियम हैं ?",
+                options: ["एक", "दो", "तीन", "चार"],
+                correct: 1
+            },
+            {
+                chapter: 1,
+                chapterTitle: "Chapter 1: प्रकाश-परावर्तन तथा अपवर्तन",
+                question: "अवतल दर्पण की फोकस दूरी उसकी वक्रता त्रिज्या की होती है -",
+                options: ["दुगुनी", "आधी", "चौथाई", "बराबर"],
+                correct: 1
+            },
+            {
+                chapter: 1,
+                chapterTitle: "Chapter 1: प्रकाश-परावर्तन तथा अपवर्तन",
+                question: "किसी माध्यम के अपवर्तनांक (μ) का मान होता है -",
+                options: ["sin i / sin r", "sin r / sin i", "sin i × sin r", "sin i + sin r"],
+                correct: 0
+            },
+            {
+                chapter: 1,
+                chapterTitle: "Chapter 1: प्रकाश-परावर्तन तथा अपवर्तन",
+                question: "दाढ़ी बनाने में कौन-सा दर्पण उपयुक्त होता है ?",
+                options: ["समतल", "उत्तल", "अवतल", "कोई नहीं"],
+                correct: 2
+            },
+
+            // CHAPTER 2: मानव नेत्र तथा रंगबिरंगा संसार
+            {
+                chapter: 2,
+                chapterTitle: "Chapter 2: मानव नेत्र तथा रंगबिरंगा संसार",
+                question: "सामान्य दृष्टि के वयस्क के लिए स्पष्ट दर्शन की अल्पतम दूरी होती है लगभग -",
+                options: ["25 m", "2.5 cm", "25 cm", "2.5 m"],
+                correct: 2
+            },
+            {
+                chapter: 2,
+                chapterTitle: "Chapter 2: मानव नेत्र तथा रंगबिरंगा संसार",
+                question: "मानव नेत्र में किस प्रकार का लेंस पाया जाता है ?",
+                options: ["उत्तल", "अवतल", "वलयाकार", "बाइफोकल"],
+                correct: 0
+            },
+            {
+                chapter: 2,
+                chapterTitle: "Chapter 2: मानव नेत्र तथा रंगबिरंगा संसार",
+                question: "निकट दृष्टि दोष को दूर करने के लिए किस लेंस का उपयोग किया जाता है ?",
+                options: ["उत्तल लेंस", "अवतल लेंस", "बेलनाकार लेंस", "द्विफोकसी लेंस"],
+                correct: 1
+            },
+            {
+                chapter: 2,
+                chapterTitle: "Chapter 2: मानव नेत्र तथा रंगबिरंगा संसार",
+                question: "किस वर्ण (रंग) का तरंगदैर्ध्य सबसे अधिक होता है ?",
+                options: ["लाल", "नीला", "पीला", "बैंगनी"],
+                correct: 0
+            },
+            {
+                chapter: 2,
+                chapterTitle: "Chapter 2: मानव नेत्र तथा रंगबिरंगा संसार",
+                question: "स्पेक्ट्रम प्राप्त करने के लिए किसका उपयोग होता है ?",
+                options: ["काँच की सिली", "अवतल दर्पण", "उत्तल लेंस", "प्रिज्म"],
+                correct: 3
+            },
+
+            // CHAPTER 3: विद्युत
+            {
+                chapter: 3,
+                chapterTitle: "Chapter 3: विद्युत",
+                question: "विभवांतर का SI मात्रक क्या होता है ?",
+                options: ["जूल", "वाट", "एम्पीयर", "वोल्ट"],
+                correct: 3
+            },
+            {
+                chapter: 3,
+                chapterTitle: "Chapter 3: विद्युत",
+                question: "विद्युत धारा का SI मात्रक है -",
+                options: ["वाट", "वोल्ट", "एम्पीयर", "ओम"],
+                correct: 2
+            },
+            {
+                chapter: 3,
+                chapterTitle: "Chapter 3: विद्युत",
+                question: "प्रतिरोध का SI मात्रक क्या है ?",
+                options: ["जूल", "एम्पीयर", "ओम", "वोल्ट"],
+                correct: 2
+            },
+            {
+                chapter: 3,
+                chapterTitle: "Chapter 3: विद्युत",
+                question: "1 HP (अश्व शक्ति) बराबर होता है -",
+                options: ["746 वाट", "736 वाट", "767 वाट", "756 वाट"],
+                correct: 0
+            },
+            {
+                chapter: 3,
+                chapterTitle: "Chapter 3: विद्युत",
+                question: "एमीटर को परिपथ में कैसे जोड़ा जाता है ?",
+                options: ["श्रेणीक्रम", "समांतर क्रम", "दोनों", "इनमें से कोई नहीं"],
+                correct: 0
+            },
+
+            // CHAPTER 4: विद्युत धारा के चुंबकीय प्रभाव
+            {
+                chapter: 4,
+                chapterTitle: "Chapter 4: विद्युत धारा के चुंबकीय प्रभाव",
+                question: "विद्युत धारा उत्पन्न करने की युक्ति को कहते हैं -",
+                options: ["जनित्र (Generator)", "गैलवेनोमीटर", "एमीटर", "मोटर"],
+                correct: 0
+            },
+            {
+                chapter: 4,
+                chapterTitle: "Chapter 4: विद्युत धारा के चुंबकीय प्रभाव",
+                question: "विद्युत फ्यूज विद्युत धारा के किस प्रभाव पर कार्य करता है ?",
+                options: ["ऊष्मीय", "चुंबकीय", "रासायनिक", "कोई नहीं"],
+                correct: 0
+            },
+            {
+                chapter: 4,
+                chapterTitle: "Chapter 4: विद्युत धारा के चुंबकीय प्रभाव",
+                question: "लघुपथन (Short Circuit) के समय परिपथ में विद्युत धारा का मान -",
+                options: ["बहुत कम हो जाता है", "परिवर्तित नहीं होता", "बहुत अधिक बढ़ जाता है", "निरंतर परिवर्तित होता है"],
+                correct: 2
+            },
+            {
+                chapter: 4,
+                chapterTitle: "Chapter 4: विद्युत धारा के चुंबकीय प्रभाव",
+                question: "डायनेमो से किस प्रकार की धारा प्राप्त होती है ?",
+                options: ["दिश धारा (DC)", "प्रत्यावर्ती धारा (AC)", "दोनों धाराएँ", "इनमें से कोई नहीं"],
+                correct: 2
+            },
+            {
+                chapter: 4,
+                chapterTitle: "Chapter 4: विद्युत धारा के चुंबकीय प्रभाव",
+                question: "चुंबकीय क्षेत्र की तीव्रता का मात्रक है -",
+                options: ["न्यूटन / एम्पीयर-मीटर", "टेसला", "वेबर", "एमीटर"],
+                correct: 1
+            },
+
+            // CHAPTER 5: ऊर्जा के स्रोत
+            {
+                chapter: 5,
+                chapterTitle: "Chapter 5: ऊर्जा के स्रोत",
+                question: "बायोगैस (गोबर गैस) का मुख्य घटक क्या है ?",
+                options: ["मीथेन (CH4)", "एथेन", "प्रोपेन", "ब्यूटेन"],
+                correct: 0
+            },
+            {
+                chapter: 5,
+                chapterTitle: "Chapter 5: ऊर्जा के स्रोत",
+                question: "सौर कुकर के लिए कौन-सा दर्पण सर्वाधिक उपयुक्त होता है ?",
+                options: ["समतल दर्पण", "उत्तल दर्पण", "अवतल दर्पण", "इनमें से सभी"],
+                correct: 2
+            },
+            {
+                chapter: 5,
+                chapterTitle: "Chapter 5: ऊर्जा के स्रोत",
+                question: "नाभिकीय ऊर्जा प्राप्त करने हेतु कौन-सा तत्व आवश्यक है ?",
+                options: ["हीलीयम", "क्रोमियम", "यूरेनियम", "ऐलुमिनियम"],
+                correct: 2
+            },
+            {
+                chapter: 5,
+                chapterTitle: "Chapter 5: ऊर्जा के स्रोत",
+                question: "पवन विद्युत जनित्र में पवन की चाल कम-से-कम कितनी होनी चाहिए ?",
+                options: ["15 km/h", "150 km/h", "1.5 km/h", "1500 km/h"],
+                correct: 0
+            },
+            {
+                chapter: 5,
+                chapterTitle: "Chapter 5: ऊर्जा के स्रोत",
+                question: "जीवाश्म ईंधन का उदाहरण है -",
+                options: ["कोयला", "पेट्रोलियम", "प्राकृतिक गैस", "इनमें से सभी"],
+                correct: 3
+            },
+
+            // ==================== CHEMISTRY (रसायन विज्ञान) ====================
+            // CHAPTER 6: रासायनिक अभिक्रियाएँ एवं समीकरण
+            {
+                chapter: 6,
+                chapterTitle: "Chapter 6: रासायनिक अभिक्रियाएँ एवं समीकरण",
+                question: "Fe2O3 + 2Al → Al2O3 + 2Fe किस प्रकार की अभिक्रिया है ?",
+                options: ["संयोजन अभिक्रिया", "द्विविस्थापन अभिक्रिया", "वियोजन अभिक्रिया", "विस्थापन अभिक्रिया"],
+                correct: 3
+            },
+            {
+                chapter: 6,
+                chapterTitle: "Chapter 6: रासायनिक अभिक्रियाएँ एवं समीकरण",
+                question: "श्वसन किस प्रकार की रासायनिक अभिक्रिया है ?",
+                options: ["उपचयन (ऊष्माक्षेपी)", "संयोजन", "अपचयन", "ऊष्माशोषी"],
+                correct: 0
+            },
+            {
+                chapter: 6,
+                chapterTitle: "Chapter 6: रासायनिक अभिक्रियाएँ एवं समीकरण",
+                question: "साग-सब्जियों का विघटित होकर कम्पोस्ट बनना कैसी अभिक्रिया है ?",
+                options: ["ऊष्माशोषी", "ऊष्माक्षेपी", "उभयगामी", "प्रतिस्थापन"],
+                correct: 1
+            },
+            {
+                chapter: 6,
+                chapterTitle: "Chapter 6: रासायनिक अभिक्रियाएँ एवं समीकरण",
+                question: "चिप्स की थैली में कौन-सी गैस भरी जाती है ?",
+                options: ["ऑक्सीजन", "नाइट्रोजन", "हाइड्रोजन", "कार्बन डाइऑक्साइड"],
+                correct: 1
+            },
+            {
+                chapter: 6,
+                chapterTitle: "Chapter 6: रासायनिक अभिक्रियाएँ एवं समीकरण",
+                question: "समीकरण के बाएँ एवं दाएँ दोनों ओर प्रत्येक प्रकार के परमाणुओं की संख्या समान हो, तो यह समीकरण है -",
+                options: ["असंतुलित", "संतुलित", "द्रव्यमान नियम के प्रतिकूल", "कोई नहीं"],
+                correct: 1
+            },
+
+            // CHAPTER 7: अम्ल, क्षारक एवं लवण
+            {
+                chapter: 7,
+                chapterTitle: "Chapter 7: अम्ल, क्षारक एवं लवण",
+                question: "शुद्ध जल का pH मान कितना होता है ?",
+                options: ["6", "7", "8", "9"],
+                correct: 1
+            },
+            {
+                chapter: 7,
+                chapterTitle: "Chapter 7: अम्ल, क्षारक एवं लवण",
+                question: "अम्लीय विलयन का pH मान होता है -",
+                options: ["7 के बराबर", "7 से कम", "7 से अधिक", "14"],
+                correct: 1
+            },
+            {
+                chapter: 7,
+                chapterTitle: "Chapter 7: अम्ल, क्षारक एवं लवण",
+                question: "प्लास्टर ऑफ पेरिस का रासायनिक सूत्र है -",
+                options: ["CaSO4·2H2O", "CaSO4·½H2O", "Na2CO3·10H2O", "NaHCO3"],
+                correct: 1
+            },
+            {
+                chapter: 7,
+                chapterTitle: "Chapter 7: अम्ल, क्षारक एवं लवण",
+                question: "धोने के सोडा (Washing Soda) का आणविक सूत्र है -",
+                options: ["Na2CO3·10H2O", "Na2CO3·5H2O", "Na2CO3·7H2O", "Na2CO3·H2O"],
+                correct: 0
+            },
+            {
+                chapter: 7,
+                chapterTitle: "Chapter 7: अम्ल, क्षारक एवं लवण",
+                question: "संगमरमर (Marble) का रासायनिक सूत्र क्या है ?",
+                options: ["CaCO3", "MgHCO3", "Ca(HCO3)2", "Mg(CO3)2"],
+                correct: 0
+            },
+
+            // CHAPTER 8: धातु एवं अधातु
+            {
+                chapter: 8,
+                chapterTitle: "Chapter 8: धातु एवं अधातु",
+                question: "कमरे के ताप पर द्रव अवस्था में रहने वाली धातु है -",
+                options: ["पारा (Hg)", "सोडियम", "लोहा", "ताँबा"],
+                correct: 0
+            },
+            {
+                chapter: 8,
+                chapterTitle: "Chapter 8: धातु एवं अधातु",
+                question: "कमरे के ताप पर द्रव अवस्था में रहने वाली अधातु है -",
+                options: ["ब्रोमीन", "आयोडीन", "क्लोरीन", "ऑक्सीजन"],
+                correct: 0
+            },
+            {
+                chapter: 8,
+                chapterTitle: "Chapter 8: धातु एवं अधातु",
+                question: "सबसे कठोर प्राकृतिक पदार्थ कौन-सा है ?",
+                options: ["सोना", "चांदी", "लोहा", "हीरा"],
+                correct: 3
+            },
+            {
+                chapter: 8,
+                chapterTitle: "Chapter 8: धातु एवं अधातु",
+                question: "कौन-सी धातु विद्युत की सबसे अच्छी चालक है ?",
+                options: ["ताँबा (Cu)", "चाँदी (Ag)", "ऐलुमिनियम (Al)", "लोहा (Fe)"],
+                correct: 1
+            },
+            {
+                chapter: 8,
+                chapterTitle: "Chapter 8: धातु एवं अधातु",
+                question: "सीसा और टिन की मिश्रधातु को कहते हैं -",
+                options: ["सोल्डर", "स्टील", "गन मेटल", "उपधातु"],
+                correct: 0
+            },
+
+            // CHAPTER 9: कार्बन एवं उसके यौगिक
+            {
+                chapter: 9,
+                chapterTitle: "Chapter 9: कार्बन एवं उसके यौगिक",
+                question: "C-60 बकमिन्स्टर फुलेरीन किसकी अपररूप है ?",
+                options: ["फास्फोरस", "सल्फर", "कार्बन", "टिन"],
+                correct: 2
+            },
+            {
+                chapter: 9,
+                chapterTitle: "Chapter 9: कार्बन एवं उसके यौगिक",
+                question: "मेथेन का रासायनिक सूत्र है -",
+                options: ["CH4", "C2H6", "C2H4", "C2H2"],
+                correct: 0
+            },
+            {
+                chapter: 9,
+                chapterTitle: "Chapter 9: कार्बन एवं उसके यौगिक",
+                question: "ऐल्केन श्रेणी के यौगिकों का सामान्य सूत्र है -",
+                options: ["CnH2n+2", "CnH2n", "CnH2n-2", "CnH2n+1"],
+                correct: 0
+            },
+            {
+                chapter: 9,
+                chapterTitle: "Chapter 9: कार्बन एवं उसके यौगिक",
+                question: "सिरका (Vinegar) में कौन-सा अम्ल पाया जाता है ?",
+                options: ["एसिटिक अम्ल", "फॉर्मिक अम्ल", "साइट्रिक अम्ल", "टार्टरिक अम्ल"],
+                correct: 0
+            },
+            {
+                chapter: 9,
+                chapterTitle: "Chapter 9: कार्बन एवं उसके यौगिक",
+                question: "एथिल अल्कोहल का IUPAC नाम है -",
+                options: ["एथेनॉल", "एथेनल", "एथेनोन", "एथेनॉइक अम्ल"],
+                correct: 0
+            },
+
+            // CHAPTER 10: तत्वों का आवर्त वर्गीकरण
+            {
+                chapter: 10,
+                chapterTitle: "Chapter 10: तत्वों का आवर्त वर्गीकरण",
+                question: "आधुनिक आवर्त सारणी में आवर्तों (कतारों) की संख्या कितनी है ?",
+                options: ["7", "8", "9", "18"],
+                correct: 0
+            },
+            {
+                chapter: 10,
+                chapterTitle: "Chapter 10: तत्वों का आवर्त वर्गीकरण",
+                question: "आधुनिक आवर्त सारणी में वर्गों (समूहों) की संख्या है -",
+                options: ["7", "12", "15", "18"],
+                correct: 3
+            },
+            {
+                chapter: 10,
+                chapterTitle: "Chapter 10: तत्वों का आवर्त वर्गीकरण",
+                question: "अष्टक नियम का प्रतिपादन किसने किया था ?",
+                options: ["डोबेराइनर", "न्यूलैंड्स", "मेंडलीव", "मोसले"],
+                correct: 1
+            },
+            {
+                chapter: 10,
+                chapterTitle: "Chapter 10: तत्वों का आवर्त वर्गीकरण",
+                question: "त्रिक नियम का प्रतिपादन किस वैज्ञानिक ने किया ?",
+                options: ["न्यूलैंड्स", "डोबेराइनर", "मेंडलीव", "डाल्टन"],
+                correct: 1
+            },
+            {
+                chapter: 10,
+                chapterTitle: "Chapter 10: तत्वों का आवर्त वर्गीकरण",
+                question: "आधुनिक आवर्त नियम का प्रतिपादन किसने किया था ?",
+                options: ["मोसले ने", "मेंडलीव ने", "न्यूलैंड्स ने", "डोबेराइनर ने"],
+                correct: 0
+            },
+
+            // ==================== BIOLOGY (जीव विज्ञान) ====================
+            // CHAPTER 11: जैव प्रक्रम
+            {
+                chapter: 11,
+                chapterTitle: "Chapter 11: जैव प्रक्रम",
+                question: "पौधों में वाष्पोत्सर्जन किस भाग में होता है ?",
+                options: ["जड़", "तना", "पत्ता", "फूल"],
+                correct: 2
+            },
+            {
+                chapter: 11,
+                chapterTitle: "Chapter 11: जैव प्रक्रम",
+                question: "पत्तियों में गैसों का आदान-प्रदान कहाँ होता है ?",
+                options: ["शिरा", "रंध्र (Stomata)", "मध्यशिरा", "कोई नहीं"],
+                correct: 1
+            },
+            {
+                chapter: 11,
+                chapterTitle: "Chapter 11: जैव प्रक्रम",
+                question: "मनुष्य में वृक्क (Kidney) एक तंत्र का भाग है जो संबंधित है -",
+                options: ["पोषण से", "श्वसन से", "उत्सर्जन से", "परिवहन से"],
+                correct: 2
+            },
+            {
+                chapter: 11,
+                chapterTitle: "Chapter 11: जैव प्रक्रम",
+                question: "क्लोरोफिल वर्णक का रंग होता है -",
+                options: ["हरा", "नीला", "लाल", "सफेद"],
+                correct: 0
+            },
+            {
+                chapter: 11,
+                chapterTitle: "Chapter 11: जैव प्रक्रम",
+                question: "स्वपोषी पोषण के लिए आवश्यक है -",
+                options: ["क्लोरोफिल", "सूर्य का प्रकाश", "CO2 एवं जल", "उपर्युक्त सभी"],
+                correct: 3
+            },
+
+            // CHAPTER 12: नियंत्रण एवं समन्वय
+            {
+                chapter: 12,
+                chapterTitle: "Chapter 12: नियंत्रण एवं समन्वय",
+                question: "शरीर का संतुलन बनाए रखता है -",
+                options: ["सेरीबेलम (अनुमस्तिष्क)", "क्रेनियम", "मस्तिष्क स्टेम", "सेरीब्रम"],
+                correct: 0
+            },
+            {
+                chapter: 12,
+                chapterTitle: "Chapter 12: नियंत्रण एवं समन्वय",
+                question: "इंसुलिन की कमी से कौन-सा रोग होता है ?",
+                options: ["घेंघा", "बौनापन", "मधुमेह (Diabetes)", "एड्स"],
+                correct: 2
+            },
+            {
+                chapter: 12,
+                chapterTitle: "Chapter 12: नियंत्रण एवं समन्वय",
+                question: "थायरोक्सिन हार्मोन के संश्लेषण के लिए क्या आवश्यक है ?",
+                options: ["सोडियम", "क्लोरीन", "फास्फोरस", "आयोडीन"],
+                correct: 3
+            },
+            {
+                chapter: 12,
+                chapterTitle: "Chapter 12: नियंत्रण एवं समन्वय",
+                question: "तंत्रिका कोशिका की रचनात्मक एवं कार्यात्मक इकाई को कहते हैं -",
+                options: ["नेफ्रॉन", "न्यूरॉन", "साइटॉन", "एक्सॉन"],
+                correct: 1
+            },
+            {
+                chapter: 12,
+                chapterTitle: "Chapter 12: नियंत्रण एवं समन्वय",
+                question: "निम्नलिखित में से कौन पादप हार्मोन है ?",
+                options: ["इंसुलिन", "थायरोक्सिन", "एस्ट्रोजन", "साइटोकाइनिन"],
+                correct: 3
+            },
+
+            // CHAPTER 13: जीव जनन कैसे करते हैं?
+            {
+                chapter: 13,
+                chapterTitle: "Chapter 13: जीव जनन कैसे करते हैं?",
+                question: "मुकुलन द्वारा अलैंगिक जनन किसमें होता है ?",
+                options: ["अमीबा", "ईस्ट", "प्लाज्मोडियम", "पैरामीशियम"],
+                correct: 1
+            },
+            {
+                chapter: 13,
+                chapterTitle: "Chapter 13: जीव जनन कैसे करते हैं?",
+                question: "परागकोश में पाए जाते हैं -",
+                options: ["बाह्यदल", "अंडाशय", "अंडप", "परागकण"],
+                correct: 3
+            },
+            {
+                chapter: 13,
+                chapterTitle: "Chapter 13: जीव जनन कैसे करते हैं?",
+                question: "पुष्प का नर जननांग कहलाता है -",
+                options: ["पुंकेसर", "स्त्रीकेसर", "पंखुड़ी", "अंडाशय"],
+                correct: 0
+            },
+            {
+                chapter: 13,
+                chapterTitle: "Chapter 13: जीव जनन कैसे करते हैं?",
+                question: "द्विखंडन होता है -",
+                options: ["अमीबा में", "पैरामीशियम में", "लीसमानिया में", "इनमें से सभी में"],
+                correct: 3
+            },
+            {
+                chapter: 13,
+                chapterTitle: "Chapter 13: जीव जनन कैसे करते हैं?",
+                question: "मानव मादा के जनन तंत्र का भाग नहीं है -",
+                options: ["अंडाशय", "गर्भाशय", "शुक्रवाहिका", "डिंबवाहिनी"],
+                correct: 2
+            },
+
+            // CHAPTER 14: आनुवंशिकता एवं जैव विकास
+            {
+                chapter: 14,
+                chapterTitle: "Chapter 14: आनुवंशिकता एवं जैव विकास",
+                question: "अनुवांशिकी का पिता (Father of Genetics) किसे कहा जाता है ?",
+                options: ["ग्रैगर जॉन मेंडेल", "लैमार्क", "चार्ल्स डार्विन", "अरस्तू"],
+                correct: 0
+            },
+            {
+                chapter: 14,
+                chapterTitle: "Chapter 14: आनुवंशिकता एवं जैव विकास",
+                question: "मेंडेल ने अपने प्रयोगों के लिए किस पौधे का चयन किया था ?",
+                options: ["गुलाब", "साधारण मटर", "गेहूँ", "चमेली"],
+                correct: 1
+            },
+            {
+                chapter: 14,
+                chapterTitle: "Chapter 14: आनुवंशिकता एवं जैव विकास",
+                question: "स्त्रियों में लिंग गुणसूत्र का युग्म होता है -",
+                options: ["XY", "XX", "YY", "XO"],
+                correct: 1
+            },
+            {
+                chapter: 14,
+                chapterTitle: "Chapter 14: आनुवंशिकता एवं जैव विकास",
+                question: "पुरुषों में लिंग गुणसूत्र होता है -",
+                options: ["XX", "XY", "YY", "कोई नहीं"],
+                correct: 1
+            },
+            {
+                chapter: 14,
+                chapterTitle: "Chapter 14: आनुवंशिकता एवं जैव विकास",
+                question: "समजात अंगों का उदाहरण है -",
+                options: ["हमारा हाथ और कुत्ते के अग्रपाद", "हमारे दाँत और हाथी के दाँत", "आलू और घास के उपरिभूस्तारी", "उपर्युक्त सभी"],
+                correct: 0
+            },
+
+            // CHAPTER 15: हमारा पर्यावरण
+            {
+                chapter: 15,
+                chapterTitle: "Chapter 15: हमारा पर्यावरण",
+                question: "ओजोन परत किस वायुमंडलीय परत में पाई जाती है ?",
+                options: ["स्ट्रेटोस्फीयर (समताप मंडल)", "ट्रोपोस्फीयर", "एक्सोस्फीयर", "आयनोस्फीयर"],
+                correct: 0
+            },
+            {
+                chapter: 15,
+                chapterTitle: "Chapter 15: हमारा पर्यावरण",
+                question: "निम्नांकित में से कौन-सा जैव निम्नीकरणीय पदार्थ है ?",
+                options: ["डी० डी० टी०", "कागज / सूखा पत्ता", "प्लास्टिक", "पॉलिथीन"],
+                correct: 1
+            },
+            {
+                chapter: 15,
+                chapterTitle: "Chapter 15: हमारा पर्यावरण",
+                question: "पारिस्थितिक तंत्र में प्रथम पोषी स्तर कौन से जीव होते हैं ?",
+                options: ["शाकाहारी", "मांसाहारी", "उत्पादक (हरे पौधे)", "अपघटक"],
+                correct: 2
+            },
+            {
+                chapter: 15,
+                chapterTitle: "Chapter 15: हमारा पर्यावरण",
+                question: "ओजोन के एक अणु में ऑक्सीजन के कितने परमाणु होते हैं ?",
+                options: ["1", "2", "3", "4"],
+                correct: 2
+            },
+            {
+                chapter: 15,
+                chapterTitle: "Chapter 15: हमारा पर्यावरण",
+                question: "CFC का पूरा नाम क्या है ?",
+                options: ["क्लोरोफ्लोरो कार्बन", "क्लोरो फ्लोरो क्लोराइड", "कार्बन क्लोरो फ्लोराइड", "कोई नहीं"],
+                correct: 0
+            },
+
+            // CHAPTER 16: प्राकृतिक संसाधनों का प्रबंधन
+            {
+                chapter: 16,
+                chapterTitle: "Chapter 16: प्राकृतिक संसाधनों का प्रबंधन",
+                question: "चिपको आंदोलन किस उद्देश्य से शुरू किया गया था ?",
+                options: ["वन (वृक्ष) संरक्षण", "जल संरक्षण", "मृदा संरक्षण", "बिजली संरक्षण"],
+                correct: 0
+            },
+            {
+                chapter: 16,
+                chapterTitle: "Chapter 16: प्राकृतिक संसाधनों का प्रबंधन",
+                question: "गंगा सफाई योजना किस वर्ष प्रारंभ हुई थी ?",
+                options: ["1985 ई०", "1990 ई०", "2000 ई०", "2014 ई०"],
+                correct: 0
+            },
+            {
+                chapter: 16,
+                chapterTitle: "Chapter 16: प्राकृतिक संसाधनों का प्रबंधन",
+                question: "'सरदार सरोवर बांध' किस नदी पर निर्मित है ?",
+                options: ["गंगा नदी", "नर्मदा नदी", "यमुना नदी", "कावेरी नदी"],
+                correct: 1
+            },
+            {
+                chapter: 16,
+                chapterTitle: "Chapter 16: प्राकृतिक संसाधनों का प्रबंधन",
+                question: "'टिहरी बांध' किस नदी पर बना हुआ है ?",
+                options: ["भागीरथी नदी", "नर्मदा नदी", "सतलज नदी", "गोदावरी नदी"],
+                correct: 0
+            },
+            {
+                chapter: 16,
+                chapterTitle: "Chapter 16: प्राकृतिक संसाधनों का प्रबंधन",
+                question: "अमृता देवी विश्नोई का संबंध किस वृक्ष के संरक्षण से है ?",
+                options: ["खेजड़ी वृक्ष", "नीम वृक्ष", "पीपल वृक्ष", "आम वृक्ष"],
+                correct: 0
+            }
+        ];
+
+        // Global State variables
+        let activeQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let currentChapter = 'all';
+        let isSoundEnabled = true;
+        let quizMode = 'practice';
+        let timerInterval = null;
+        let secondsElapsed = 0;
+        let lastPercentageScore = 0;
+
+        const AudioEngine = {
+            ctx: null,
+            init() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    this.ctx = new AudioCtx();
+                }
+            },
+            playCorrect() {
+                if (!isSoundEnabled) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523.25, now);
+                osc.frequency.exponentialRampToValueAtTime(659.25, now + 0.1);
+                osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.2);
+
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.35);
+            },
+            playIncorrect() {
+                if (!isSoundEnabled) return;
+                this.init();
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(220, now);
+                osc.frequency.linearRampToValueAtTime(140, now + 0.25);
+
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.3);
+            },
+            playFanfare() {
+                if (!isSoundEnabled) return;
+                this.init();
+                const notes = [440, 554.37, 659.25, 880];
+                notes.forEach((freq, index) => {
+                    const now = this.ctx.currentTime + (index * 0.1);
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, now);
+
+                    gain.gain.setValueAtTime(0.25, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                });
+            }
+        };
+
+        function toggleSound() {
+            isSoundEnabled = !isSoundEnabled;
+            const icon = document.getElementById('soundIcon');
+            if (isSoundEnabled) {
+                icon.className = 'fa-solid fa-volume-high text-base text-sky-600';
+            } else {
+                icon.className = 'fa-solid fa-volume-xmark text-base text-slate-400';
+            }
+        }
+
+        // Fixed WhatsApp Share Functionality
+        function shareOnWhatsApp() {
+            const currentUrl = window.location.href;
+            const text = "📚 बिहार बोर्ड कक्षा 10वीं विज्ञान (Physics, Chemistry, Biology) ऑब्जेक्टिव क्विज़ टेस्ट!\n\n" +
+                "सभी अध्यायों के महत्वपूर्ण प्रश्न हल करें, सूत्र देखें और ऑनलाइन सर्टिफिकेट प्राप्त करें।\n" +
+                "Author: Mr. Md Imamul Kalam\n\n" +
+                "अभी ऐप खोलें: " + currentUrl;
+            
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Render Chapter Selection Grid on Init
+        function renderChapterGrid() {
+            const grid = document.getElementById('chapterGrid');
+            const chapterMap = {};
+
+            quizData.forEach(q => {
+                if (!chapterMap[q.chapter]) {
+                    chapterMap[q.chapter] = {
+                        title: q.chapterTitle,
+                        count: 0
+                    };
+                }
+                chapterMap[q.chapter].count++;
+            });
+
+            grid.innerHTML = '';
+            Object.keys(chapterMap).sort((a,b) => a - b).forEach(chapNum => {
+                const chap = chapterMap[chapNum];
+                const card = document.createElement('div');
+                card.className = 'white-card white-card-hover rounded-2xl p-5 border border-slate-200 flex flex-col justify-between space-y-4 cursor-pointer';
+                card.onclick = () => startQuiz(chapNum);
+
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">अध्याय ${chapNum}</span>
+                            <span class="text-xs text-slate-500 font-medium"><i class="fa-regular fa-file-lines text-slate-400 mr-1"></i>${chap.count} प्रश्न</span>
+                        </div>
+                        <h4 class="text-base font-bold text-slate-900 group-hover:text-sky-600 transition">${chap.title}</h4>
+                    </div>
+                    <div class="pt-2 flex items-center justify-between border-t border-slate-100 text-xs text-slate-500 font-medium">
+                        <span>वस्तुनिष्ठ अभ्यास</span>
+                        <span class="text-sky-600 font-bold flex items-center gap-1">शुरू करें <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Subject Wise Quiz Filter Display Function
+        function filterSubjectQuizzes(subject) {
+            const listContainer = document.getElementById('subjectChapterList');
+            const grid = document.getElementById('subjectChapterGrid');
+            const title = document.getElementById('subjectListTitle');
+
+            let minCh = 1, maxCh = 5, subName = "भौतिकी (Physics)";
+            if (subject === 'chemistry') { minCh = 6; maxCh = 10; subName = "रसायन विज्ञान (Chemistry)"; }
+            if (subject === 'biology') { minCh = 11; maxCh = 16; subName = "जीव विज्ञान (Biology)"; }
+
+            title.innerHTML = `<i class="fa-solid fa-list text-sky-600"></i> ${subName} के अध्याय क्विज़:`;
+            grid.innerHTML = '';
+
+            for (let i = minCh; i <= maxCh; i++) {
+                const chapQuestions = quizData.filter(q => q.chapter === i);
+                if (chapQuestions.length > 0) {
+                    const card = document.createElement('div');
+                    card.className = 'p-4 rounded-xl bg-white border border-slate-200 hover:border-sky-400 shadow-sm flex items-center justify-between cursor-pointer transition';
+                    card.onclick = () => startQuiz(i);
+                    card.innerHTML = `
+                        <div>
+                            <span class="text-[10px] font-bold text-sky-700 uppercase bg-sky-50 px-2 py-0.5 rounded">Ch - ${i}</span>
+                            <h5 class="text-xs sm:text-sm font-bold text-slate-900 mt-1">${chapQuestions[0].chapterTitle}</h5>
+                        </div>
+                        <button class="px-3 py-1.5 rounded-lg bg-sky-600 text-white font-bold text-xs whitespace-nowrap shadow-sm">
+                            क्विज़ दें
+                        </button>
+                    `;
+                    grid.appendChild(card);
+                }
+            }
+
+            listContainer.classList.remove('hidden');
+            listContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toggle Collapsible Notes (Hide / Show)
+        function toggleNote(noteId) {
+            const el = document.getElementById(noteId);
+            const icon = document.getElementById(`icon-${noteId}`);
+            
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                el.classList.add('hidden');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Start Quiz
+        function startQuiz(chapterFilter) {
+            currentChapter = chapterFilter;
+            quizMode = document.querySelector('input[name="quizMode"]:checked').value;
+
+            if (chapterFilter === 'all') {
+                activeQuestions = [...quizData];
+                document.getElementById('activeQuizTitle').innerText = 'सम्पूर्ण विज्ञान (All 16 Chapters)';
+            } else {
+                activeQuestions = quizData.filter(q => q.chapter == chapterFilter);
+                document.getElementById('activeQuizTitle').innerText = `अध्याय ${chapterFilter}`;
+            }
+
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            secondsElapsed = 0;
+
+            const timerContainer = document.getElementById('timerContainer');
+            if (quizMode === 'exam') {
+                timerContainer.classList.remove('hidden');
+                startTimer();
+            } else {
+                timerContainer.classList.add('hidden');
+                clearInterval(timerInterval);
+            }
+
+            document.getElementById('homeScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('quizScreen').classList.remove('hidden');
+
+            renderQuestion();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            const timerDisplay = document.getElementById('quizTimer');
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+                const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+                timerDisplay.innerText = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function renderQuestion() {
+            const q = activeQuestions[currentQuestionIndex];
+            const total = activeQuestions.length;
+
+            document.getElementById('currentQuestionNum').innerText = currentQuestionIndex + 1;
+            document.getElementById('totalQuestionsNum').innerText = total;
+            document.getElementById('questionTag').innerText = `प्रश्न ${currentQuestionIndex + 1} of ${total} | Ch-${q.chapter}`;
+            document.getElementById('questionText').innerText = q.question;
+
+            const progressPercent = ((currentQuestionIndex + 1) / total) * 100;
+            document.getElementById('quizProgressBar').style.width = `${progressPercent}%`;
+
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+
+            const optionPrefixes = ['(क)', '(ख)', '(ग)', '(घ)'];
+            const hasAnswered = userAnswers.hasOwnProperty(currentQuestionIndex);
+            const selectedOpt = userAnswers[currentQuestionIndex];
+
+            q.options.forEach((optText, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `option-btn w-full text-left p-4 rounded-2xl border flex items-center justify-between text-sm sm:text-base font-medium transition `;
+
+                let btnStyle = 'bg-white border-slate-200 text-slate-800 hover:border-slate-400 hover:bg-slate-50 shadow-sm';
+
+                if (hasAnswered) {
+                    if (quizMode === 'practice') {
+                        if (idx === q.correct) {
+                            btnStyle = 'bg-emerald-50 border-emerald-500 text-emerald-900 font-bold shadow-md';
+                        } else if (idx === selectedOpt && selectedOpt !== q.correct) {
+                            btnStyle = 'bg-rose-50 border-rose-400 text-rose-900 font-medium';
+                        } else {
+                            btnStyle = 'bg-slate-50 border-slate-200 text-slate-400 opacity-60';
+                        }
+                    } else {
+                        if (idx === selectedOpt) {
+                            btnStyle = 'bg-sky-50 border-sky-500 text-sky-900 font-bold shadow-md';
+                        } else {
+                            btnStyle = 'bg-white border-slate-200 text-slate-600';
+                        }
+                    }
+                }
+
+                btn.className += ` ${btnStyle}`;
+                btn.onclick = () => selectOption(idx);
+
+                btn.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-xs font-bold text-sky-700 shrink-0">
+                            ${optionPrefixes[idx]}
+                        </span>
+                        <span>${optText}</span>
+                    </div>
+                    ${hasAnswered && quizMode === 'practice' && idx === q.correct ? '<i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>' : ''}
+                    ${hasAnswered && quizMode === 'practice' && idx === selectedOpt && selectedOpt !== q.correct ? '<i class="fa-solid fa-circle-xmark text-rose-500 text-lg"></i>' : ''}
+                    ${hasAnswered && quizMode === 'exam' && idx === selectedOpt ? '<i class="fa-solid fa-check text-sky-600 text-lg"></i>' : ''}
+                `;
+
+                optionsContainer.appendChild(btn);
+            });
+
+            // Feedback Box Handling for Practice Mode
+            const feedbackBox = document.getElementById('feedbackBox');
+            if (quizMode === 'practice' && hasAnswered) {
+                feedbackBox.classList.remove('hidden');
+                const isCorrect = selectedOpt === q.correct;
+                if (isCorrect) {
+                    feedbackBox.className = 'p-4 rounded-2xl border bg-emerald-50 border-emerald-300 text-emerald-900 flex items-center justify-between';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center text-sm font-bold';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-check"></i>';
+                    document.getElementById('feedbackText').innerText = 'बिलकुल सही उत्तर! शाबाश!';
+                } else {
+                    feedbackBox.className = 'p-4 rounded-2xl border bg-rose-50 border-rose-300 text-rose-900 flex items-center justify-between';
+                    document.getElementById('feedbackIcon').className = 'w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center text-sm font-bold';
+                    document.getElementById('feedbackIcon').innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    document.getElementById('feedbackText').innerText = `गलत उत्तर! सही उत्तर है: ${optionPrefixes[q.correct]} ${q.options[q.correct]}`;
+                }
+            } else {
+                feedbackBox.classList.add('hidden');
+            }
+
+            document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+
+            if (currentQuestionIndex === total - 1) {
+                document.getElementById('nextBtn').classList.add('hidden');
+                document.getElementById('submitQuizBtn').classList.remove('hidden');
+            } else {
+                document.getElementById('nextBtn').classList.remove('hidden');
+                document.getElementById('submitQuizBtn').classList.add('hidden');
+            }
+        }
+
+        function selectOption(optionIndex) {
+            userAnswers[currentQuestionIndex] = optionIndex;
+            const q = activeQuestions[currentQuestionIndex];
+
+            if (quizMode === 'practice') {
+                if (optionIndex === q.correct) {
+                    AudioEngine.playCorrect();
+                } else {
+                    AudioEngine.playIncorrect();
+                }
+            }
+
+            renderQuestion();
+        }
+
+        function navigateQuestion(direction) {
+            const targetIndex = currentQuestionIndex + direction;
+            if (targetIndex >= 0 && targetIndex < activeQuestions.length) {
+                currentQuestionIndex = targetIndex;
+                renderQuestion();
+            }
+        }
+
+        function confirmExitQuiz() {
+            if (Object.keys(userAnswers).length > 0) {
+                document.getElementById('exitModal').classList.remove('hidden');
+            } else {
+                showHomeScreen();
+            }
+        }
+
+        function executeExitQuiz() {
+            closeExitModal();
+            showHomeScreen();
+        }
+
+        function closeExitModal() {
+            document.getElementById('exitModal').classList.add('hidden');
+        }
+
+        function showHomeScreen() {
+            clearInterval(timerInterval);
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.add('hidden');
+            document.getElementById('homeScreen').classList.remove('hidden');
+        }
+
+        function submitQuiz() {
+            clearInterval(timerInterval);
+
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let skippedCount = 0;
+
+            activeQuestions.forEach((q, idx) => {
+                if (userAnswers.hasOwnProperty(idx)) {
+                    if (userAnswers[idx] === q.correct) {
+                        correctCount++;
+                    } else {
+                        incorrectCount++;
+                    }
+                } else {
+                    skippedCount++;
+                }
+            });
+
+            const total = activeQuestions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+            lastPercentageScore = percentage;
+
+            document.getElementById('correctAnswersCount').innerText = correctCount;
+            document.getElementById('totalResultQuestions').innerText = total;
+            document.getElementById('percentageText').innerText = `${percentage}%`;
+
+            document.getElementById('statCorrect').innerText = correctCount;
+            document.getElementById('statIncorrect').innerText = incorrectCount;
+            document.getElementById('statSkipped').innerText = skippedCount;
+
+            const accuracy = (correctCount + incorrectCount) > 0 
+                ? Math.round((correctCount / (correctCount + incorrectCount)) * 100)
+                : 0;
+            document.getElementById('accuracyText').innerText = `${accuracy}%`;
+
+            const mins = Math.floor(secondsElapsed / 60).toString().padStart(2, '0');
+            const secs = (secondsElapsed % 60).toString().padStart(2, '0');
+            document.getElementById('resultTimeTaken').innerText = `${mins}:${secs}`;
+
+            const badge = document.getElementById('performanceBadge');
+            const note = document.getElementById('resultFeedbackNote');
+
+            if (percentage >= 80) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200';
+                badge.innerText = 'उत्कृष्ट प्रदर्शन! (Excellent)';
+                note.innerText = 'अद्भुत! आपकी विज्ञान की तैयारी बहुत ही शानदार है। ऐसे ही मेहनत जारी रखें!';
+            } else if (percentage >= 60) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-sky-100 text-sky-800 border border-sky-200';
+                badge.innerText = 'अच्छा प्रयास! (Good)';
+                note.innerText = 'आपकी तैयारी अच्छी है, थोड़ा और अभ्यास करके आप 90%+ ला सकते हैं।';
+            } else if (percentage >= 40) {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200';
+                badge.innerText = 'औसत परिणाम (Average)';
+                note.innerText = 'आपको अध्यायों को पुनः पढ़ने की आवश्यकता है। पुनरीक्षण करें।';
+            } else {
+                badge.className = 'inline-block px-4 py-1.5 rounded-xl text-xs font-bold bg-rose-100 text-rose-800 border border-rose-200';
+                badge.innerText = 'अधिक सुधार की आवश्यकता (Needs Improvement)';
+                note.innerText = 'घबराएं नहीं! अध्यायों को दोबारा पढ़ें और पुनः प्रयास करें।';
+            }
+
+            const ring = document.getElementById('resultProgressRing');
+            const circumference = 2 * Math.PI * 40;
+            const offset = circumference - (percentage / 100) * circumference;
+            
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultScreen').classList.remove('hidden');
+
+            setTimeout(() => {
+                ring.style.strokeDashoffset = offset;
+            }, 100);
+
+            renderReviewKey();
+
+            if (percentage >= 50) {
+                AudioEngine.playFanfare();
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                }
+            }
+        }
+
+        // Render Review Answer Key
+        function renderReviewKey() {
+            const container = document.getElementById('reviewContainer');
+            container.innerHTML = '';
+
+            const optionPrefixes = ['(क)', '(ख)', '(ग)', '(घ)'];
+
+            activeQuestions.forEach((q, idx) => {
+                const userSelected = userAnswers[idx];
+                const isCorrect = userSelected === q.correct;
+                const isSkipped = userSelected === undefined;
+
+                const item = document.createElement('div');
+                item.className = `p-4 rounded-2xl border ${
+                    isCorrect ? 'bg-emerald-50/50 border-emerald-200' :
+                    isSkipped ? 'bg-amber-50/50 border-amber-200' :
+                    'bg-rose-50/50 border-rose-200'
+                }`;
+
+                item.innerHTML = `
+                    <div class="flex items-start justify-between gap-3">
+                        <div class="space-y-1">
+                            <span class="text-xs text-slate-500 font-semibold">प्र० ${idx + 1} (Ch-${q.chapter})</span>
+                            <h4 class="text-sm sm:text-base font-bold text-slate-900">${q.question}</h4>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-md text-xs font-bold shrink-0 ${
+                            isCorrect ? 'bg-emerald-100 text-emerald-800 border border-emerald-200' :
+                            isSkipped ? 'bg-amber-100 text-amber-800 border border-amber-200' :
+                            'bg-rose-100 text-rose-800 border border-rose-200'
+                        }">
+                            ${isCorrect ? 'सही' : isSkipped ? 'छोड़ा गया' : 'गलत'}
+                        </span>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200">
+                            <span class="text-slate-500">आपका उत्तर: </span>
+                            <span class="font-bold ${isCorrect ? 'text-emerald-700' : 'text-rose-600'}">
+                                ${isSkipped ? 'कोई उत्तर नहीं चुना' : `${optionPrefixes[userSelected]} ${q.options[userSelected]}`}
+                            </span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white border border-slate-200">
+                            <span class="text-slate-500">सही उत्तर: </span>
+                            <span class="font-bold text-emerald-700">
+                                ${optionPrefixes[q.correct]} ${q.options[q.correct]}
+                            </span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function generateCertificate() {
+            const nameInput = document.getElementById('studentNameInput').value.trim();
+            const displayName = nameInput || 'विद्यार्थी';
+
+            document.getElementById('certStudentName').innerText = displayName;
+            document.getElementById('certScoreText').innerText = `${lastPercentageScore}%`;
+
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('hi-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            document.getElementById('certDateText').innerText = dateStr;
+
+            document.getElementById('certificateModal').classList.remove('hidden');
+        }
+
+        function closeCertificateModal() {
+            document.getElementById('certificateModal').classList.add('hidden');
+        }
+
+        function downloadCertificateImage() {
+            const certElement = document.getElementById('certificateCard');
+            if (typeof html2canvas === 'function') {
+                html2canvas(certElement, { scale: 2 }).then(canvas => {
+                    const link = document.createElement('a');
+                    link.download = `Certificate_${document.getElementById('certStudentName').innerText}.png`;
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                });
+            } else {
+                window.print();
+            }
+        }
+
+        function retakeCurrentQuiz() {
+            startQuiz(currentChapter);
+        }
+
+        window.onload = function() {
+            renderChapterGrid();
+        };
+
+        // VVI Subject Tabs Switcher
+        function switchVVITab(subject) {
+            const subjects = ['physics', 'chemistry', 'biology'];
+            subjects.forEach(s => {
+                const content = document.getElementById(`vvi${capitalizeFirstLetter(s)}Content`);
+                const btn = document.getElementById(`tab${capitalizeFirstLetter(s)}Btn`);
+                
+                if (s === subject) {
+                    content.classList.remove('hidden');
+                    btn.className = 'vvi-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 bg-sky-600 text-white shadow-md shadow-sky-500/20';
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = 'vvi-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 bg-slate-100 text-slate-700 hover:bg-slate-200';
+                }
+            });
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+ document.getElementById('backBtn').addEventListener('click', () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html'; 
+            }
+        });
+
+    </script>
+</body>
+</html>
